@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Europa en familia: 9 de enero al 11 de febrero de 2027</title>
+<script>try{const t=localStorage.getItem("eu27-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2C4FC9">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -46,7 +47,68 @@ a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 
 /* Hero */
-header.hero{padding:44px 0 20px}
+.hero{position:relative;isolation:isolate;padding:40px 0 18px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(45% 60% at 8% 20%,var(--s1-soft),transparent 70%),
+  radial-gradient(40% 55% at 55% 0%,var(--s2-soft),transparent 70%),
+  radial-gradient(40% 60% at 98% 40%,var(--s3-soft),transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background-image:radial-gradient(var(--rule) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(#000,transparent 85%);-webkit-mask-image:linear-gradient(#000,transparent 85%)}
+.kick{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.kick span{font-size:.85rem;font-weight:700;padding:5px 11px;border-radius:999px;background:var(--surface);color:var(--muted);border:1px solid var(--rule)}
+/* Barra superior */
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+.appbar{position:sticky;top:0;z-index:3000;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--rule);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;gap:16px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:0 0 auto}
+.logo{width:36px;height:36px;display:block}
+.bt b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.08rem;line-height:1.1}
+.bt small{display:block;font-size:.78rem;color:var(--muted)}
+.topnav{display:flex;gap:2px;margin:0 auto;overflow-x:auto;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.93rem;font-weight:700;padding:8px 11px;border-radius:999px}
+.topnav a:hover{color:var(--ink);background:var(--surface)}
+.topnav a[aria-current="page"]{color:var(--ink);background:var(--surface);box-shadow:inset 0 -3px 0 var(--s1)}
+.bar-r{display:flex;align-items:center;gap:8px;flex:0 0 auto;margin-left:auto}
+.pill{font-size:.82rem;font-weight:700;padding:6px 11px;border-radius:999px;background:var(--s1);color:var(--surface);white-space:nowrap}
+.iconbtn{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.iconbtn svg{width:20px;height:20px}
+.ico{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tabbar{display:none}
+@media (max-width:899px){
+  .topnav{display:none}
+  .bar{height:56px}
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:3000;background:color-mix(in srgb,var(--surface) 90%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--rule);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px))}
+  .tabbar a,.tabbar button{display:flex;flex-direction:column;align-items:center;gap:2px;font:inherit;font-size:.72rem;font-weight:700;color:var(--muted);text-decoration:none;background:none;border:0;padding:4px 0;cursor:pointer;border-radius:12px}
+  .tabbar [aria-current="page"]{color:var(--s1)}
+  .tabbar [aria-current="page"] .ico{background:var(--s1-soft);border-radius:999px;padding:3px 14px;width:52px;height:30px}
+  body{padding-bottom:calc(70px + env(safe-area-inset-bottom,0px))}
+  .bt small{display:none}
+}
+@media (max-width:420px){.pill{display:none}}
+#ruta,#atajos{padding-top:28px}
+#ruta .route{margin-top:0}
+
+/* Hoja «Más» */
+.sheet{border:0;padding:8px 10px calc(16px + env(safe-area-inset-bottom,0px));margin:auto auto 0;width:min(560px,100vw);max-width:100vw;border-radius:20px 20px 0 0;background:var(--surface);color:var(--ink);box-shadow:0 -10px 40px rgba(0,0,0,.3)}
+.sheet::backdrop{background:rgba(10,15,25,.5)}
+.sheet .grab{width:42px;height:5px;border-radius:9px;background:var(--rule);margin:4px auto 10px}
+.sheet a,.sheet button{display:flex;align-items:center;gap:14px;width:100%;font:inherit;font-weight:700;font-size:1.02rem;color:var(--ink);text-decoration:none;background:none;border:0;padding:13px 12px;border-radius:12px;cursor:pointer;text-align:left}
+.sheet a:hover,.sheet button:hover,.sheet a[aria-current="page"]{background:var(--bg)}
+.sheet hr{border:0;border-top:1px solid var(--rule);margin:6px 0}
+/* Páginas */
+.page[hidden]{display:none}
+.page > section:first-child{padding-top:32px}
+.subnav{display:flex;flex-wrap:wrap;gap:8px}
+.subnav a{font-size:.92rem;font-weight:700;text-decoration:none;color:var(--ink);background:var(--surface);border:1.5px solid var(--rule);padding:7px 13px;border-radius:999px}
+.subnav a:hover{border-color:var(--ink)}
+.h2s{font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.tile{display:grid;grid-template-columns:44px 1fr;gap:4px 12px;align-items:center;text-decoration:none;color:var(--ink);background:var(--surface);border-radius:14px;padding:14px 16px;border:1.5px solid transparent;transition:border-color .15s,transform .15s}
+.tile:hover{border-color:var(--c);transform:translateY(-2px)}
+.tile .ti{grid-row:span 2;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--c)}
+.tile b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+.tile small{color:var(--muted);font-size:.88rem}
+@media (prefers-reduced-motion:reduce){.tile{transition:none}.tile:hover{transform:none}}
 .hero h1{font-size:clamp(2.3rem,7vw,4.6rem);font-weight:800;letter-spacing:-.02em;max-width:14ch}
 .hero p.lede{font-size:1.1rem;color:var(--muted);max-width:60ch;margin:16px 0 0}
 .groups{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
@@ -325,13 +387,34 @@ ul.items li.o > span:first-child{font-weight:700}
 .gm{display:block;padding:9px 12px;font-size:.92rem;font-weight:700;color:var(--c);background:var(--surface);border-top:1px solid var(--rule);text-decoration:none}
 .gm:hover{text-decoration:underline}
 .mapinfo .minis{margin-top:4px}
-footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
+footer{color:var(--muted);font-size:.9rem}
+.foot{margin-top:56px;background:var(--surface);border-top:1px solid var(--rule);position:relative}
+.foot::before{content:"";position:absolute;left:0;right:0;top:-1px;height:4px;background:linear-gradient(90deg,var(--s1) 0 33.3%,var(--s2) 33.3% 66.6%,var(--s3) 66.6%)}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:28px;padding:40px 0 28px}
+.fbrand p{margin:12px 0;max-width:38ch;line-height:1.55}
+.stages{display:flex;flex-wrap:wrap;gap:6px}
+.stages span{font-size:.8rem;font-weight:700;color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:3px 10px}
+nav.fcol{display:grid;grid-template-columns:1fr 1fr;column-gap:14px;align-content:start}
+nav.fcol h3{grid-column:1 / -1}
+.fcol h3{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:4px 0 10px}
+.fcol a,.fcol button{display:block;width:100%;text-align:left;font:inherit;font-size:.93rem;color:var(--muted);text-decoration:none;background:none;border:0;padding:5px 0;cursor:pointer}
+.fcol a:hover,.fcol button:hover{color:var(--ink)}
+.sos{display:flex;gap:12px;align-items:center;margin:0 0 10px}
+.sos b{font-family:"Bricolage Grotesque",sans-serif;font-size:2rem;line-height:1;color:var(--must);background:var(--must-soft);border-radius:12px;padding:8px 12px}
+.sos span{font-size:.88rem}
+.fsmall{font-size:.85rem;margin:0}
+.fbottom{border-top:1px solid var(--rule);padding:16px 0 28px;font-size:.84rem}
+.fbottom p{margin:4px 0}
+.credits{opacity:.85}
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr}.fbrand{grid-column:1 / -1}}
+@media (max-width:520px){.fgrid{grid-template-columns:1fr;gap:22px}}
+@media print{.foot{display:none}}
 @media (prefers-reduced-motion:no-preference){
   .route path.seg{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 1.6s ease-out forwards}
   .route path.seg.fly{animation:none;stroke-dashoffset:0}
   @keyframes draw{to{stroke-dashoffset:0}}
 }
-@media print{nav.sticky,.filters,.check{display:none}.day{break-inside:avoid}}
+@media print{.appbar,.tabbar,.filters,.check{display:none}.page[hidden]{display:block}.day{break-inside:avoid}}
 /* Hoy */
 #hoy{padding-top:28px}
 .hoy{background:var(--surface);border-radius:16px;overflow:hidden;border-top:6px solid var(--c)}
@@ -385,12 +468,45 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
   #printView .muted{color:#444}
   @page{margin:12mm}
 }
+@media (max-width:560px){
+  .hero{padding:22px 0 8px}
+  .hero h1{font-size:2.15rem}
+  .hero p.lede{display:none}
+  .groups{display:flex;overflow-x:auto;gap:8px;margin-top:16px;scroll-snap-type:x mandatory;padding-bottom:4px}
+  .group{flex:0 0 80%;scroll-snap-align:start;padding:10px 14px}
+  .group b{font-size:1.05rem}
+  #hoy{padding-top:16px}
+}
 </style>
 </head>
 <body>
-
-<header class="hero">
+<header class="appbar">
+  <div class="wrap bar">
+    <a class="brand" href="#/inicio" aria-label="Europa en familia, inicio">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="var(--s1)"/><path d="M9 27L16 17L24 22L31 12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="27" r="3" fill="#E6ECFB"/><circle cx="16" cy="17" r="3" fill="#4CC79A"/><circle cx="24" cy="22" r="3" fill="#F0B54A"/><circle cx="31" cy="12" r="3" fill="#fff"/></svg>
+      <span class="bt"><b>Europa en familia</b><small>9 ene – 11 feb 2027</small></span>
+    </a>
+    <nav class="topnav" aria-label="Páginas"><a href="#/itinerario" data-p="itinerario">Itinerario</a><a href="#/mapa" data-p="mapa">Mapa</a><a href="#/comer" data-p="comer">Comer</a><a href="#/guia" data-p="guia">Guía</a><a href="#/reservas" data-p="reservas">Reservas</a><a href="#/presupuesto" data-p="presupuesto">Presupuesto</a><a href="#/antes" data-p="antes">Antes de viajar</a></nav>
+    <div class="bar-r"><span class="pill" id="cdPill"></span><button type="button" class="iconbtn" id="themeBtn" aria-label="Cambiar entre modo claro y oscuro" title="Modo claro u oscuro"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button></div>
+  </div>
+</header>
+<nav class="tabbar" aria-label="Páginas">
+  <a href="#/inicio" data-p="inicio"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span>Inicio</span></a><a href="#/itinerario" data-p="itinerario"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Itinerario</span></a><a href="#/mapa" data-p="mapa"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg><span>Mapa</span></a><a href="#/comer" data-p="comer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v6M9 3v6M17 3c-2 0-3 2-3 5s1 4 3 4v9"/></svg><span>Comer</span></a>
+  <button type="button" id="moreBtn" data-p="mas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg><span>Más</span></button>
+</nav>
+<dialog class="sheet" id="moreSheet" aria-label="Más páginas">
+  <div class="grab"></div>
+  <a href="#/guia" data-p="guia"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Guía</span></a><a href="#/reservas" data-p="reservas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4z"/><path d="M14 7v2M14 11v2M14 15v2"/></svg><span>Reservas</span></a><a href="#/presupuesto" data-p="presupuesto"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/></svg><span>Presupuesto</span></a><a href="#/antes" data-p="antes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V4h6v3M4 12h16"/></svg><span>Antes de viajar</span></a>
+  <hr>
+  <button type="button" data-act="off">📥 <span>Guardar para usar sin internet</span></button>
+  <button type="button" data-act="print">🖨️ <span>Imprimir resumen</span></button>
+  <button type="button" data-act="theme">🌗 <span>Modo claro u oscuro</span></button>
+</dialog>
+<main>
+<div class="page" data-page="inicio">
+<div class="hero">
   <div class="wrap">
+    <p class="kick"><span>9 ene – 11 feb 2027</span><span>6 países</span><span>14 ciudades</span></p>
     <h1>Europa en familia, día por día</h1>
     <p class="lede">Del 9 de enero al 11 de febrero de 2027. Seis países, catorce ciudades y un grupo que cambia de tamaño en el camino: aquí está cada traslado, cada entrada y dónde dormir.</p>
     <div class="groups">
@@ -399,31 +515,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
       <div class="group" style="--c:var(--s3)"><b>Etapa 3: 4 personas</b><span>2 al 11 de febrero. Solo equipaje de mano. Nápoles, Atenas, Lisboa y Madrid.</span></div>
     </div>
   </div>
-  <div class="wrap">
-    <div class="route" aria-label="Mapa de la ruta">
-      <div class="route-scroll"><svg id="routeSvg" viewBox="0 0 1000 170" role="img" aria-label="Ruta: Madrid, Barcelona, París, Zúrich, Lucerna, Chur, Milán, Venecia, Florencia, Roma, Nápoles, Atenas, Lisboa, Madrid"></svg></div>
-      <div class="legend"><span><i></i>Tren (el grosor indica cuántos viajan)</span><span><i class="dash"></i>Avión</span><span>Número sobre cada ciudad: noches</span></div>
-    </div>
-  </div>
-</header>
-
-<nav class="sticky" aria-label="Secciones">
-  <div class="wrap">
-    <a href="#hoy">Hoy</a>
-    <a href="#mapa">Mapa por día</a>
-    <a href="#entradas">Entradas obligatorias</a>
-    <a href="#dias">Día a día</a>
-    <a href="#comer">Dónde comer</a>
-    <a href="#tips">Tips de guía</a>
-    <a href="#traslados">Trenes y vuelos</a>
-    <a href="#alojamiento">Dónde dormir</a>
-    <a href="#presupuesto">Presupuesto</a>
-    <a href="#reservas">Qué reservar y cuándo</a>
-    <a href="#antes">Antes de viajar</a>
-  </div>
-</nav>
-
-<main>
+</div>
 <section id="hoy">
   <div class="wrap">
     <div class="hoy" id="hoyCard"></div>
@@ -435,6 +527,32 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
     <div class="offbox" id="offBox" hidden></div>
   </div>
 </section>
+<section id="ruta"><div class="wrap"><h2 class="h2s">La ruta</h2></div>
+  <div class="wrap">
+    <div class="route" aria-label="Mapa de la ruta">
+      <div class="route-scroll"><svg id="routeSvg" viewBox="0 0 1000 170" role="img" aria-label="Ruta: Madrid, Barcelona, París, Zúrich, Lucerna, Chur, Milán, Venecia, Florencia, Roma, Nápoles, Atenas, Lisboa, Madrid"></svg></div>
+      <div class="legend"><span><i></i>Tren (el grosor indica cuántos viajan)</span><span><i class="dash"></i>Avión</span><span>Número sobre cada ciudad: noches</span></div>
+    </div>
+  </div>
+</section>
+<section id="atajos"><div class="wrap"><h2 class="h2s">Todo el viaje</h2><div class="tiles" id="tiles"></div></div></section>
+</div>
+<div class="page" data-page="itinerario" hidden>
+<section id="dias">
+  <div class="wrap">
+    <h2>Día a día</h2>
+    <p class="sub">Precios por persona en euros, referenciales con tarifas 2026 (pueden subir en 2027). Marquen cada día como listo a medida que reservan; la marca queda guardada en este dispositivo.</p>
+    <div class="filters" role="group" aria-label="Filtrar por etapa">
+      <button type="button" data-f="all" aria-pressed="true">Todo el viaje</button>
+      <button type="button" data-f="1" aria-pressed="false">Etapa 1</button>
+      <button type="button" data-f="2" aria-pressed="false">Etapa 2</button>
+      <button type="button" data-f="3" aria-pressed="false">Etapa 3</button>
+    </div>
+    <div id="days"></div>
+  </div>
+</section>
+</div>
+<div class="page" data-page="mapa" hidden>
 <section id="mapa">
   <div class="wrap">
     <h2>Mapa del viaje, día por día</h2>
@@ -459,30 +577,8 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
     </div>
   </div>
 </section>
-
-<section id="entradas">
-  <div class="wrap">
-    <h2>Entradas que deben comprar antes, sí o sí</h2>
-    <p class="sub">Sin estas reservas no se entra, o la fila es de horas y los cupos se agotan. Cómprenlas solo en el sitio oficial indicado. En el día a día aparecen destacadas en rojo.</p>
-    <div class="mustlist" id="mustlist"></div>
-    <div class="reclist" id="reclist"></div>
-  </div>
-</section>
-
-<section id="dias">
-  <div class="wrap">
-    <h2>Día a día</h2>
-    <p class="sub">Precios por persona en euros, referenciales con tarifas 2026 (pueden subir en 2027). Marquen cada día como listo a medida que reservan; la marca queda guardada en este dispositivo.</p>
-    <div class="filters" role="group" aria-label="Filtrar por etapa">
-      <button type="button" data-f="all" aria-pressed="true">Todo el viaje</button>
-      <button type="button" data-f="1" aria-pressed="false">Etapa 1</button>
-      <button type="button" data-f="2" aria-pressed="false">Etapa 2</button>
-      <button type="button" data-f="3" aria-pressed="false">Etapa 3</button>
-    </div>
-    <div id="days"></div>
-  </div>
-</section>
-
+</div>
+<div class="page" data-page="comer" hidden>
 <section id="comer">
   <div class="wrap">
     <h2>Dónde comer</h2>
@@ -497,7 +593,8 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
     <div class="clegend"><span><b>€</b> menos de €15</span><span><b>€€</b> €15–35</span><span><b>€€€</b> más de €35</span><span>por persona, sin bebidas</span></div>
   </div>
 </section>
-
+</div>
+<div class="page" data-page="guia" hidden>
 <section id="tips">
   <div class="wrap">
     <h2>Tips de guía</h2>
@@ -508,38 +605,18 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
     <div class="tpanel" id="tPanel" role="tabpanel"></div>
   </div>
 </section>
-
-<section id="traslados">
+</div>
+<div class="page" data-page="reservas" hidden>
+<section id="reservas-top"><div class="wrap"><h2>Reservas</h2><p class="sub">Todo lo que hay que comprar antes del viaje, ordenado por urgencia.</p>
+<div class="subnav"><a href="#entradas">Entradas obligatorias</a><a href="#reservas">Qué reservar y cuándo</a><a href="#traslados">Trenes y vuelos</a><a href="#alojamiento">Dónde dormir</a></div></div></section>
+<section id="entradas">
   <div class="wrap">
-    <h2>Trenes y vuelos</h2>
-    <p class="sub">Frecuencias de invierno. Los precios bajan bastante comprando con 2 a 3 meses de anticipación.</p>
-    <div class="table-box"><table>
-      <thead><tr><th>Fecha</th><th>Tramo</th><th>Operador y días que opera</th><th>Duración</th><th>Precio por persona</th><th>Dónde comprar</th></tr></thead>
-      <tbody id="moves"></tbody>
-    </table></div>
+    <h2>Entradas que deben comprar antes, sí o sí</h2>
+    <p class="sub">Sin estas reservas no se entra, o la fila es de horas y los cupos se agotan. Cómprenlas solo en el sitio oficial indicado. En el día a día aparecen destacadas en rojo.</p>
+    <div class="mustlist" id="mustlist"></div>
+    <div class="reclist" id="reclist"></div>
   </div>
 </section>
-
-<section id="alojamiento">
-  <div class="wrap">
-    <h2>Dónde dormir</h2>
-    <p class="sub">Zonas cercanas a las estaciones o a lo que van a visitar, para no arrastrar maletas. El precio es por noche para todo el grupo en departamento o habitaciones juntas, como referencia de temporada baja.</p>
-    <div class="table-box"><table>
-      <thead><tr><th>Ciudad</th><th>Zona recomendada</th><th>Noches</th><th>Personas</th><th>Por noche (grupo)</th><th>Por qué</th></tr></thead>
-      <tbody id="lodging"></tbody>
-    </table></div>
-  </div>
-</section>
-
-<section id="presupuesto">
-  <div class="wrap">
-    <h2>Presupuesto estimado</h2>
-    <p class="sub">Calculado con los precios de esta guía: traslados y entradas, comidas (promedio por país) y alojamiento al valor medio. No incluye los vuelos desde y hacia Chile ni el vuelo a China.</p>
-    <div class="budget" id="budget"></div>
-    <div class="grand" id="grand"></div>
-  </div>
-</section>
-
 <section id="reservas">
   <div class="wrap">
     <h2>Qué reservar y cuándo</h2>
@@ -566,7 +643,38 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
     </ul></div>
   </div>
 </section>
-
+<section id="traslados">
+  <div class="wrap">
+    <h2>Trenes y vuelos</h2>
+    <p class="sub">Frecuencias de invierno. Los precios bajan bastante comprando con 2 a 3 meses de anticipación.</p>
+    <div class="table-box"><table>
+      <thead><tr><th>Fecha</th><th>Tramo</th><th>Operador y días que opera</th><th>Duración</th><th>Precio por persona</th><th>Dónde comprar</th></tr></thead>
+      <tbody id="moves"></tbody>
+    </table></div>
+  </div>
+</section>
+<section id="alojamiento">
+  <div class="wrap">
+    <h2>Dónde dormir</h2>
+    <p class="sub">Zonas cercanas a las estaciones o a lo que van a visitar, para no arrastrar maletas. El precio es por noche para todo el grupo en departamento o habitaciones juntas, como referencia de temporada baja.</p>
+    <div class="table-box"><table>
+      <thead><tr><th>Ciudad</th><th>Zona recomendada</th><th>Noches</th><th>Personas</th><th>Por noche (grupo)</th><th>Por qué</th></tr></thead>
+      <tbody id="lodging"></tbody>
+    </table></div>
+  </div>
+</section>
+</div>
+<div class="page" data-page="presupuesto" hidden>
+<section id="presupuesto">
+  <div class="wrap">
+    <h2>Presupuesto estimado</h2>
+    <p class="sub">Calculado con los precios de esta guía: traslados y entradas, comidas (promedio por país) y alojamiento al valor medio. No incluye los vuelos desde y hacia Chile ni el vuelo a China.</p>
+    <div class="budget" id="budget"></div>
+    <div class="grand" id="grand"></div>
+  </div>
+</section>
+</div>
+<div class="page" data-page="antes" hidden>
 <section id="antes">
   <div class="wrap">
     <h2>Antes de viajar</h2>
@@ -582,10 +690,48 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem}
     </div>
   </div>
 </section>
+</div>
 </main>
+
+
+
+
+
+
 <dialog id="info" aria-labelledby="iT"><button type="button" class="x" aria-label="Cerrar">×</button><div id="iBody"></div></dialog>
 
-<footer><div class="wrap">Guía preparada en octubre de 2026. Precios y horarios son referenciales; confirmen en los sitios oficiales antes de comprar.</div></footer>
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="#/inicio"><svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="var(--s1)"/><path d="M9 27L16 17L24 22L31 12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="27" r="3" fill="#E6ECFB"/><circle cx="16" cy="17" r="3" fill="#4CC79A"/><circle cx="24" cy="22" r="3" fill="#F0B54A"/><circle cx="31" cy="12" r="3" fill="#fff"/></svg><span class="bt"><b>Europa en familia</b><small>9 ene – 11 feb 2027</small></span></a>
+        <p>Madrid → Barcelona → París → Suiza → Italia → Atenas → Lisboa → Madrid. 34 días, 6 países y un grupo de 6, 7 y 4 viajeros.</p>
+        <div class="stages"><span style="--c:var(--s1)">Etapa 1</span><span style="--c:var(--s2)">Etapa 2</span><span style="--c:var(--s3)">Etapa 3</span></div>
+      </div>
+      <nav class="fcol" aria-label="Páginas del pie">
+        <h3>Páginas</h3>
+        <a href="#/inicio">Inicio</a><a href="#/itinerario">Itinerario</a><a href="#/mapa">Mapa</a><a href="#/comer">Dónde comer</a>
+        <a href="#/guia">Guía</a><a href="#/reservas">Reservas</a><a href="#/presupuesto">Presupuesto</a><a href="#/antes">Antes de viajar</a>
+      </nav>
+      <div class="fcol">
+        <h3>Herramientas</h3>
+        <button type="button" data-fact="off">📥 Guardar sin internet</button>
+        <button type="button" data-fact="print">🖨️ Imprimir resumen</button>
+        <button type="button" data-fact="theme">🌗 Modo claro u oscuro</button>
+        <button type="button" data-fact="top">↑ Volver arriba</button>
+      </div>
+      <div class="fcol">
+        <h3>En caso de emergencia</h3>
+        <p class="sos"><b>112</b><span>Emergencias en todos los países del viaje, incluida Suiza. Gratis, desde cualquier teléfono.</span></p>
+        <p class="fsmall">Lleven anotado el teléfono del seguro de viaje y una foto del pasaporte en el correo.</p>
+      </div>
+    </div>
+    <div class="fbottom">
+      <p>Guía preparada en octubre de 2026. Precios, horarios y tarifas son referenciales: confirmen siempre en los sitios oficiales antes de comprar.</p>
+      <p class="credits">Mapas: Esri, OpenStreetMap y Leaflet · Fotos: Wikimedia Commons · Información: Wikipedia · Clima: Open-Meteo</p>
+    </div>
+  </div>
+</footer>
 
 <script>
 if(!location.hash){ try{ history.scrollRestoration='manual'; }catch(e){} }
@@ -886,9 +1032,10 @@ const cssCol=v=>{const m=/var\((--[\w-]+)\)/.exec(v);return m?getComputedStyle(d
 const LABELS=()=>L.layerGroup([
   L.tileLayer(ESRI.replace('services/','services/Reference/')+'World_Transportation/MapServer/tile/{z}/{y}/{x}',{maxZoom:19}),
   L.tileLayer(ESRI.replace('services/','services/Reference/')+'World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19})]);
+const ALLMAPS=[];
 function newMap(el, streets){
   if(!window.L){el.innerHTML='<p style="padding:14px">No se pudo cargar el mapa. Revisen la conexión a internet.</p>';return null;}
-  const m=L.map(el,{scrollWheelZoom:false});
+  const m=L.map(el,{scrollWheelZoom:false}); ALLMAPS.push(m);
   const ORDER=streets?[...BASES,SAT]:[SAT,...BASES];   // satélite por defecto; calles en la guía de restaurantes
   let idx=0, errs=0, cur=mkLayer(ORDER[0]).addTo(m);
   const labels=LABELS(); if(!streets) labels.addTo(m);
@@ -1569,6 +1716,66 @@ document.getElementById('btnPrint').addEventListener('click',()=>{
 });
 addEventListener('afterprint',()=>document.documentElement.classList.remove('printmode'));
 
+// ================= Páginas =================
+const ICONS={"inicio": "<path d=\"M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z\"/>", "itinerario": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>", "mapa": "<path d=\"M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14\"/>", "comer": "<path d=\"M7 3v8a2 2 0 0 0 2 2v8M5 3v6M9 3v6M17 3c-2 0-3 2-3 5s1 4 3 4v9\"/>", "guia": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M15.5 8.5l-2 5-5 2 2-5z\"/>", "reservas": "<path d=\"M4 6h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4z\"/><path d=\"M14 7v2M14 11v2M14 15v2\"/>", "presupuesto": "<rect x=\"3\" y=\"6\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M3 10h18M16 15h2\"/>", "antes": "<rect x=\"4\" y=\"7\" width=\"16\" height=\"13\" rx=\"2\"/><path d=\"M9 7V4h6v3M4 12h16\"/>", "mas": "<circle cx=\"5\" cy=\"12\" r=\"1.6\"/><circle cx=\"12\" cy=\"12\" r=\"1.6\"/><circle cx=\"19\" cy=\"12\" r=\"1.6\"/>"};
+const PAGES=['inicio','itinerario','mapa','comer','guia','reservas','presupuesto','antes'];
+const PTITLE={inicio:'Inicio',itinerario:'Itinerario',mapa:'Mapa',comer:'Dónde comer',guia:'Guía',reservas:'Reservas',presupuesto:'Presupuesto',antes:'Antes de viajar'};
+function go(h){ if(location.hash===h) route(); else location.hash=h; }
+let curPage=null;
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1)); let page='inicio', target=null;
+  if(h.startsWith('/')) page=h.slice(1)||'inicio';
+  else if(h){ const el=document.getElementById(h); const pg=el&&el.closest('.page'); if(pg){ page=pg.dataset.page; target=el; } }
+  if(!PAGES.includes(page)) page='inicio';
+  const changed=page!==curPage; curPage=page;
+  document.querySelectorAll('.page').forEach(p=>p.hidden=p.dataset.page!==page);
+  document.querySelectorAll('[data-p]').forEach(a=>{ if(a.dataset.p===page) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  const more=document.getElementById('moreBtn'); if(more&&['guia','reservas','presupuesto','antes'].includes(page)) more.setAttribute('aria-current','page');
+  document.title=(page==='inicio'?'':PTITLE[page]+' · ')+'Europa en familia 2027';
+  const sh=document.getElementById('moreSheet'); if(sh&&sh.open) sh.close();
+  setTimeout(()=>ALLMAPS.forEach(m=>{try{m.invalidateSize();}catch(e){}}),60);
+  if(target && target.previousElementSibling) target.scrollIntoView();
+  else if(changed || !target) window.scrollTo(0,0);
+}
+addEventListener('hashchange',route);
+route();
+
+// Hoja «Más»
+const sheet=document.getElementById('moreSheet');
+document.getElementById('moreBtn').addEventListener('click',()=>{ sheet.showModal?sheet.showModal():sheet.setAttribute('open',''); });
+sheet.addEventListener('click',e=>{
+  if(e.target===sheet){ sheet.close(); return; }
+  const b=e.target.closest('[data-act]'); if(!b) return; sheet.close();
+  if(b.dataset.act==='print') document.getElementById('btnPrint').click();
+  if(b.dataset.act==='theme') toggleTheme();
+  if(b.dataset.act==='off'){ go('#/inicio'); const ob=document.getElementById('offBox'); if(ob.hidden) document.getElementById('btnOff').click(); setTimeout(()=>ob.scrollIntoView({block:'center'}),80); }
+});
+
+// Acciones del pie de página
+document.querySelector('.foot').addEventListener('click',e=>{
+  const b=e.target.closest('[data-fact]'); if(!b) return;
+  const a=b.dataset.fact;
+  if(a==='top') window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+  if(a==='print') document.getElementById('btnPrint').click();
+  if(a==='theme') toggleTheme();
+  if(a==='off'){ go('#/inicio'); const ob=document.getElementById('offBox'); if(ob.hidden) document.getElementById('btnOff').click(); setTimeout(()=>ob.scrollIntoView({block:'center'}),80); }
+});
+
+// Tema claro u oscuro
+function toggleTheme(){
+  const root=document.documentElement;
+  const dark=root.dataset.theme? root.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme=dark?'light':'dark';
+  try{ localStorage.setItem('eu27-theme',root.dataset.theme); }catch(e){}
+}
+document.getElementById('themeBtn').addEventListener('click',toggleTheme);
+
+// Cuenta regresiva en la barra
+(()=>{ const el=document.getElementById('cdPill'); const toStart=Math.round((FIRST-NOW)/864e5);
+  el.textContent = NOW<FIRST ? `Faltan ${toStart} días` : NOW>LAST ? 'Viaje terminado' : `Día ${hoyIdx+1} de ${DAYS.length}`; })();
+
+
+
 // ---- Guía de restaurantes: pestañas, mapa y tarjetas ----
 const SWEET=/Pastelería|Heladería|Salón de té|Café|Postres|Panadería|Chocolatería/; let eatFilter='all', eatDish=null;
 const norm=t=>t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -1766,7 +1973,7 @@ function showDay(i, scroll){
   initMinis(info);
   document.querySelectorAll('#mChips button').forEach(b=>b.setAttribute('aria-current', +b.dataset.i===i?'true':'false'));
   const chip=document.querySelector(`#mChips button[data-i="${i}"]`); if(chip) stripScroll(chip);
-  if(scroll) document.getElementById('mapa').scrollIntoView({behavior:reduce?'auto':'smooth'});
+  if(scroll) go('#/mapa');
 }
 function showAll(){
   cur=-1; activeKeys=[]; document.getElementById('mAct').innerHTML='';
@@ -1836,6 +2043,17 @@ STOPS.forEach((st,i) => {
   s += `<text x="${x}" y="${y+32}" text-anchor="middle" font-family="Atkinson Hyperlegible, sans-serif" font-size="13" fill="var(--ink)" transform="rotate(32 ${x} ${y+32})" dx="18">${st[0]}</text>`;
 });
 svg.innerHTML = s;
+
+// Atajos de la página de inicio
+(()=>{
+  const nMust=DAYS.reduce((a,d)=>a+d.items.filter(it=>it[2]==='o').length,0);
+  const nEat=Object.values(EAT).reduce((a,l)=>a+l.length,0);
+  const T=[['itinerario','Itinerario',`${DAYS.length} días, 14 ciudades`,'s1'],['mapa','Mapa','La ruta, día por día','s1'],
+    ['comer','Dónde comer',`${nEat} lugares y platos típicos`,'s2'],['guia','Guía',`Transporte, barrios y consejos`,'s2'],
+    ['reservas','Reservas',`${nMust} entradas obligatorias`,'s3'],['presupuesto','Presupuesto',`Total estimado ${eur(grand)}`,'s3'],
+    ['antes','Antes de viajar','Documentos, seguro, clima y maletas','s1']];
+  document.getElementById('tiles').innerHTML=T.map(t=>`<a class="tile" href="#/${t[0]}" style="--c:var(--${t[3]});--soft:var(--${t[3]}-soft)"><span class="ti"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">${ICONS[t[0]]}</svg></span><b>${t[1]}</b><small>${t[2]}</small></a>`).join('');
+})();
 </script>
 </body>
 </html>
