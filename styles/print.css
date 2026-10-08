@@ -1,0 +1,23 @@
+/* Impresión: oculta la interfaz y muestra el resumen imprimible (#printView). */
+@media print{.foot{display:none}}
+@media print{.appbar,.tabbar,.filters,.check{display:none}.page[hidden]{display:block}.day{break-inside:avoid}}
+/* Versión imprimible */
+#printView{display:none}
+@media print{
+  html.printmode body > *:not(#printView){display:none !important}
+  html.printmode #printView{display:block}
+  #printView{font:10pt/1.4 "Atkinson Hyperlegible",Arial,sans-serif;color:#000}
+  #printView h1{font-size:18pt;margin:0 0 2mm}
+  #printView h2{font-size:13pt;margin:6mm 0 2mm;border-bottom:1.5pt solid #000;padding-bottom:1mm;break-after:avoid}
+  #printView h3{font-size:10.5pt;margin:3mm 0 1mm;break-after:avoid}
+  #printView .pd{break-inside:avoid;border-bottom:.5pt solid #999;padding:1.5mm 0}
+  #printView .pd b.d{display:inline-block;min-width:22mm}
+  #printView ul{margin:.5mm 0 0 5mm;padding:0}
+  #printView li{margin:0}
+  #printView table{width:100%;border-collapse:collapse;font-size:9pt}
+  #printView td,#printView th{border:.5pt solid #999;padding:1mm 1.5mm;text-align:left;vertical-align:top}
+  #printView .cols{columns:2;column-gap:8mm}
+  #printView .cols > div{break-inside:avoid;margin-bottom:2mm}
+  #printView .muted{color:#444}
+  @page{margin:12mm}
+}

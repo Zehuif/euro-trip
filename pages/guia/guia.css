@@ -1,0 +1,26 @@
+/* Guía: consejos generales y tarjetas por ciudad. */
+.gen{display:grid;gap:8px;margin-bottom:26px}
+.gen details{background:var(--surface);border-radius:12px;padding:0 16px}
+.gen summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:13px 0;font-weight:700}
+.gen summary::-webkit-details-marker{display:none}
+.gen summary .ic{width:34px;height:34px;border-radius:10px;background:var(--bg);display:grid;place-items:center;font-size:1.1rem;flex:0 0 auto}
+.gen summary::after{content:"+";margin-left:auto;font-size:1.3rem;color:var(--muted);font-weight:400}
+.gen details[open] summary::after{content:"−"}
+.gen details p{margin:0 0 14px 46px;color:var(--ink);font-size:.96rem}
+.th{font-size:1.3rem;margin:0 0 12px}
+.tpanel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.tcard{background:var(--surface);border-radius:12px;padding:16px 18px;border-top:5px solid var(--c)}
+.tcard h3{font-size:1.15rem;margin:0 0 10px;display:flex;gap:8px;align-items:center}
+.fares{width:100%;min-width:0;border-collapse:collapse;font-size:.92rem;margin-bottom:10px}
+.fares td{padding:6px 0;border-bottom:1px dashed var(--rule);vertical-align:top}
+.fares td:last-child{text-align:right;white-space:nowrap;font-weight:700;padding-left:10px}
+.fares tr:last-child td{border-bottom:0}
+.tcard ul{margin:0;padding-left:18px;font-size:.94rem}
+.tcard li{margin:6px 0}
+.tcard li b{color:var(--c)}
+.zone{padding:8px 0;border-bottom:1px dashed var(--rule);font-size:.94rem}
+.zone:last-child{border-bottom:0}
+.zone b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.02rem}
+.ojo{margin-top:10px;background:var(--must-soft);border-radius:8px;padding:9px 11px;font-size:.9rem}
+.ojo b{color:var(--must)}
+@media (max-width:900px){.tpanel{grid-template-columns:1fr}}

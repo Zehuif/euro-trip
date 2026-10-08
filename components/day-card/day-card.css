@@ -1,0 +1,31 @@
+/* Contenido de un día (traslado, lugares, enlaces de compra, clima). Lo usan Itinerario e Inicio («Hoy»). */
+.move{margin:10px 0 4px;padding:10px 12px;border-radius:8px;background:var(--soft);font-size:.96rem}
+.move strong{display:block;font-size:.85rem;color:var(--c);margin-bottom:2px}
+ul.items{list-style:none;padding:0;margin:10px 0 0}
+ul.items li{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px dashed var(--rule)}
+ul.items li:last-child{border-bottom:0}
+ul.items .p{white-space:nowrap;color:var(--muted);font-size:.95rem;text-align:right}
+.pl{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:var(--c);text-decoration-thickness:2px;text-underline-offset:3px}
+.pl:hover{color:var(--c)}
+.pl::after{content:" ⓘ";font-size:.85em;color:var(--c);text-decoration:none;display:inline-block}
+a.tk{display:inline-block;font-size:.8rem;font-weight:700;line-height:1;padding:5px 9px;border-radius:999px;margin:4px 0 0 8px;vertical-align:1px;white-space:nowrap;background:var(--c);color:var(--surface);text-decoration:none}
+a.tk:hover{filter:brightness(1.1)}
+.buylinks{margin-top:6px;font-size:.9rem}
+.buylinks a.tk{margin:4px 6px 0 0}
+.tip{margin-top:10px;font-size:.95rem;font-style:italic;color:var(--muted)}
+/* Must-buy */
+ul.items li.o{background:var(--must-soft);border-bottom-color:transparent;border-radius:8px;padding:9px 10px;margin:4px -10px}
+ul.items li.o > span:first-child{font-weight:700}
+.badge{display:inline-block;font-size:.78rem;font-weight:700;line-height:1;padding:4px 8px;border-radius:999px;margin-left:8px;vertical-align:2px;white-space:nowrap}
+.badge.o{background:var(--must);color:var(--surface)}
+.badge.r{border:1.5px solid var(--muted);color:var(--muted);font-weight:400}
+@media (max-width:560px){
+  ul.items li{flex-direction:column;gap:0}
+  ul.items .p{text-align:left}
+}
+/* Clima */
+.wx{display:inline-flex;align-items:center;gap:6px;font-size:.88rem;color:var(--muted);background:var(--bg);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.wx b{color:var(--ink)}
+.wx.fc{background:var(--soft,var(--bg));color:var(--ink)}
+.eat{font-weight:700;color:var(--c);text-decoration:none}
+.eat:hover{text-decoration:underline}

@@ -1,0 +1,22 @@
+/* Pie de página. */
+footer{color:var(--muted);font-size:.9rem}
+.foot{margin-top:56px;background:var(--surface);border-top:1px solid var(--rule);position:relative}
+.foot::before{content:"";position:absolute;left:0;right:0;top:-1px;height:4px;background:linear-gradient(90deg,var(--s1) 0 33.3%,var(--s2) 33.3% 66.6%,var(--s3) 66.6%)}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:28px;padding:40px 0 28px}
+.fbrand p{margin:12px 0;max-width:38ch;line-height:1.55}
+.stages{display:flex;flex-wrap:wrap;gap:6px}
+.stages span{font-size:.8rem;font-weight:700;color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:3px 10px}
+nav.fcol{display:grid;grid-template-columns:1fr 1fr;column-gap:14px;align-content:start}
+nav.fcol h3{grid-column:1 / -1}
+.fcol h3{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:4px 0 10px}
+.fcol a,.fcol button{display:block;width:100%;text-align:left;font:inherit;font-size:.93rem;color:var(--muted);text-decoration:none;background:none;border:0;padding:5px 0;cursor:pointer}
+.fcol a:hover,.fcol button:hover{color:var(--ink)}
+.sos{display:flex;gap:12px;align-items:center;margin:0 0 10px}
+.sos b{font-family:"Bricolage Grotesque",sans-serif;font-size:2rem;line-height:1;color:var(--must);background:var(--must-soft);border-radius:12px;padding:8px 12px}
+.sos span{font-size:.88rem}
+.fsmall{font-size:.85rem;margin:0}
+.fbottom{border-top:1px solid var(--rule);padding:16px 0 28px;font-size:.84rem}
+.fbottom p{margin:4px 0}
+.credits{opacity:.85}
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr}.fbrand{grid-column:1 / -1}}
+@media (max-width:520px){.fgrid{grid-template-columns:1fr;gap:22px}}

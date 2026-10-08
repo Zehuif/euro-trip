@@ -1,0 +1,42 @@
+/* Itinerario: filtros por etapa y tarjetas de cada día. */
+/* Filters */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filters button{font:inherit;font-size:.95rem;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* Days */
+.stage-head{display:flex;align-items:baseline;gap:14px;margin:34px 0 12px;padding-bottom:8px;border-bottom:3px solid var(--c)}
+.stage-head h3{font-size:1.5rem}
+.stage-head span{color:var(--muted)}
+.day{display:grid;grid-template-columns:92px 1fr;gap:0;background:var(--surface);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.day.done{opacity:.6}
+.date{background:var(--soft);padding:16px 10px;text-align:center;border-right:4px solid var(--c)}
+.date .wd{font-size:.85rem;color:var(--muted);display:block}
+.date .n{font-family:"Bricolage Grotesque",sans-serif;font-size:2.3rem;font-weight:800;line-height:1;display:block;margin:2px 0}
+.date .m{font-size:.9rem;display:block}
+.date .ppl{margin-top:10px;font-size:.8rem;color:var(--muted);display:block}
+.body{padding:16px 18px 14px}
+.title{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px}
+.title h4{font-family:"Bricolage Grotesque",sans-serif;font-size:1.35rem;margin:0}
+.flag{font-size:.85rem;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;font-size:.92rem;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:700}
+.check{margin-top:10px;display:flex;align-items:center;gap:8px;font-size:.9rem;color:var(--muted);cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--c)}
+@media (max-width:560px){
+  .day{grid-template-columns:1fr}
+  .date{display:flex;align-items:baseline;gap:10px;text-align:left;border-right:0;border-bottom:4px solid var(--c);padding:10px 16px}
+  .date .n{font-size:1.6rem}
+  .date .ppl{margin:0 0 0 auto}
+}
+
+/* Illustrations */
+.illus{grid-column:1 / -1;background:var(--soft);border-bottom:1px solid var(--rule);line-height:0}
+.illus svg{display:block;width:100%;height:auto;max-height:150px}
+.illus figure{margin:0;position:relative;line-height:1.3}
+.illus img{display:block;width:100%;height:240px;object-fit:cover;background:var(--soft)}
+.illus figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:22px 14px 8px;font-size:.85rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.illus figcaption b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.05rem}
+.illus figcaption a{color:#fff;opacity:.85}
+@media (max-width:560px){.illus img{height:190px}}
+.tomap{font:inherit;font-size:.88rem;border:1.5px solid var(--c);color:var(--c);background:transparent;border-radius:999px;padding:6px 12px;cursor:pointer;margin-top:10px;margin-right:8px}

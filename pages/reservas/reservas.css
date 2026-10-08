@@ -1,0 +1,20 @@
+/* Reservas: entradas obligatorias, calendario de compra y tablas. */
+.subnav{display:flex;flex-wrap:wrap;gap:8px}
+.subnav a{font-size:.92rem;font-weight:700;text-decoration:none;color:var(--ink);background:var(--surface);border:1.5px solid var(--rule);padding:7px 13px;border-radius:999px}
+.subnav a:hover{border-color:var(--ink)}
+.mcard a{color:var(--must);font-weight:700}
+/* Bookings */
+.book{display:grid;grid-template-columns:200px 1fr;gap:0 20px;background:var(--surface);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+.book h3{font-size:1.1rem}
+.book ul{margin:0;padding-left:18px}
+.book li{margin:3px 0}
+@media (max-width:640px){.book{grid-template-columns:1fr}.book h3{margin-bottom:8px}}
+.mustlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.mcard{background:var(--surface);border-radius:12px;padding:14px 16px;border-left:6px solid var(--must)}
+.mcard .when{font-size:.88rem;color:var(--muted)}
+.mcard h3{font-size:1.15rem;margin:4px 0 6px}
+.mcard .row{display:flex;justify-content:space-between;gap:10px;font-size:.93rem}
+.mcard .row b{white-space:nowrap}
+.mcard .buy{margin-top:6px;font-size:.88rem;color:var(--must);font-weight:700}
+.reclist{margin-top:18px;background:var(--surface);border-radius:12px;padding:14px 18px;font-size:.95rem}
+.reclist b{font-family:"Bricolage Grotesque",sans-serif}

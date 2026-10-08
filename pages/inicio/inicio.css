@@ -1,0 +1,79 @@
+/* Inicio: portada, tarjeta «Hoy», franja de la ruta, accesos y herramientas. */
+/* Hero */
+.hero{position:relative;isolation:isolate;padding:40px 0 18px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(45% 60% at 8% 20%,var(--s1-soft),transparent 70%),
+  radial-gradient(40% 55% at 55% 0%,var(--s2-soft),transparent 70%),
+  radial-gradient(40% 60% at 98% 40%,var(--s3-soft),transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background-image:radial-gradient(var(--rule) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(#000,transparent 85%);-webkit-mask-image:linear-gradient(#000,transparent 85%)}
+.kick{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.kick span{font-size:.85rem;font-weight:700;padding:5px 11px;border-radius:999px;background:var(--surface);color:var(--muted);border:1px solid var(--rule)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.6rem);font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.hero p.lede{font-size:1.1rem;color:var(--muted);max-width:60ch;margin:16px 0 0}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.group{border-left:6px solid var(--c);background:var(--surface);padding:14px 16px;border-radius:0 10px 10px 0}
+.group b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.25rem}
+.group span{color:var(--muted);font-size:.95rem}
+@media (max-width:720px){.groups{grid-template-columns:1fr}}
+#ruta,#atajos{padding-top:28px}
+#ruta .route{margin-top:0}
+
+/* Accesos */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.tile{display:grid;grid-template-columns:44px 1fr;gap:4px 12px;align-items:center;text-decoration:none;color:var(--ink);background:var(--surface);border-radius:14px;padding:14px 16px;border:1.5px solid transparent;transition:border-color .15s,transform .15s}
+.tile:hover{border-color:var(--c);transform:translateY(-2px)}
+.tile .ti{grid-row:span 2;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--c)}
+.tile b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+.tile small{color:var(--muted);font-size:.88rem}
+@media (prefers-reduced-motion:reduce){.tile{transition:none}.tile:hover{transform:none}}
+
+/* Route map */
+.route{margin:30px 0 8px;background:var(--surface);border-radius:14px;padding:18px 0 6px}
+.route-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.route svg{display:block;min-width:980px;width:100%;height:auto}
+.route .legend{display:flex;flex-wrap:wrap;gap:18px;padding:6px 20px 12px;color:var(--muted);font-size:.9rem}
+.legend i{display:inline-block;width:28px;height:0;border-top:5px solid var(--muted);vertical-align:middle;margin-right:6px}
+.legend i.dash{border-top-style:dashed}
+@media (prefers-reduced-motion:no-preference){
+  .route path.seg{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 1.6s ease-out forwards}
+  .route path.seg.fly{animation:none;stroke-dashoffset:0}
+  @keyframes draw{to{stroke-dashoffset:0}}
+}
+/* Hoy */
+#hoy{padding-top:28px}
+.hoy{background:var(--surface);border-radius:16px;overflow:hidden;border-top:6px solid var(--c)}
+.hoyhd{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:16px 18px 8px}
+.hoyhd .k{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.hoyhd h2{font-size:clamp(1.6rem,4.5vw,2.3rem);margin:2px 0 0}
+.hoyhd .sub2{color:var(--muted);font-size:.95rem;margin-top:4px}
+.hoynav{display:flex;gap:6px}
+.hoynav button{font:inherit;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--rule);background:var(--bg);color:var(--ink);font-size:1.2rem;cursor:pointer}
+.hoybody{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:14px;padding:6px 18px 18px}
+.hoybody .move{margin-top:0}
+.hoyside{display:grid;gap:10px;align-content:start}
+.hbox{background:var(--bg);border-radius:12px;padding:12px 14px;font-size:.95rem}
+.hbox h4{margin:0 0 6px;font-family:"Bricolage Grotesque",sans-serif;font-size:1rem}
+.hbox .big{font-family:"Bricolage Grotesque",sans-serif;font-size:1.8rem;font-weight:800;line-height:1.1}
+.hacts{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 18px}
+.hacts a{font-weight:700;font-size:.92rem;color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:7px 14px;text-decoration:none}
+.hacts a:hover{background:var(--c);color:#fff}
+.count{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline}
+.count b{font-family:"Bricolage Grotesque",sans-serif;font-size:3rem;line-height:1;color:var(--c)}
+@media (max-width:720px){.hoybody{grid-template-columns:1fr}}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.tool{font:inherit;font-size:.92rem;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer;min-height:40px}
+.tool:hover{border-color:var(--ink)}
+.netst{font-size:.85rem;color:var(--muted)}
+.offbox{margin-top:10px;background:var(--surface);border-radius:12px;padding:14px 16px;font-size:.94rem}
+.offbox .bar{height:10px;background:var(--bg);border-radius:999px;overflow:hidden;margin:10px 0 6px}
+.offbox .bar i{display:block;height:100%;width:0;background:var(--s2);transition:width .2s}
+.offbox button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:8px 16px;background:var(--s2);color:#fff;cursor:pointer;margin-top:8px}
+@media (max-width:560px){
+  .hero{padding:22px 0 8px}
+  .hero h1{font-size:2.15rem}
+  .hero p.lede{display:none}
+  .groups{display:flex;overflow-x:auto;gap:8px;margin-top:16px;scroll-snap-type:x mandatory;padding-bottom:4px}
+  .group{flex:0 0 80%;scroll-snap-align:start;padding:10px 14px}
+  .group b{font-size:1.05rem}
+  #hoy{padding-top:16px}
+}

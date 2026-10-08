@@ -1,0 +1,5 @@
+/* Mapas reales (Leaflet): marcadores numerados. */
+.pin{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--c);color:#fff;font:700 13px "Atkinson Hyperlegible",sans-serif;border:2.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.pin.o{background:#fff;color:var(--c);border-color:var(--c)}
+.pin.big{width:auto;min-width:26px;padding:0 8px;border-radius:13px;white-space:nowrap}
+.leaflet-container{font-family:"Atkinson Hyperlegible",sans-serif;isolation:isolate;z-index:0}

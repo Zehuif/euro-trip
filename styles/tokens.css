@@ -1,0 +1,19 @@
+/* Colores del sitio (claro y oscuro). Cambiar aquí cambia todo el sitio. */
+:root{
+  --bg:#F3F5F7; --surface:#FFFFFF; --ink:#172033; --muted:#566275; --rule:#D6DCE4;
+  --s1:#2C4FC9; --s2:#167A57; --s3:#B5790A;
+  --s1-soft:#E6ECFB; --s2-soft:#E2F2EB; --s3-soft:#FBF0DA;
+  --focus:#2C4FC9; --must:#B3261E; --must-soft:#FCE8E6; --sea:#E4ECF4; --land:#F7F8FA; --land-v:#FFFFFF; --border:#B9C3D0;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10151F; --surface:#182030; --ink:#E9EDF3; --muted:#A3AEBE; --rule:#2B3547;
+    --s1:#7E9BFF; --s2:#4CC79A; --s3:#F0B54A;
+    --s1-soft:#1D2848; --s2-soft:#16302A; --s3-soft:#36290F; --focus:#7E9BFF; --must:#FF8A80; --must-soft:#3A1A19; --sea:#0C111A; --land:#1C2433; --land-v:#253045; --border:#3A465B;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10151F; --surface:#182030; --ink:#E9EDF3; --muted:#A3AEBE; --rule:#2B3547;
+  --s1:#7E9BFF; --s2:#4CC79A; --s3:#F0B54A;
+  --s1-soft:#1D2848; --s2-soft:#16302A; --s3-soft:#36290F; --focus:#7E9BFF; --must:#FF8A80; --must-soft:#3A1A19; --sea:#0C111A; --land:#1C2433; --land-v:#253045; --border:#3A465B;
+}

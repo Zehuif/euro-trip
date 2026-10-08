@@ -1,0 +1,38 @@
+/* Dónde comer: mapa, filtros, platos típicos y tarjetas de restaurantes. */
+.cpanel{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:16px;align-items:start}
+.cmapcol{position:sticky;top:76px}
+.cmap{height:min(62vh,520px);border-radius:14px;overflow:hidden;background:var(--surface)}
+.cnote{margin:6px 2px 0;font-size:.82rem;color:var(--muted)}
+.clist{display:grid;gap:10px}
+.rcard{background:var(--surface);border-radius:12px;padding:14px 16px;border:2px solid transparent;cursor:pointer;display:grid;grid-template-columns:30px 1fr;gap:4px 12px;transition:border-color .15s}
+.rcard:hover{border-color:var(--rule)}
+.rcard.on{border-color:var(--c)}
+.rcard .nb{width:28px;height:28px;border-radius:50%;background:var(--c);color:#fff;font-weight:700;font-size:.85rem;display:grid;place-items:center;grid-column:1;grid-row:1 / span 7;align-self:start}
+.rcard > :not(.nb){grid-column:2;min-width:0}
+.rcard h3{font-size:1.15rem;margin:2px 0 0;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.rcard .tags{display:flex;flex-wrap:wrap;gap:6px;font-size:.78rem}
+.rcard .tags span{border-radius:999px;padding:3px 9px;background:var(--bg);color:var(--muted)}
+.rcard .tags .pr{background:var(--c);color:#fff;font-weight:700}
+.rcard p{margin:4px 0 0;font-size:.95rem}
+.rcard .order{font-size:.92rem;margin-top:4px}
+.rcard .order b{color:var(--c)}
+.rcard .addr{font-size:.88rem;color:var(--muted);margin-top:4px}
+.rcard .addr::before{content:'📍 '}
+.rcard .acts{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:8px}
+.rcard .acts a{display:inline-flex;align-items:center;font-size:.82rem;font-weight:700;line-height:1.2;color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:4px 10px;text-decoration:none;white-space:nowrap}
+.rcard .acts a:hover{background:var(--c);color:#fff}
+.cfil{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.cfil button{font:inherit;font-size:.85rem;border:1.5px solid var(--rule);background:transparent;color:var(--muted);padding:5px 12px;border-radius:999px;cursor:pointer}
+.cfil button[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);font-weight:700}
+.cdish{background:var(--surface);border-radius:12px;padding:12px 14px;margin:0 0 14px}
+.cdish h3{font-size:1rem;margin:0 0 8px}
+.cdish .chips2{display:flex;flex-wrap:wrap;gap:6px}
+.cdish button{font:inherit;font-size:.85rem;border:1.5px solid var(--c);background:transparent;color:var(--ink);padding:5px 11px;border-radius:999px;cursor:pointer}
+.cdish button[aria-pressed="true"]{background:var(--c);color:#fff}
+.cdish p{margin:8px 0 0;font-size:.92rem;color:var(--muted)}
+.cdish p b{color:var(--ink)}
+.rcard .tags .ty{background:transparent;border:1.5px solid var(--c);color:var(--c);font-weight:700}
+.cempty{background:var(--surface);border-radius:12px;padding:16px;color:var(--muted)}
+.clegend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px;font-size:.88rem;color:var(--muted)}
+.clegend b{color:var(--ink)}
+@media (max-width:820px){.cpanel{grid-template-columns:1fr}.cmapcol{position:static}.cmap{height:260px}}

@@ -1,0 +1,32 @@
+<div class="hero">
+  <div class="wrap">
+    <p class="kick"><span>9 ene – 11 feb 2027</span><span>6 países</span><span>14 ciudades</span></p>
+    <h1>Europa en familia, día por día</h1>
+    <p class="lede">Del 9 de enero al 11 de febrero de 2027. Seis países, catorce ciudades y un grupo que cambia de tamaño en el camino: aquí está cada traslado, cada entrada y dónde dormir.</p>
+    <div class="groups">
+      <div class="group" style="--c:var(--s1)"><b>Etapa 1: 6 personas</b><span>9 al 16 de enero. Madrid, Barcelona y llegada a París. 3 maletas de 23 kg.</span></div>
+      <div class="group" style="--c:var(--s2)"><b>Etapa 2: 7 personas</b><span>16 de enero al 2 de febrero. Cui se une en París. Suiza e Italia hasta Roma.</span></div>
+      <div class="group" style="--c:var(--s3)"><b>Etapa 3: 4 personas</b><span>2 al 11 de febrero. Solo equipaje de mano. Nápoles, Atenas, Lisboa y Madrid.</span></div>
+    </div>
+  </div>
+</div>
+<section id="hoy">
+  <div class="wrap">
+    <div class="hoy" id="hoyCard"></div>
+    <div class="tools">
+      <button type="button" class="tool" data-action="offline-toggle">📥 Guardar para usar sin internet</button>
+      <button type="button" class="tool" data-action="print">🖨️ Imprimir resumen</button>
+      <span class="netst" id="netSt"></span>
+    </div>
+    <div class="offbox" id="offBox" hidden></div>
+  </div>
+</section>
+<section id="ruta"><div class="wrap"><h2 class="h2s">La ruta</h2></div>
+  <div class="wrap">
+    <div class="route" aria-label="Mapa de la ruta">
+      <div class="route-scroll"><svg id="routeSvg" viewBox="0 0 1000 170" role="img" aria-label="Ruta: Madrid, Barcelona, París, Zúrich, Lucerna, Chur, Milán, Venecia, Florencia, Roma, Nápoles, Atenas, Lisboa, Madrid"></svg></div>
+      <div class="legend"><span><i></i>Tren (el grosor indica cuántos viajan)</span><span><i class="dash"></i>Avión</span><span>Número sobre cada ciudad: noches</span></div>
+    </div>
+  </div>
+</section>
+<section id="atajos"><div class="wrap"><h2 class="h2s">Todo el viaje</h2><div class="tiles" id="tiles"></div></div></section>

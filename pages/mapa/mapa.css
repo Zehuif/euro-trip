@@ -1,0 +1,33 @@
+/* Mapa del viaje día por día. */
+/* Map */
+.mapbox{background:var(--surface);border-radius:14px;overflow:hidden}
+.mapctl{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
+.mapctl button{font:inherit;font-size:.95rem;border:1.5px solid var(--rule);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer;min-height:40px}
+.mapctl button.arrow{width:44px;padding:0;font-size:1.2rem}
+.mapctl .lbl{flex:1;min-width:180px}
+.mapctl .lbl b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;display:block;line-height:1.2}
+.mapctl .lbl span{font-size:.9rem;color:var(--muted)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 14px;border-bottom:1px solid var(--rule)}
+.chips button{flex:0 0 auto;font:inherit;font-size:.85rem;min-width:44px;min-height:40px;border-radius:10px;border:1.5px solid var(--c);background:var(--surface);color:var(--ink);cursor:pointer;line-height:1.1;padding:4px 6px}
+.chips button small{display:block;font-size:.7rem;color:var(--muted)}
+.chips button[aria-current="true"]{background:var(--c);color:var(--surface)}
+.chips button[aria-current="true"] small{color:var(--surface)}
+#map{display:block;width:100%;height:auto;background:var(--sea);aspect-ratio:1000/640}
+#map .land path{fill:var(--land);stroke:var(--border);stroke-width:.6;vector-effect:non-scaling-stroke}
+#map .land path.v{fill:var(--land-v);stroke:var(--muted)}
+#map .all path{fill:none;stroke-width:2.5;vector-effect:non-scaling-stroke;opacity:.35;stroke-linecap:round}
+#map .act path{fill:none;stroke-width:6;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+#map text{font-family:"Atkinson Hyperlegible",sans-serif;fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-linejoin:round}
+#map text.on{font-weight:700}
+.mapinfo{padding:14px 16px;display:grid;gap:6px}
+.gwrap{display:none;background:var(--sea)}
+.lmain{height:min(70vh,560px);width:100%}
+.gwrap .gnote{font-size:.85rem;color:var(--muted);padding:8px 14px;background:var(--surface);border-top:1px solid var(--rule)}
+#mapbox.g #map{display:none}
+#mapbox.g .gwrap{display:block}
+.mapctl button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.mapinfo .mv{font-size:.96rem}
+.mapinfo .mv strong{color:var(--c)}
+.mapinfo .hl{color:var(--muted);font-size:.95rem}
+.mapinfo a{font-weight:700;color:var(--c)}
+.mapinfo .minis{margin-top:4px}

@@ -1,0 +1,4 @@
+/* Antes de viajar. */
+.notes{columns:2 320px;column-gap:28px}
+.notes p{break-inside:avoid;margin:0 0 16px}
+.notes b{font-family:"Bricolage Grotesque",sans-serif}

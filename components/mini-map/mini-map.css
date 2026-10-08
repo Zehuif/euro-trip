@@ -1,0 +1,23 @@
+/* Mapas de paradas de cada día (dibujo simple que se convierte en mapa real). */
+.lmini{height:320px;width:100%;background:var(--surface)}
+.lmini .minisvg{height:100%}
+@media (max-width:560px){.lmini{height:260px}}
+.minis{display:grid;gap:12px;margin-top:12px}
+.mini{border:1.5px solid var(--rule);border-radius:10px;overflow:hidden;background:var(--bg)}
+.minihd{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 12px;font-size:.92rem;border-bottom:1px solid var(--rule);background:var(--surface)}
+.minihd b{font-family:"Bricolage Grotesque",sans-serif}
+.minihd span{color:var(--muted)}
+.minisvg{display:block;width:100%;height:auto;background:repeating-linear-gradient(0deg,transparent 0 29px,var(--rule) 29px 30px),repeating-linear-gradient(90deg,transparent 0 29px,var(--rule) 29px 30px);background-color:var(--surface);background-blend-mode:normal}
+.minisvg text.ml{fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round;font-family:"Atkinson Hyperlegible",sans-serif}
+.minisvg text{font-family:"Atkinson Hyperlegible",sans-serif}
+.legend2{list-style:none;margin:0;padding:6px 12px;background:var(--surface);border-top:1px solid var(--rule);font-size:.93rem}
+.legend2 li{display:grid;grid-template-columns:30px 1fr auto;gap:8px;align-items:center;padding:5px 0;border-bottom:1px dashed var(--rule)}
+.legend2 li:last-child{border-bottom:0}
+.legend2 .nb{width:24px;height:24px;border-radius:50%;background:var(--c);color:var(--surface);font-weight:700;font-size:.8rem;display:grid;place-items:center}
+.legend2 .nb.o{background:var(--surface);color:var(--c);border:2.5px solid var(--c)}
+.legend2 .p{color:var(--muted);font-size:.86rem;text-align:right}
+@media (max-width:560px){.legend2 li{grid-template-columns:30px 1fr}.legend2 .p{grid-column:2;text-align:left}}
+.mini details{padding:4px 12px;font-size:.92rem;background:var(--surface);border-top:1px solid var(--rule)}
+.mini summary{cursor:pointer;padding:6px 0;color:var(--muted)}
+.gm{display:block;padding:9px 12px;font-size:.92rem;font-weight:700;color:var(--c);background:var(--surface);border-top:1px solid var(--rule);text-decoration:none}
+.gm:hover{text-decoration:underline}

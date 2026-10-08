@@ -1,0 +1,24 @@
+<section id="mapa">
+  <div class="wrap">
+    <h2>Mapa del viaje, día por día</h2>
+    <p class="sub">Elijan un día para ver su ruta entre ciudades y, debajo, el mapa de los destinos de ese día con distancias a pie. Línea continua es tren, línea punteada es avión.</p>
+    <div class="mapbox" id="mapbox">
+      <div class="mapctl">
+        <button type="button" class="arrow" id="mPrev" aria-label="Día anterior">&#8249;</button>
+        <div class="lbl" aria-live="polite"><b id="mTitle"></b><span id="mSub"></span></div>
+        <button type="button" class="arrow" id="mNext" aria-label="Día siguiente">&#8250;</button>
+        <button type="button" id="mAll">Ver todo el viaje</button>
+        <button type="button" id="mG" aria-pressed="false">Mapa real</button>
+      </div>
+      <div class="chips" id="mChips" role="group" aria-label="Elegir día"></div>
+      <svg id="map" viewBox="0 0 1000 640" role="img" aria-label="Mapa de Europa con la ruta del viaje">
+        <g class="land" id="mLand"></g>
+        <g class="all" id="mAllRoute"></g>
+        <g class="act" id="mAct"></g>
+        <g id="mDots"></g>
+      </svg>
+      <div class="gwrap" id="gWrap"><div id="lMain" class="lmain"></div><div class="gnote">Mapa real con la ruta del día. Arriba a la derecha pueden cambiar entre satélite y mapa de calles. Línea continua: tren; punteada: avión. Arrastren para moverse y usen + y − para acercar.</div></div>
+      <div class="mapinfo" id="mInfo"></div>
+    </div>
+  </div>
+</section>
