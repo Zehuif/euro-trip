@@ -78,7 +78,7 @@ function miniMap(cl){
     return `<li><span class="nb${t ? ' o' : ''}">${labels[i]}</span><span class="nm">${t ? p[0] : `<button type="button" class="pl" data-q="${escapeAttr(p[0])}" data-c="${cl.c}">${p[0]}</button>`}</span><span class="p">${d}</span></li>`;
   }).join('');
   const head = cl.dep
-    ? `<b>Salida de ${cl.c}</b><span>Del alojamiento a ${s[s.length - 1][0]}, ${fmtD(tot)}</span>`
+    ? `<b>Mañana: salida de ${cl.c}</b><span>Del alojamiento a ${s[s.length - 1][0]}, ${fmtD(tot)}</span>`
     : `<b>${cl.c}</b><span>${plural(s.filter(p => !p[3]).length, ' parada', ' paradas')}, ${fmtD(tot)} en total</span>`;
   return `<div class="mini${cl.dep ? ' dep' : ''}"><div class="minihd">${head}</div>
    <div class="lmini" data-cl="${CLS.push(cl) - 1}">${sketchSVG(cl)}</div>

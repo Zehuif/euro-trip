@@ -33,5 +33,3 @@ ul.items li.o > span:first-child{font-weight:700}
 .depart{margin:10px 0 4px;padding:10px 12px;border-radius:8px;border:1.5px dashed var(--c);font-size:.96rem}
 .depart strong{color:var(--c)}
 .depart a{font-weight:700;color:var(--c);white-space:nowrap}
-.hoybody .depart{margin-top:0}
-.hoybody .depart + .move{margin-top:8px}

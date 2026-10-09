@@ -1,5 +1,6 @@
 // Piezas HTML de un día del itinerario, compartidas por la página Itinerario y la tarjeta «Hoy» de la portada.
 import { TICKETS, NOMAP, BUY } from '../../js/data/tickets.js';
+import { DAYS } from '../../js/data/days.js';
 import { DSTOPS } from '../../js/data/day-stops.js';
 import { ext, escapeAttr } from '../../js/lib/dom.js';
 import { hav, gmaps } from '../../js/lib/geo.js';
@@ -17,11 +18,12 @@ export const buyHTML = mv => {
   return b ? `<div class="buylinks">Comprar pasajes: ${b.map(l => ext(l[0] + ' ↗', l[1], 'tk')).join('')}</div>` : '';
 };
 
-// Aviso del último día en una ciudad: del alojamiento a la estación o aeropuerto de salida (grupo dep de js/data/day-stops.js)
+// Aviso del último día en una ciudad: mañana salen del alojamiento a la estación o aeropuerto (grupo dep de js/data/day-stops.js)
 export function departHTML(i){
   const cl = (DSTOPS[i] || []).find(c => c.dep); if(!cl) return '';
   const s = cl.s, km = s.slice(1).reduce((a, p, j) => a + hav(s[j], p), 0);
-  return `<div class="depart">🧳 <strong>Último día en ${cl.c}.</strong> Salgan del alojamiento hacia <b>${s[s.length - 1][0]}</b> (${fmtD(km)}). ${ext('Cómo llegar ↗', gmaps(cl), '')}</div>`;
+  const next = DAYS[i + 1], trip = next && next.move ? ` Viaje: ${next.move.t}.` : '';
+  return `<div class="depart">🧳 <strong>Último día en ${cl.c}.</strong> Mañana${next ? ` (${next.wd} ${next.n} ${next.m})` : ''} salen del alojamiento hacia <b>${s[s.length - 1][0]}</b> (${fmtD(km)}).${trip} ${ext('Cómo llegar ↗', gmaps(cl), '')}</div>`;
 }
 
 // Traslado del día

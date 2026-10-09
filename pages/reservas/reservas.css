@@ -21,3 +21,5 @@
 /* Estaciones de trenes y vuelos */
 td small.via{display:block;margin-top:4px;color:var(--muted);font-size:.85rem}
 td small.via a{font-weight:400}
+td.stay{white-space:nowrap}
+#lodging td:first-child{white-space:nowrap}

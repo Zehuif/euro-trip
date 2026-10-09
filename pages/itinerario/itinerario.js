@@ -27,9 +27,9 @@ function dayHTML(d, i, pic){
     <div class="date"><span class="wd">${d.wd}</span><span class="n">${d.n}</span><span class="m">${d.m}</span><span class="ppl">${d.ppl} personas</span></div>
     <div class="body">
       <div class="title"><h4>${d.city}</h4><span class="flag"><span class="wx" data-wx="${i}"></span> ${CN[d.cc]}</span></div>
-      ${departHTML(i)}
       ${moveHTML(d.move)}
       ${itemsHTML(d)}
+      ${departHTML(i)}
       <div class="minis">${dayMaps(i)}</div>
       <div class="meta"><span>Dormir en <b>${d.sleep}</b></span>${eatLinks(d.city)}<span>Traslados y entradas: <b>~${eur(d.cost)}</b> por persona</span></div>
       <p class="tip">${d.tip}</p>

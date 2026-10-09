@@ -6,6 +6,7 @@ import { BUY, siteFor } from '../../js/data/tickets.js';
 import { STATIONS, stationURL } from '../../js/data/stations.js';
 import { $, ext } from '../../js/lib/dom.js';
 import { eur } from '../../js/lib/format.js';
+import { STAYS } from '../../js/lib/stays.js';
 
 const shortName = n => n.replace(/ \(.*\)$/, '');
 
@@ -31,8 +32,8 @@ function renderMoves(){
 }
 
 function renderLodging(){
-  $('lodging').innerHTML = LODGING.map(l =>
-    `<tr style="--c:${ST[l[6]].c}"><td><span class="dot"></span>${l[0]}</td><td><b>${l[1]}</b></td><td class="num">${l[2]}</td><td class="num">${l[3]}</td><td class="num">${eur(l[4][0])}–${eur(l[4][1])}</td><td>${l[5]}</td></tr>`).join('');
+  $('lodging').innerHTML = LODGING.map((l, i) =>
+    `<tr style="--c:${ST[l[6]].c}"><td><span class="dot"></span>${l[0]}</td><td class="stay">Entrada <b>${STAYS[i].checkIn}</b><br>Salida <b>${STAYS[i].checkOut}</b></td><td><b>${l[1]}</b></td><td class="num">${l[2]}</td><td class="num">${l[3]}</td><td class="num">${eur(l[4][0])}–${eur(l[4][1])}</td><td>${l[5]}</td></tr>`).join('');
 }
 
 export function initReservas(){
