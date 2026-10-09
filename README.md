@@ -1,6 +1,6 @@
 # Europa en familia 2027
 
-Guía del viaje (9 ene – 11 feb 2027) como sitio estático y PWA instalable que funciona sin internet. Sin dependencias ni paso de compilación: HTML, CSS y módulos de JavaScript nativos.
+Guía del viaje (9 ene – 10 feb 2027) como sitio estático y PWA instalable que funciona sin internet. Sin dependencias ni paso de compilación: HTML, CSS y módulos de JavaScript nativos.
 
 ## Ver en local
 

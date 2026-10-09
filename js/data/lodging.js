@@ -10,7 +10,6 @@ export const LODGING = [
  ['Venecia','Cannaregio, cerca de Santa Lucia',2,7,[400,600],'Evita cruzar puentes con maletas grandes.',2],
  ['Florencia','Santa Maria Novella y centro',3,7,[300,450],'Junto a la estación y a 10 min a pie del Duomo.',2],
  ['Roma','Monti',3,7,[320,480],'A pasos del Coliseo y cerca de Termini.',2],
- ['Roma','Monti (una noche más)',1,4,[150,250],'Los 4 que siguen viaje antes de ir a Nápoles.',3],
  ['Nápoles','Via Toledo y centro histórico',2,4,[110,180],'Zona más segura y bien conectada con Napoli Centrale.',3],
  ['Atenas','Plaka y Syntagma',3,4,[110,190],'Bajo la Acrópolis, con metro directo al aeropuerto.',3],
  ['Lisboa','Baixa y Chiado',2,4,[130,220],'Plano en la Baixa, con tranvías y metro al aeropuerto.',3],

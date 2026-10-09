@@ -10,7 +10,7 @@ import { avgTemp } from './weather.js';
 import { escapeHTML as esc } from '../lib/dom.js';
 
 function buildPrint(){
-  let h = `<h1>Europa en familia: 9 de enero al 11 de febrero de 2027</h1><div class="muted">Etapa 1: 6 personas (9–16 ene) · Etapa 2: 7 personas (16 ene–2 feb) · Etapa 3: 4 personas (2–11 feb). Emergencias en todos los países: 112.</div>`;
+  let h = `<h1>Europa en familia: 9 de enero al 10 de febrero de 2027</h1><div class="muted">Etapa 1: 6 personas (9–16 ene) · Etapa 2: 7 personas (16 ene–2 feb) · Etapa 3: 4 personas (2–10 feb). Emergencias en todos los países: 112.</div>`;
 
   h += '<h2>Día a día</h2>';
   DAYS.forEach(d => {
