@@ -21,3 +21,4 @@
 .mini summary{cursor:pointer;padding:6px 0;color:var(--muted)}
 .gm{display:block;padding:9px 12px;font-size:.92rem;font-weight:700;color:var(--c);background:var(--surface);border-top:1px solid var(--rule);text-decoration:none}
 .gm:hover{text-decoration:underline}
+.mini.dep{border-style:dashed;border-color:var(--c)}

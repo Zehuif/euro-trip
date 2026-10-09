@@ -7,7 +7,7 @@ import { $ } from '../../js/lib/dom.js';
 import { eur } from '../../js/lib/format.js';
 import { readJSON, writeJSON } from '../../js/lib/storage.js';
 import { fetchCityPhotos } from '../../js/services/wikipedia.js';
-import { moveHTML, itemsHTML } from '../../components/day-card/day-card.js';
+import { departHTML, moveHTML, itemsHTML } from '../../components/day-card/day-card.js';
 import { dayMaps, initMinis } from '../../components/mini-map/mini-map.js';
 import { showDay } from '../mapa/mapa.js';
 
@@ -18,7 +18,7 @@ const stageHead = st => `<div class="stage-head" data-st="${st}" style="--c:${ST
 
 const eatLinks = city => {
   const fc = FOODCITY[city]; if(!fc) return '';
-  return `<a class="eat" href="#comer" data-city="${fc}">Dónde comer en ${FOOD_NAMES[fc]} →</a><a class="eat tip" href="#tips" data-tip="${fc}">Tips de ${FOOD_NAMES[fc]} →</a>`;
+  return `<a class="eat" href="#comer" data-city="${fc}">Dónde comer en ${FOOD_NAMES[fc]} →</a><a class="eat" href="#tips" data-tip="${fc}">Tips de ${FOOD_NAMES[fc]} →</a>`;
 };
 
 function dayHTML(d, i, pic){
@@ -27,6 +27,7 @@ function dayHTML(d, i, pic){
     <div class="date"><span class="wd">${d.wd}</span><span class="n">${d.n}</span><span class="m">${d.m}</span><span class="ppl">${d.ppl} personas</span></div>
     <div class="body">
       <div class="title"><h4>${d.city}</h4><span class="flag"><span class="wx" data-wx="${i}"></span> ${CN[d.cc]}</span></div>
+      ${departHTML(i)}
       ${moveHTML(d.move)}
       ${itemsHTML(d)}
       <div class="minis">${dayMaps(i)}</div>

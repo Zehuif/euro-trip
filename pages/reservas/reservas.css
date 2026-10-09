@@ -18,3 +18,6 @@
 .mcard .buy{margin-top:6px;font-size:.88rem;color:var(--must);font-weight:700}
 .reclist{margin-top:18px;background:var(--surface);border-radius:12px;padding:14px 18px;font-size:.95rem}
 .reclist b{font-family:"Bricolage Grotesque",sans-serif}
+/* Estaciones de trenes y vuelos */
+td small.via{display:block;margin-top:4px;color:var(--muted);font-size:.85rem}
+td small.via a{font-weight:400}

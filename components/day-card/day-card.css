@@ -12,7 +12,7 @@ a.tk{display:inline-block;font-size:.8rem;font-weight:700;line-height:1;padding:
 a.tk:hover{filter:brightness(1.1)}
 .buylinks{margin-top:6px;font-size:.9rem}
 .buylinks a.tk{margin:4px 6px 0 0}
-.tip{margin-top:10px;font-size:.95rem;font-style:italic;color:var(--muted)}
+p.tip{font-size:.95rem;font-style:italic;color:var(--muted)}
 /* Must-buy */
 ul.items li.o{background:var(--must-soft);border-bottom-color:transparent;border-radius:8px;padding:9px 10px;margin:4px -10px}
 ul.items li.o > span:first-child{font-weight:700}
@@ -29,3 +29,9 @@ ul.items li.o > span:first-child{font-weight:700}
 .wx.fc{background:var(--soft,var(--bg));color:var(--ink)}
 .eat{font-weight:700;color:var(--c);text-decoration:none}
 .eat:hover{text-decoration:underline}
+/* Último día en una ciudad: cómo llegar a la estación de salida */
+.depart{margin:10px 0 4px;padding:10px 12px;border-radius:8px;border:1.5px dashed var(--c);font-size:.96rem}
+.depart strong{color:var(--c)}
+.depart a{font-weight:700;color:var(--c);white-space:nowrap}
+.hoybody .depart{margin-top:0}
+.hoybody .depart + .move{margin-top:8px}

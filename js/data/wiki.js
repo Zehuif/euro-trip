@@ -3,7 +3,7 @@
 export const WIKI = {
  'Puerta del Sol y Plaza Mayor':'Puerta del Sol','Chocolate con churros en San Ginés':'Chocolatería San Ginés','Chocolatería San Ginés':'Chocolatería San Ginés',
  'Parque del Retiro':'Parque del Retiro','Palacio de Cristal':'Palacio de Cristal del Retiro','Puerta de Alcalá':'Puerta de Alcalá','Cibeles':'Fuente de Cibeles',
- 'Gran Vía':'Gran Vía (Madrid)','Tour Estadio Bernabéu':'Estadio Santiago Bernabéu','Barrio de las Letras':'Barrio de las Letras',
+ 'Gran Vía':'Gran Vía (Madrid)','Barrio de las Letras':'Barrio de las Letras',
  'Barrio Gótico':'Barrio Gótico de Barcelona','Catedral de Barcelona':'Catedral de Barcelona','El Born y Santa María del Mar':'Santa María del Mar','Santa María del Mar':'Santa María del Mar',
  'Las Ramblas':'La Rambla de Barcelona','La Boquería':'Mercado de La Boquería','Casa Batlló':'Casa Batlló','La Pedrera':'Casa Milà','Paseo de Gracia':'Paseo de Gracia',
  'Mirador Bunkers del Carmel':'Turó de la Rovira','Bunkers del Carmel':'Turó de la Rovira','Barceloneta':'La Barceloneta','Teleférico de Montjuïc':'Teleférico de Montjuïc',
@@ -27,7 +27,12 @@ export const WIKI = {
  'Santuario y museo de Delfos':'Delfos','Delfos':'Delfos','Pueblo de montaña de Arachova':'Arájova','Arachova':'Arájova',
  'Alfama':'Alfama','Miradouro de Santa Luzia':'Mirador de Santa Lucía','Catedral (Sé)':'Catedral de Lisboa','Monasterio de los Jerónimos':'Monasterio de los Jerónimos de Belém',
  'Torre de Belém':'Torre de Belém','Pastéis de Belém':'Pastel de nata','Tranvía 28':'Tranvía de Lisboa',
- 'Catedral Primada':'Catedral de Toledo','Sinagoga de Santa María la Blanca':'Sinagoga de Santa María la Blanca','Miradores sobre el río Tajo':'Toledo','Mirador del Valle':'Toledo'
+ 'Catedral Primada':'Catedral de Toledo','Sinagoga de Santa María la Blanca':'Sinagoga de Santa María la Blanca','Miradores sobre el río Tajo':'Toledo','Mirador del Valle':'Toledo',
+ 'Puerta del Sol':'Puerta del Sol','Cava Baja':'Calle de la Cava Baja','Plaza de la Villa':'Plaza de la Villa','Plaza de Oriente':'Plaza de Oriente',
+ 'Fuente de Neptuno':'Fuente de Neptuno (Madrid)','Estanque Grande del Retiro':'Estanque grande del Retiro','Plaza de Cibeles':'Fuente de Cibeles',
+ 'Plaza de Santa Ana':'Plaza de Santa Ana','Plaza del Callao':'Plaza del Callao',
+ 'Plaça Reial':'Plaza Real (Barcelona)','Plaça de Sant Jaume':'Plaza de San Jaime','Pont del Bisbe':'Pont del Bisbe Barcelona','Plaça del Rei':'Plaza del Rey (Barcelona)',
+ 'Passeig del Born':'Paseo del Born','Plaça de Gaudí':'Plaza de Gaudí Barcelona','Casa Amatller':'Casa Amatller','Casa Lleó Morera':'Casa Lleó Morera','Port Vell':'Port Vell'
 };
 
 // Fotos reales de cada lugar (Wikipedia en inglés / Wikimedia Commons, licencias libres).

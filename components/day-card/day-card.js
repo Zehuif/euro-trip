@@ -1,6 +1,9 @@
 // Piezas HTML de un día del itinerario, compartidas por la página Itinerario y la tarjeta «Hoy» de la portada.
 import { TICKETS, NOMAP, BUY } from '../../js/data/tickets.js';
+import { DSTOPS } from '../../js/data/day-stops.js';
 import { ext, escapeAttr } from '../../js/lib/dom.js';
+import { hav, gmaps } from '../../js/lib/geo.js';
+import { fmtD } from '../../js/lib/format.js';
 
 // Nombre del lugar: botón que abre la información de Wikipedia, más enlaces oficiales de entradas si los hay
 export function placeHTML(name, city){
@@ -13,6 +16,13 @@ export const buyHTML = mv => {
   const b = BUY[mv.route];
   return b ? `<div class="buylinks">Comprar pasajes: ${b.map(l => ext(l[0] + ' ↗', l[1], 'tk')).join('')}</div>` : '';
 };
+
+// Aviso del último día en una ciudad: del alojamiento a la estación o aeropuerto de salida (grupo dep de js/data/day-stops.js)
+export function departHTML(i){
+  const cl = (DSTOPS[i] || []).find(c => c.dep); if(!cl) return '';
+  const s = cl.s, km = s.slice(1).reduce((a, p, j) => a + hav(s[j], p), 0);
+  return `<div class="depart">🧳 <strong>Último día en ${cl.c}.</strong> Salgan del alojamiento hacia <b>${s[s.length - 1][0]}</b> (${fmtD(km)}). ${ext('Cómo llegar ↗', gmaps(cl), '')}</div>`;
+}
 
 // Traslado del día
 export const moveHTML = mv => mv

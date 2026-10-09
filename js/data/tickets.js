@@ -4,7 +4,6 @@ export const TICKETS = [
  ['Palacio Real',[['Entradas','https://www.patrimonionacional.es']]],
  ['Museo del Prado',[['Entradas','https://www.museodelprado.es']]],
  ['Museo Reina Sofía',[['Entradas','https://www.museoreinasofia.es']]],
- ['Tour Estadio Bernabéu',[['Entradas','https://www.realmadrid.com']]],
  ['Barrio Gótico y Catedral',[['Catedral','https://catedralbcn.org']]],
  ['Sagrada Familia',[['Entradas','https://sagradafamilia.org']]],
  ['Casa Batlló o La Pedrera',[['Casa Batlló','https://www.casabatllo.es'],['La Pedrera','https://www.lapedrera.com']]],

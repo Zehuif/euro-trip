@@ -23,7 +23,8 @@ export const stopLabels = s => s.map((p, i) => p[3] === 'h' ? 'H' : p[3] === 't'
 export function gmaps(cl){
   const s = cl.s, enc = p => `${p[1]},${p[2]}`;
   const mode = cl.m || (s.some((p, i) => i && hav(s[i - 1], p) > WALK_KM) ? 'transit' : 'walking');
-  const wp = s.slice(1, -1).slice(0, 3).map(enc).join('|');
+  // Google Maps acepta hasta 9 paradas intermedias (3 en el navegador del teléfono)
+  const wp = s.slice(1, -1).slice(0, 9).map(enc).join('|');
   return `https://www.google.com/maps/dir/?api=1&origin=${enc(s[0])}&destination=${enc(s[s.length - 1])}${wp ? `&waypoints=${encodeURIComponent(wp)}` : ''}&travelmode=${mode === 'driving' ? 'driving' : mode}`;
 }
 

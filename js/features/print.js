@@ -4,6 +4,7 @@ import { LODGING } from '../data/lodging.js';
 import { EAT, FOOD_NAMES } from '../data/restaurants.js';
 import { TIPS } from '../data/tips.js';
 import { siteFor } from '../data/tickets.js';
+import { STATIONS } from '../data/stations.js';
 import { avgTemp } from './weather.js';
 import { escapeHTML as esc } from '../lib/dom.js';
 
@@ -23,8 +24,8 @@ function buildPrint(){
     h += `<tr><td>${d.n} ${d.m}</td><td>${esc(it[0].replace(/ \(.*\)$/, ''))}</td><td>${siteFor(it[0])[0]}</td><td>${esc(it[1])}</td></tr>`;
   }));
 
-  h += '</table><h2>Trenes y vuelos</h2><table><tr><th>Fecha</th><th>Tramo</th><th>Operador</th><th>Duración</th><th>Precio</th></tr>';
-  DAYS.filter(d => d.move).forEach(d => { h += `<tr><td>${d.n} ${d.m}</td><td>${esc(d.move.route)}</td><td>${esc(d.move.op)}</td><td>${esc(d.move.dur)}</td><td>${esc(d.move.pr)}</td></tr>`; });
+  h += '</table><h2>Trenes y vuelos</h2><table><tr><th>Fecha</th><th>Tramo</th><th>Sale de</th><th>Llega a</th><th>Operador</th><th>Duración</th><th>Precio</th></tr>';
+  DAYS.filter(d => d.move).forEach(d => { h += `<tr><td>${d.n} ${d.m}</td><td>${esc(d.move.route)}</td><td>${STATIONS[d.move.from][0]}</td><td>${STATIONS[d.move.to][0]}</td><td>${esc(d.move.op)}</td><td>${esc(d.move.dur)}</td><td>${esc(d.move.pr)}</td></tr>`; });
 
   h += '</table><h2>Dónde dormir</h2><table><tr><th>Ciudad</th><th>Zona</th><th>Noches</th><th>Personas</th></tr>';
   LODGING.forEach(l => { h += `<tr><td>${l[0]}</td><td>${esc(l[1])}</td><td>${l[2]}</td><td>${l[3]}</td></tr>`; });

@@ -3,6 +3,7 @@ import { DAYS } from '../../js/data/days.js';
 import { ST } from '../../js/data/stages.js';
 import { LODGING } from '../../js/data/lodging.js';
 import { BUY, siteFor } from '../../js/data/tickets.js';
+import { STATIONS, stationURL } from '../../js/data/stations.js';
 import { $, ext } from '../../js/lib/dom.js';
 import { eur } from '../../js/lib/format.js';
 
@@ -21,9 +22,12 @@ function renderTickets(){
   $('reclist').innerHTML = `<b>También conviene reservar</b>, aunque se puede comprar en el lugar: ${recs.join(', ')}.`;
 }
 
+const stationLink = k => ext(STATIONS[k][0] + ' ↗', stationURL(k), 'stn');
+const viaHTML = mv => mv.via ? `<small class="via">Pasando por ${mv.via.map(stationLink).join(', ')}</small>` : '';
+
 function renderMoves(){
   $('moves').innerHTML = DAYS.filter(d => d.move).map(d =>
-    `<tr style="--c:${ST[d.st].c}"><td><span class="dot"></span>${d.wd} ${d.n} ${d.m}</td><td>${d.move.route}</td><td>${d.move.op}</td><td>${d.move.dur}</td><td>${d.move.pr}</td><td>${(BUY[d.move.route] || []).map(l => ext(l[0], l[1], '')).join('<br>') || '—'}</td></tr>`).join('');
+    `<tr style="--c:${ST[d.st].c}"><td><span class="dot"></span>${d.wd} ${d.n} ${d.m}</td><td>${d.move.route}${viaHTML(d.move)}</td><td>${stationLink(d.move.from)}</td><td>${stationLink(d.move.to)}</td><td>${d.move.op}</td><td>${d.move.dur}</td><td>${d.move.pr}</td><td>${(BUY[d.move.route] || []).map(l => ext(l[0], l[1], '')).join('<br>') || '—'}</td></tr>`).join('');
 }
 
 function renderLodging(){
