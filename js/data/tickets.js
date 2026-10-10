@@ -55,7 +55,8 @@ export const BUY = {
  'Nápoles ⇄ Pompeya':[['EAV Circumvesuviana','https://www.eavsrl.it']],
  'Nápoles → Atenas':[['Aegean','https://www.aegeanair.com'],['Volotea','https://www.volotea.com'],FLY],
  'Atenas → Lisboa':[['TAP','https://www.flytap.com'],['Aegean','https://www.aegeanair.com'],FLY],
- 'Lisboa → Madrid → Toledo → Madrid':[['TAP','https://www.flytap.com'],['Iberia','https://www.iberia.com'],FLY,['Renfe (Avant a Toledo)','https://www.renfe.com']]
+ 'Lisboa → Madrid':[['Air Europa','https://www.aireuropa.com']],
+ 'Madrid ⇄ Toledo':[['Renfe (Avant)','https://www.renfe.com']]
 };
 
 export const SITES = {

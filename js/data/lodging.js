@@ -12,6 +12,6 @@ export const LODGING = [
  ['Roma','Monti',3,7,[320,480],'A pasos del Coliseo y cerca de Termini.',2],
  ['Nápoles','Via Toledo y centro histórico',2,4,[110,180],'Zona más segura y bien conectada con Napoli Centrale.',3],
  ['Atenas','Plaka y Syntagma',3,4,[110,190],'Bajo la Acrópolis, con metro directo al aeropuerto.',3],
- ['Lisboa','Baixa y Chiado',2,4,[130,220],'Plano en la Baixa, con tranvías y metro al aeropuerto.',3],
- ['Madrid','Barrio de las Letras, cerca de Atocha',1,4,[150,250],'A pasos de Atocha para volver de Toledo, y a 30 min del aeropuerto.',3]
+ ['Lisboa','Baixa y Chiado',1,4,[130,220],'Plano en la Baixa, con tranvías y metro al aeropuerto.',3],
+ ['Madrid','Barrio de las Letras, cerca de Atocha',2,4,[150,250],'A pasos de Atocha para ir y volver de Toledo, y a 30 min del aeropuerto.',3]
 ];

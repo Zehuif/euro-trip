@@ -45,10 +45,11 @@ export const DSTOPS = [
  [{c:'Atenas',s:[['Alojamiento en Plaka',37.9730,23.7310,'h'],['Acrópolis',37.9715,23.7257],['Museo de la Acrópolis',37.9685,23.7285],['Cambio de guardia, Syntagma',37.9753,23.7369]]}],
  [{c:'Atenas',m:'transit',s:[['Alojamiento en Plaka',37.9730,23.7310,'h'],['Ágora Antigua y Templo de Hefesto',37.9752,23.7219],['Monastiraki',37.9761,23.7255],['Estadio Panatenaico',37.9683,23.7411],['Funicular del Licabeto',37.9829,23.7432],['Monte Licabeto',37.9819,23.7433]]},
   {c:'Atenas',dep:true,s:[['Alojamiento en Plaka',37.973,23.731,'h'],['Plaza Syntagma (metro línea 3)',37.9755,23.7348,'t'],['Aeropuerto de Atenas',37.9364,23.9445,'t']]}],
- [{c:'Lisboa',m:'transit',s:[['Alojamiento en Baixa',38.7100,-9.1380,'h'],['Pastéis de Belém',38.6975,-9.2032],['Monasterio de los Jerónimos',38.6979,-9.2068],['Torre de Belém',38.6916,-9.2160]]}],
- [{c:'Lisboa',s:[['Alojamiento en Baixa',38.7100,-9.1380,'h'],['Tranvía 28, Martim Moniz',38.7160,-9.1355],['Catedral (Sé)',38.7098,-9.1335],['Miradouro de Santa Luzia',38.7118,-9.1302],['Alfama',38.7125,-9.1285]]},
+ [{c:'Lisboa',m:'transit',s:[['Alojamiento en Baixa',38.7100,-9.1380,'h'],['Pastéis de Belém',38.6975,-9.2032],['Monasterio de los Jerónimos',38.6979,-9.2068],['Torre de Belém',38.6916,-9.2160]]},
   {c:'Lisboa',dep:true,s:[['Alojamiento en Baixa',38.71,-9.138,'h'],['Aeropuerto de Lisboa',38.7742,-9.1342,'t']]}],
- [{c:'Toledo',s:[['Estación de Toledo',39.8662,-4.0115,'t'],['Catedral Primada',39.8570,-4.0237],['Sinagoga de Santa María la Blanca',39.8567,-4.0282],['Mirador del Valle',39.8510,-4.0200],['Estación de Toledo (tren a Madrid)',39.8662,-4.0115,'t']]},
+ [{c:'Lisboa',s:[['Alojamiento en Baixa',38.7100,-9.1380,'h'],['Tranvía 28, Martim Moniz',38.7160,-9.1355],['Catedral (Sé)',38.7098,-9.1335],['Miradouro de Santa Luzia',38.7118,-9.1302],['Alfama',38.7125,-9.1285],['Aeropuerto de Lisboa',38.7742,-9.1342,'t']]},
+  {c:'Madrid',m:'driving',s:[['Aeropuerto de Barajas',40.4919,-3.5933,'t'],['Alojamiento en Barrio de las Letras',40.4140,-3.6975,'h']]}],
+ [{c:'Toledo',s:[['Estación Madrid Puerta de Atocha',40.4065,-3.6895,'t'],['Estación de Toledo',39.8662,-4.0115,'t'],['Catedral Primada',39.8570,-4.0237],['Sinagoga de Santa María la Blanca',39.8567,-4.0282],['Mirador del Valle',39.8510,-4.0200],['Estación de Toledo (tren a Madrid)',39.8662,-4.0115,'t']]},
   {c:'Madrid',m:'driving',dep:true,s:[['Alojamiento en Barrio de las Letras',40.4140,-3.6975,'h'],['Aeropuerto de Barajas',40.4919,-3.5933,'t']]}],
  [{c:'Madrid',m:'driving',s:[['Alojamiento en Barrio de las Letras',40.4140,-3.6975,'h'],['Aeropuerto de Barajas',40.4919,-3.5933,'t']]}]
 ];
