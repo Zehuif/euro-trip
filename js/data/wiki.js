@@ -24,7 +24,7 @@ export const WIKI = {
  'Spaccanapoli':'Spaccanapoli','San Gregorio Armeno':'San Gregorio Armeno (Nápoles)','Capilla Sansevero':'Capilla Sansevero','Parque arqueológico de Pompeya':'Pompeya','Pompeya':'Pompeya',
  "Paseo marítimo y Castel dell'Ovo":"Castel dell'Ovo","Castel dell'Ovo":"Castel dell'Ovo",'Paseo marítimo':'Nápoles',
  'Barrio de Plaka':'Plaka','Anafiotika':'Anafiotika','Acrópolis':'Acrópolis de Atenas','Museo de la Acrópolis':'Nuevo Museo de la Acrópolis','Cambio de guardia':'Evzones','Plaza Syntagma':'Plaza Syntagma',
- 'Santuario y museo de Delfos':'Delfos','Delfos':'Delfos','Pueblo de montaña de Arachova':'Arájova','Arachova':'Arájova',
+ 'Ágora Antigua':'Ágora de Atenas','Monastiraki':'Monastiraki','Mercado de Monastiraki':'Monastiraki','Estadio Panatenaico':'Estadio Panathinaikó','Monte Licabeto':'Monte Licabeto',
  'Alfama':'Alfama','Miradouro de Santa Luzia':'Mirador de Santa Lucía','Catedral (Sé)':'Catedral de Lisboa','Monasterio de los Jerónimos':'Monasterio de los Jerónimos de Belém',
  'Torre de Belém':'Torre de Belém','Pastéis de Belém':'Pastel de nata','Tranvía 28':'Tranvía de Lisboa',
  'Catedral Primada':'Catedral de Toledo','Sinagoga de Santa María la Blanca':'Sinagoga de Santa María la Blanca','Miradores sobre el río Tajo':'Toledo','Mirador del Valle':'Toledo',
@@ -42,6 +42,6 @@ export const PHOTO = {
   zurich:['Grossmünster'], lucerna:['Kapellbrücke','Lucerne'], chur:['Brusio spiral viaduct','Bernina Express','Bernina railway'],
   milan:['Milan Cathedral'], venecia:['Grand Canal (Venice)','Venice'], florencia:['Florence Cathedral'],
   pisa:['Leaning Tower of Pisa'], roma:['Colosseum'], napoles:['Gulf of Naples','Naples'],
-  pompeya:['Pompeii'], atenas:['Parthenon'], delfos:['Delphi'], lisboa:['Trams in Lisbon','Lisbon'],
+  pompeya:['Pompeii'], atenas:['Parthenon'], lisboa:['Trams in Lisbon','Lisbon'],
   toledo:['Alcázar of Toledo','Toledo, Spain']
 };

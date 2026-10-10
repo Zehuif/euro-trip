@@ -33,8 +33,6 @@ export const STATIONS = {
   napAir:    ['Aeropuerto de Nápoles-Capodichino', 'Aeroporto di Napoli-Capodichino'],
   // Grecia y Portugal
   athAir:    ['Aeropuerto de Atenas', 'Aeropuerto Internacional de Atenas Eleftherios Venizelos'],
-  liosion:   ['Terminal de buses KTEL Liosion', 'KTEL Liosion Bus Terminal, Athens'],
-  delfos:    ['Delfos (sitio arqueológico)', 'Sitio arqueológico de Delfos'],
   lisAir:    ['Aeropuerto de Lisboa', 'Aeropuerto Humberto Delgado, Lisboa']
 };
 

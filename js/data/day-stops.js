@@ -43,7 +43,7 @@ export const DSTOPS = [
   {c:'Nápoles',dep:true,s:[['Alojamiento en Via Toledo',40.842,14.249,'h'],['Aeropuerto de Nápoles (bus Alibus)',40.886,14.2908,'t']]}],
  [{c:'Atenas',s:[['Plaza Syntagma (metro aeropuerto)',37.9755,23.7348,'t'],['Alojamiento en Plaka',37.9730,23.7310,'h'],['Anafiotika',37.9718,23.7290]]}],
  [{c:'Atenas',s:[['Alojamiento en Plaka',37.9730,23.7310,'h'],['Acrópolis',37.9715,23.7257],['Museo de la Acrópolis',37.9685,23.7285],['Cambio de guardia, Syntagma',37.9753,23.7369]]}],
- [{c:'Grecia central',m:'driving',s:[['Alojamiento en Plaka',37.9730,23.7310,'h'],['Arachova',38.4790,22.5850],['Delfos',38.4824,22.5010]]},
+ [{c:'Atenas',m:'transit',s:[['Alojamiento en Plaka',37.9730,23.7310,'h'],['Ágora Antigua y Templo de Hefesto',37.9752,23.7219],['Monastiraki',37.9761,23.7255],['Estadio Panatenaico',37.9683,23.7411],['Funicular del Licabeto',37.9829,23.7432],['Monte Licabeto',37.9819,23.7433]]},
   {c:'Atenas',dep:true,s:[['Alojamiento en Plaka',37.973,23.731,'h'],['Plaza Syntagma (metro línea 3)',37.9755,23.7348,'t'],['Aeropuerto de Atenas',37.9364,23.9445,'t']]}],
  [{c:'Lisboa',m:'transit',s:[['Alojamiento en Baixa',38.7100,-9.1380,'h'],['Pastéis de Belém',38.6975,-9.2032],['Monasterio de los Jerónimos',38.6979,-9.2068],['Torre de Belém',38.6916,-9.2160]]}],
  [{c:'Lisboa',s:[['Alojamiento en Baixa',38.7100,-9.1380,'h'],['Tranvía 28, Martim Moniz',38.7160,-9.1355],['Catedral (Sé)',38.7098,-9.1335],['Miradouro de Santa Luzia',38.7118,-9.1302],['Alfama',38.7125,-9.1285]]},

@@ -10,7 +10,7 @@ import { go } from '../../js/core/router.js';
 import { dayMaps, initMinis } from '../../components/mini-map/mini-map.js';
 
 const FULL = [0, 0, 1000, 640];               // viewBox completo del mapa SVG
-const LABEL_LEFT = new Set(['lisboa', 'toledo', 'pisa', 'lucerna', 'delfos']);  // nombres a la izquierda del punto
+const LABEL_LEFT = new Set(['lisboa', 'toledo', 'pisa', 'lucerna']);  // nombres a la izquierda del punto
 
 let cur = -1;                                  // día mostrado (-1 = todo el viaje)
 let vb = FULL.slice(), anim = null;

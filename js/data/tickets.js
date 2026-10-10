@@ -35,7 +35,6 @@ export const TICKETS = [
  ['Parque arqueológico de Pompeya',[['Entradas','https://www.pompeiisites.org']]],
  ['Acrópolis',[['Entradas','https://hhticket.gr']]],
  ['Museo de la Acrópolis',[['Entradas','https://www.theacropolismuseum.gr']]],
- ['Santuario y museo de Delfos',[['Entradas','https://hhticket.gr']]],
  ['Tranvía 28',[['Carris','https://www.carris.pt']]],
  ['Catedral Primada',[['Entradas','https://catedralprimada.es']]]
 ];
