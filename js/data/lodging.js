@@ -3,8 +3,8 @@
 export const LODGING = [
  ['Madrid','Sol (centro histórico)',4,6,[280,420],'Todo a pie: Plaza Mayor, Palacio Real y Prado. Busquen edificio con ascensor.',1],
  ['Barcelona','Eixample, cerca de Passeig de Gràcia',3,6,[300,450],'Plano, seguro, con metro directo a Sants y a la Sagrada Familia.',1],
- ['París','Le Marais',3,7,[450,700],'Céntrico y caminable; a 10 min en taxi de Gare de Lyon, donde llegan y de donde salen.',1],
- ['Lucerna','Casco antiguo, cerca de la estación',3,7,[450,700],'Base para Rigi y Titlis; barcos, trenes y centro histórico a pasos. Reemplaza la noche en Zúrich.',2],
+ ['París','Le Marais',4,7,[450,700],'Céntrico y caminable; a 10 min en taxi de Gare de Lyon, donde llegan y de donde salen.',1],
+ ['Lucerna','Casco antiguo, cerca de la estación',2,7,[450,700],'Base para el Titlis (y el Rigi opcional); barcos, trenes y centro histórico a pasos. Reemplaza la noche en Zúrich.',2],
  ['Chur','Cerca de la estación',1,7,[350,500],'El Bernina sale temprano desde ahí.',2],
  ['Milán','Centrale y Porta Venezia',2,7,[300,450],'Llegan y salen desde Milano Centrale; metro directo al Duomo.',2],
  ['Venecia','Cannaregio, cerca de Santa Lucia',2,7,[400,600],'Evita cruzar puentes con maletas grandes.',2],

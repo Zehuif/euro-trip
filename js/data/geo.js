@@ -9,8 +9,8 @@ export const MAIN = ['madrid','barcelona','paris','zurich','milan','venecia','fl
 export const DAY_ROUTES = [
  {p:['madrid'],m:'l'},{p:['madrid'],m:'l'},{p:['madrid'],m:'l'},{p:['madrid'],m:'l'},
  {p:['madrid','barcelona'],m:'t'},{p:['barcelona'],m:'l'},{p:['barcelona'],m:'l'},
- {p:['barcelona','paris'],m:'t'},{p:['paris'],m:'l'},{p:['paris'],m:'l'},
- {p:['paris','zurich','lucerna'],m:'t'},{p:['lucerna'],m:'l'},{p:['lucerna'],m:'l'},
+ {p:['barcelona','paris'],m:'t'},{p:['paris'],m:'l'},{p:['paris'],m:'l'},{p:['paris'],m:'l'},
+ {p:['paris','zurich','lucerna'],m:'t'},{p:['lucerna'],m:'l'},
  {p:['lucerna','chur'],m:'t'},{p:['chur','tirano','milan'],m:'t'},{p:['milan'],m:'l'},
  {p:['milan','venecia'],m:'t'},{p:['venecia'],m:'l'},{p:['venecia','florencia'],m:'t'},{p:['florencia'],m:'l'},
  {p:['florencia','pisa','lucca','florencia'],m:'t'},{p:['florencia','roma'],m:'t'},{p:['roma'],m:'l'},{p:['roma'],m:'l'},
@@ -21,7 +21,7 @@ export const DAY_ROUTES = [
 
 // Franja «La ruta»: [ciudad, noches, etapa]
 export const ROUTE_STOPS = [
-  ['Madrid',4,1],['Barcelona',3,1],['París',3,1],['Zúrich',0,2],['Lucerna',3,2],['Chur',1,2],
+  ['Madrid',4,1],['Barcelona',3,1],['París',4,1],['Zúrich',0,2],['Lucerna',2,2],['Chur',1,2],
   ['Milán',2,2],['Venecia',2,2],['Florencia',3,2],['Roma',3,2],['Nápoles',2,3],['Atenas',3,3],['Lisboa',1,3],['Madrid',2,3]
 ];
 // segment stage + mode (from stop i to i+1)

@@ -137,7 +137,7 @@ function showAll(){
   cur = -1; activeKeys = []; $('mAct').innerHTML = '';
   setVB(FULL); updateRealMap();
   $('mTitle').textContent = 'Todo el viaje';
-  $('mSub').textContent = '34 días, de Madrid a Madrid. Elijan un día para acercarse.';
+  $('mSub').textContent = '33 días, de Madrid a Madrid. Elijan un día para acercarse.';
   $('mInfo').innerHTML = '<div class="hl">Azul: grupo de 6. Verde: grupo de 7. Ámbar: grupo de 4.</div>';
   markChip(-1);
 }
