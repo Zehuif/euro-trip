@@ -1,7 +1,7 @@
 // Service worker: guarda la página y lo que se va viendo para usarlo sin internet.
 // Los archivos propios (HTML, CSS, JS) van primero a internet, para recibir cambios; sin conexión se usa lo guardado.
 // En la primera visita la página envía la lista de archivos que cargó (js/features/offline.js), así no hay que mantener una lista aquí.
-const SHELL = 'europa27-shell-v2', RT = 'europa27-datos-v1';
+const SHELL = 'europa27-shell-v3', RT = 'europa27-datos-v1';
 const SHELL_URLS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js',
@@ -24,8 +24,9 @@ self.addEventListener('message', e => {
 
 const FRESH = /api\.open-meteo\.com/;  // el clima: primero internet, si no hay, lo último guardado
 
-// Primero internet (y se guarda la respuesta); sin conexión, lo guardado
-const networkFirst = (req, cacheName, key = req) => fetch(req).then(r => {
+// Primero internet (y se guarda la respuesta); sin conexión, lo guardado.
+// cache: 'no-cache' obliga a revisar con el servidor, para no recibir una copia vieja de la caché del navegador.
+const networkFirst = (req, cacheName, key = req) => fetch(req.url, {cache:'no-cache'}).then(r => {
   if(r.ok){ const c = r.clone(); caches.open(cacheName).then(ca => ca.put(key, c)); }
   return r;
 }).catch(() => caches.match(key));

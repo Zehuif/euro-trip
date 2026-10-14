@@ -71,9 +71,4 @@ export const TIPS = {
   zones:[['Baixa y Plaza del Comercio','El centro reconstruido después del terremoto de 1755, plano y ordenado.'],['Chiado','Cafés históricos, librerías y el Elevador de Santa Justa.'],['Alfama','El barrio más antiguo, con escaleras, miradores y casas de fado.'],['Bairro Alto','Tranquilo de día y lleno de bares de noche.'],['Belém','El monasterio, la Torre y los pastéis originales.']],
   tips:['El suelo de piedra blanca (calçada) resbala mucho con lluvia: zapatos con buena suela.','Vean el atardecer en un miradouro: Santa Luzia, Graça o San Pedro de Alcántara.','En los restaurantes, el pan, las aceitunas o el queso que traen al inicio (couvert) se cobran si se comen.'],
   ojo:'En la Baixa ofrecen drogas a los turistas en la calle: no respondan y sigan caminando.'},
- toledo:{fares:[['Avant Madrid–Toledo, por tramo','~€14'],['Bus urbano estación–Zocodover','~€1,50']],
-  move:['La estación está fuera del casco antiguo y la subida es empinada: tomen bus o taxi hasta Zocodover.','Para volver, las escaleras mecánicas de Recaredo bajan gratis desde el casco antiguo hacia la muralla.'],
-  zones:[['Catedral Primada','Una de las grandes catedrales góticas de España, con obras del Greco.'],['Barrio judío','Sinagogas de Santa María la Blanca y del Tránsito, y la iglesia de Santo Tomé.'],['Plaza de Zocodover','La plaza principal, punto de encuentro y de partida.'],['Puente de San Martín','Puente medieval con vista al río Tajo.'],['Mirador del Valle','La postal clásica de Toledo, al otro lado del río (en taxi).']],
-  tips:['Es casi todo cuesta: calzado cómodo y paradas para descansar.','Si piensan entrar a varios monumentos, pregunten en Zocodover por la pulsera turística, que agrupa varias entradas.'],
-  ojo:'El último Avant a Madrid sale a media tarde-noche: revisen el horario y no lo dejen para el último.'}
 };

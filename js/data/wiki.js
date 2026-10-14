@@ -27,7 +27,11 @@ export const WIKI = {
  'Ágora Antigua':'Ágora de Atenas','Monastiraki':'Monastiraki','Mercado de Monastiraki':'Monastiraki','Estadio Panatenaico':'Estadio Panathinaikó','Monte Licabeto':'Monte Licabeto',
  'Alfama':'Alfama','Miradouro de Santa Luzia':'Mirador de Santa Lucía','Catedral (Sé)':'Catedral de Lisboa','Monasterio de los Jerónimos':'Monasterio de los Jerónimos de Belém',
  'Torre de Belém':'Torre de Belém','Pastéis de Belém':'Pastel de nata','Tranvía 28':'Tranvía de Lisboa',
- 'Catedral Primada':'Catedral de Toledo','Sinagoga de Santa María la Blanca':'Sinagoga de Santa María la Blanca','Miradores sobre el río Tajo':'Toledo','Mirador del Valle':'Toledo',
+ 'Santuario y museo de Delfos':'Delfos','Delfos':'Delfos','Pueblo de montaña de Arachova':'Arájova','Arachova':'Arájova',
+ 'Miradouro de São Pedro de Alcântara':'Mirador de San Pedro de Alcántara','Bairro Alto':'Barrio Alto (Lisboa)','Time Out Market':'Mercado da Ribeira',
+ 'Padrão dos Descobrimentos':'Monumento a los Descubrimientos','Praça do Comércio':'Plaza del Comercio (Lisboa)','Rua Augusta':'Rua Augusta','Chiado':'Chiado','Elevador de Santa Justa':'Elevador de Santa Justa','Castillo de San Jorge':'Castillo de San Jorge (Lisboa)','Manteigaria':'Pastel de nata',
+ 'Via Toledo':'Via Toledo','Galería Umberto I':'Galería Umberto I','Plaza del Plebiscito':'Plaza del Plebiscito','Via dei Tribunali':'Spaccanapoli',
+ 'Calle Preciados':'Calle de Preciados','El Corte Inglés':'El Corte Inglés','Barrio de Salamanca':'Barrio de Salamanca (Madrid)','Calle Serrano':'Calle de Serrano','Calle Fuencarral':'Calle de Fuencarral','Turrones':'Turrón','Casa Mira':'Turrón',
  'Puerta del Sol':'Puerta del Sol','Cava Baja':'Calle de la Cava Baja','Plaza de la Villa':'Plaza de la Villa','Plaza de Oriente':'Plaza de Oriente',
  'Fuente de Neptuno':'Fuente de Neptuno (Madrid)','Estanque Grande del Retiro':'Estanque grande del Retiro','Plaza de Cibeles':'Fuente de Cibeles',
  'Plaza de Santa Ana':'Plaza de Santa Ana','Plaza del Callao':'Plaza del Callao',
@@ -42,6 +46,5 @@ export const PHOTO = {
   zurich:['Grossmünster'], lucerna:['Kapellbrücke','Lucerne'], chur:['Brusio spiral viaduct','Bernina Express','Bernina railway'],
   milan:['Milan Cathedral'], venecia:['Grand Canal (Venice)','Venice'], florencia:['Florence Cathedral'],
   pisa:['Leaning Tower of Pisa'], roma:['Colosseum'], napoles:['Gulf of Naples','Naples'],
-  pompeya:['Pompeii'], atenas:['Parthenon'], lisboa:['Trams in Lisbon','Lisbon'],
-  toledo:['Alcázar of Toledo','Toledo, Spain']
+  pompeya:['Pompeii'], atenas:['Parthenon'], delfos:['Delphi'], lisboa:['Trams in Lisbon','Lisbon']
 };

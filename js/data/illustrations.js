@@ -60,6 +60,9 @@ export const ILL = {
  atenas: svgWrap(`<path d="M0 128Q150 70 300 74Q450 70 600 128Z" fill="${C}" opacity=".3"/>`+ground()+
   `<rect x="190" y="70" width="220" height="8" fill="${C}"/>`+columns(200,8,28,10,40,70)+
   `<rect x="194" y="32" width="212" height="8" fill="${C}"/><path d="M194 32L300 12L406 32Z" fill="${C}"/>`,'Partenón, Atenas'),
+ delfos: svgWrap(mtn('0,128 80,40 170,90 260,24 340,80 430,30 520,84 600,50 600,128','.25')+ground()+
+  `<path d="M220 118h160v10H220z" fill="${C}"/>`+columns(244,3,40,12,62,118)+
+  `<path d="M236 54h96v8h-96z" fill="${C}"/><rect x="364" y="96" width="12" height="22" fill="${C}"/>`,'Templo de Delfos'),
  lisboa: svgWrap(`<path d="M0 128Q120 50 260 96Q380 60 600 110V128Z" fill="${C}" opacity=".25"/>`+
   `<g fill="${C}" opacity=".45">${[30,60,90,330,360,390,420,470].map((x,i)=>`<rect x="${x}" y="${84+(i%3)*8}" width="24" height="${44-(i%3)*8}"/>`).join('')}</g>`+ground()+
   `<rect x="190" y="72" width="150" height="48" rx="8" fill="#E8A60C"/><rect x="190" y="104" width="150" height="6" fill="${S}" opacity=".9"/>
@@ -69,9 +72,5 @@ export const ILL = {
   `<g transform="rotate(5 300 128)"><rect x="280" y="34" width="40" height="94" fill="${C}"/><rect x="284" y="20" width="32" height="14" fill="${C}"/>
    ${[46,62,78,94,110].map(y=>`<rect x="280" y="${y}" width="40" height="2" fill="${K}"/>`).join('')}</g>
    <path d="M110 128V90L190 76L270 90V128Z" fill="${C}" opacity=".6"/><path d="M160 76a30 20 0 0 1 60 0z" fill="${C}" opacity=".6"/>`,'Torre inclinada de Pisa'),
- toledo: svgWrap(`<path d="M0 128Q160 70 300 66Q460 70 600 128Z" fill="${C}" opacity=".3"/>`+water+
-  `<rect x="330" y="40" width="110" height="40" fill="${C}"/>${[330,422].map(x=>`<rect x="${x-4}" y="26" width="22" height="54" fill="${C}"/><path d="M${x-6} 26l13 -16l13 16z" fill="${C}"/>`).join('')}
-   <rect x="200" y="54" width="70" height="30" fill="${C}" opacity=".8"/><rect x="226" y="18" width="12" height="40" fill="${C}"/><path d="M224 18l8 -16l8 16z" fill="${C}"/>
-   <g fill="${C}" opacity=".6"><rect x="120" y="76" width="60" height="16"/><rect x="460" y="76" width="70" height="16"/></g>`,'Alcázar y catedral de Toledo')
 };
-export const KEYS = {'Madrid':'madrid','Barcelona':'barcelona','París':'paris','Zúrich':'zurich','Zúrich y Lucerna':'zurich','Lucerna':'lucerna','Chur':'chur','Milán':'milan','Venecia':'venecia','Florencia':'florencia','Pisa y Lucca':'pisa','Roma':'roma','Roma: se separan':'roma','Nápoles':'napoles','Pompeya':'pompeya','Atenas':'atenas','Lisboa':'lisboa','Toledo':'toledo'};
+export const KEYS = {'Madrid':'madrid','Barcelona':'barcelona','París':'paris','Zúrich':'zurich','Zúrich y Lucerna':'zurich','Lucerna':'lucerna','Chur':'chur','Milán':'milan','Venecia':'venecia','Florencia':'florencia','Pisa y Lucca':'pisa','Roma':'roma','Roma: se separan':'roma','Nápoles':'napoles','Pompeya':'pompeya','Atenas':'atenas','Delfos':'delfos','Lisboa':'lisboa'};

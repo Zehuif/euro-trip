@@ -122,11 +122,6 @@ export const EAT = {
   ['Café A Brasileira','Café histórico','€','Café de 1905 en Chiado, con estatua de Fernando Pessoa en la terraza.','Bica (espresso lisboeta)','Rua Garrett 120',38.7107,-9.1424,'Chiado'],
   ['Casa da Índia','Tasca','€','Tasca popular de Bairro Alto con parrilla a la vista y precios bajos.','Frango piri-piri y sardinas asadas','Rua do Loreto 49',38.7110,-9.1450,'Bairro Alto'],
   ['Cervejaria Trindade','Cervecería','€€','Antigua cervecería en un convento, con salones de azulejos del siglo XIX.','Bitoque y almejas a Bulhão Pato','Rua Nova da Trindade 20C',38.7120,-9.1420,'Chiado']],
- toledo:[
-  ['Santo Tomé','Pastelería','€','Obrador tradicional del mazapán de Toledo, ideal para llevar de recuerdo.','Mazapán y figuritas de mazapán','Calle de Santo Tomé 3',39.8580,-4.0260,'Barrio judío'],
-  ['Bar Ludeña','Bar de tapas','€','Bar castizo conocido por un guiso típico toledano, servido como tapa o ración.','Carcamusas','Plaza de la Magdalena 10',39.8585,-4.0215,'Plaza de Zocodover'],
-  ['La Abadía','Cocina manchega','€€','Restaurante en sótanos abovedados del casco antiguo, con platos manchegos.','Perdiz estofada y queso manchego','Plaza de San Nicolás 3',39.8590,-4.0240,'Plaza de Zocodover'],
-  ['Adolfo','Alta cocina','€€€','Restaurante clásico de Toledo junto a la catedral, con cocina manchega refinada.','Platos de caza de temporada','Calle Hombre de Palo 7',39.8575,-4.0230,'Catedral Primada']]
 };
 // [plato, palabra clave para buscar en las tarjetas, descripción]
 export const DISHES = {
@@ -142,10 +137,9 @@ export const DISHES = {
  napoles:[['Pizza napolitana','pizza','Masa blanda y borde inflado: margherita o marinara.'],['Pizza frita','fritta','Pizza rellena y frita, la versión callejera.'],['Ragù napolitano','ragù','Salsa de tomate cocinada horas con carne.'],['Sfogliatella','sfogliatella','Pastel crujiente de hojaldre relleno de ricota.'],['Babà','babà','Bizcocho empapado en ron.']],
  atenas:[['Souvlaki','souvlaki','Brochetas o carne en pan pita con tzatziki.'],['Musaka','musaka','Pastel al horno de berenjena, carne y bechamel.'],['Spanakopita','spanakopita','Empanada de hojaldre con espinaca y queso feta.'],['Meze','meze','Platillos pequeños para compartir.'],['Loukoumades','loukoumades','Buñuelos con miel y canela.']],
  lisboa:[['Pastel de nata','pastel','Pastelito de hojaldre con crema, mejor tibio y con canela.'],['Bacalhau','bacalhau','Bacalao preparado de mil formas; à brás lleva huevo y papas paja.'],['Bifana','bifana','Sándwich de cerdo marinado.'],['Sardinas asadas','sardinas','Sardinas a la parrilla, clásicas de las tascas.'],['Mariscos','gambas','Gambas, almejas y percebes en las marisquerías.'],['Ginjinha','ginjinha','Licor de guinda que se toma en vasito.']],
- toledo:[['Carcamusas','carcamusas','Guiso de carne con tomate y arvejas, típico de Toledo.'],['Mazapán','mazapán','Dulce de almendra y azúcar, tradición de los conventos toledanos.'],['Perdiz estofada','perdiz','Perdiz guisada, plato de caza manchego.'],['Queso manchego','manchego','Queso de oveja de La Mancha.']]
 };
 export const NOT_TYPICAL = new Set(["L'As du Fallafel",'Hiltl','Marché des Enfants Rouges','Spontini',"Dal Moro's",'Time Out Market']);
 export const isTyp = r => !NOT_TYPICAL.has(r[0]);
-export const FOOD_NAMES = {madrid:'Madrid',barcelona:'Barcelona',paris:'París',zurich:'Zúrich',lucerna:'Lucerna',milan:'Milán',venecia:'Venecia',florencia:'Florencia',roma:'Roma',napoles:'Nápoles',atenas:'Atenas',lisboa:'Lisboa',toledo:'Toledo'};
-export const FOODCITY = {'Madrid':'madrid','Madrid: regreso a Chile':'madrid','Barcelona':'barcelona','París':'paris','Zúrich y Lucerna':'zurich','Lucerna':'lucerna','Milán':'milan','Venecia':'venecia','Florencia':'florencia','Pisa y Lucca':'florencia','Roma':'roma','Roma: se separan':'roma','Nápoles':'napoles','Pompeya':'napoles','Atenas':'atenas','Lisboa':'lisboa','Toledo':'toledo'};
-export const FOOD_ST = {madrid:1,barcelona:1,paris:2,zurich:2,lucerna:2,milan:2,venecia:2,florencia:2,roma:2,napoles:3,atenas:3,lisboa:3,toledo:3};
+export const FOOD_NAMES = {madrid:'Madrid',barcelona:'Barcelona',paris:'París',zurich:'Zúrich',lucerna:'Lucerna',milan:'Milán',venecia:'Venecia',florencia:'Florencia',roma:'Roma',napoles:'Nápoles',atenas:'Atenas',lisboa:'Lisboa'};
+export const FOODCITY = {'Madrid':'madrid','Madrid: regreso a Chile':'madrid','Barcelona':'barcelona','París':'paris','Zúrich y Lucerna':'zurich','Lucerna':'lucerna','Milán':'milan','Venecia':'venecia','Florencia':'florencia','Pisa y Lucca':'florencia','Roma':'roma','Roma: se separan':'roma','Nápoles':'napoles','Pompeya':'napoles','Atenas':'atenas','Delfos':'atenas','Lisboa':'lisboa'};
+export const FOOD_ST = {madrid:1,barcelona:1,paris:2,zurich:2,lucerna:2,milan:2,venecia:2,florencia:2,roma:2,napoles:3,atenas:3,lisboa:3};

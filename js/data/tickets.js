@@ -38,7 +38,8 @@ export const TICKETS = [
  ['Acrópolis',[['Entradas','https://hhticket.gr']]],
  ['Museo de la Acrópolis',[['Entradas','https://www.theacropolismuseum.gr']]],
  ['Tranvía 28',[['Carris','https://www.carris.pt']]],
- ['Catedral Primada',[['Entradas','https://catedralprimada.es']]]
+ ['Santuario y museo de Delfos',[['Entradas','https://hhticket.gr']]],
+ ['Castillo de San Jorge',[['Entradas','https://castelodesaojorge.pt']]]
 ];
 export const NOMAP = /^(Llegada|Mañana|Tarde|Cena|Almuerzo|Desayuno|Reserva de asiento|Pase de|Paseo en góndola|Alternativa|Pizza|Barco por|Viaducto circular)/;
 const FLY = ['Google Flights','https://www.google.com/travel/flights'];
@@ -50,14 +51,12 @@ export const BUY = {
  'Lucerna ⇄ Engelberg y Titlis':[['Titlis','https://www.titlis.ch'],['SBB','https://www.sbb.ch']],
  'Lucerna → Chur':[['SBB','https://www.sbb.ch']],
  'Chur → Tirano → Milán':[['Bernina Express (RhB)','https://www.rhb.ch'],['Trenord','https://www.trenord.it']],
- 'Milán → Venecia':IT_TRAIN, 'Venecia → Florencia':IT_TRAIN, 'Florencia → Roma':IT_TRAIN, 'Roma → Nápoles':IT_TRAIN,
+ 'Milán → Venecia':IT_TRAIN, 'Venecia → Florencia':IT_TRAIN, 'Florencia → Roma':IT_TRAIN,
  'Florencia ⇄ Pisa y Lucca':[['Trenitalia','https://www.trenitalia.com']],
- 'Roma Termini → Fiumicino':[['Leonardo Express (Trenitalia)','https://www.trenitalia.com']],
- 'Nápoles ⇄ Pompeya':[['EAV Circumvesuviana','https://www.eavsrl.it']],
- 'Nápoles → Atenas':[['Aegean','https://www.aegeanair.com'],['Volotea','https://www.volotea.com'],FLY],
- 'Atenas → Lisboa':[['TAP','https://www.flytap.com'],['Aegean','https://www.aegeanair.com'],FLY],
- 'Lisboa → Madrid':[['Air Europa','https://www.aireuropa.com']],
- 'Madrid ⇄ Toledo':[['Renfe (Avant)','https://www.renfe.com']]
+ 'Roma → Atenas':[['Leonardo Express (Trenitalia)','https://www.trenitalia.com'],['Aegean','https://www.aegeanair.com'],['ITA Airways','https://www.ita-airways.com'],FLY],
+ 'Atenas → Nápoles ⇄ Pompeya':[['Aegean','https://www.aegeanair.com'],['Volotea','https://www.volotea.com'],FLY,['EAV Circumvesuviana','https://www.eavsrl.it']],
+ 'Nápoles → Roma → Lisboa':[...IT_TRAIN,['Leonardo Express (Trenitalia)','https://www.trenitalia.com'],['TAP','https://www.flytap.com'],FLY],
+ 'Lisboa → Madrid':[['TAP','https://www.flytap.com'],['Iberia','https://www.iberia.com'],['Air Europa','https://www.aireuropa.com'],FLY]
 };
 
 export const SITES = {
