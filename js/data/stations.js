@@ -9,6 +9,7 @@ export const STATIONS = {
   sants:     ['Barcelona Sants', 'Estación de Barcelona Sants'],
   // Francia y Suiza
   gareLyon:  ['Paris Gare de Lyon', 'Gare de Lyon, Paris'],
+  orly:      ['Aeropuerto París-Orly', 'Aéroport de Paris-Orly'],
   zurichHB:  ['Zürich HB', 'Zürich Hauptbahnhof'],
   kilchberg: ['Kilchberg (Lindt Home of Chocolate)', 'Bahnhof Kilchberg ZH'],
   luzern:    ['Luzern (estación)', 'Bahnhof Luzern'],

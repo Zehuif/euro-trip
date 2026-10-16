@@ -47,6 +47,7 @@ const IT_TRAIN = [['Trenitalia','https://www.trenitalia.com'],['Italo','https://
 export const BUY = {
  'Madrid → Barcelona':[['Renfe','https://www.renfe.com'],['Iryo','https://iryo.eu'],['Ouigo','https://www.ouigo.com/es']],
  'Barcelona → París':[['SNCF Connect','https://www.sncf-connect.com']],
+ 'Madrid → París Orly (Cui)':[['Orlyval y RER B (RATP)','https://www.ratp.fr']],
  'París → Zúrich → Kilchberg → Lucerna':[['TGV Lyria','https://www.tgv-lyria.com'],['SBB (trenes en Suiza)','https://www.sbb.ch']],
  'Lucerna ⇄ Engelberg y Titlis':[['Titlis','https://www.titlis.ch'],['SBB','https://www.sbb.ch']],
  'Lucerna → Chur':[['SBB','https://www.sbb.ch']],
