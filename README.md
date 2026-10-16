@@ -35,7 +35,7 @@ components/<nombre>/    Piezas reutilizables: .html (marcado), .css (estilos), .
   city-tabs             Pestañas de ciudades (Comer y Guía)
 
 pages/<id>/             Una carpeta por página del menú: <id>.html, <id>.css, <id>.js
-  inicio  itinerario  mapa  comer  guia  reservas  presupuesto  antes
+  inicio  itinerario  mapa  comer  guia  reservas  pases  presupuesto  antes
 
 js/
   main.js               Punto de entrada: carga el HTML y arranca cada módulo

@@ -15,6 +15,8 @@ export const PAGES = [
    icon:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>'},
   {id:'reservas', label:'Reservas', title:'Reservas',
    icon:'<path d="M4 6h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4z"/><path d="M14 7v2M14 11v2M14 15v2"/>'},
+  {id:'pases', label:'Pases', title:'Pases turísticos',
+   icon:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>'},
   {id:'presupuesto', label:'Presupuesto', title:'Presupuesto',
    icon:'<rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>'},
   {id:'antes', label:'Antes de viajar', title:'Antes de viajar',

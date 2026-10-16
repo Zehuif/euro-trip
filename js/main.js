@@ -18,6 +18,7 @@ import { initMapa } from '../pages/mapa/mapa.js';
 import { initComer } from '../pages/comer/comer.js';
 import { initGuia } from '../pages/guia/guia.js';
 import { initReservas } from '../pages/reservas/reservas.js';
+import { initPases } from '../pages/pases/pases.js';
 import { initPresupuesto } from '../pages/presupuesto/presupuesto.js';
 
 if(!location.hash){ try { history.scrollRestoration = 'manual'; } catch(e){} }
@@ -28,7 +29,7 @@ async function boot(){
 
   initAppBar(); initTabBar(); initFooter(); initInfoDialog(); initActions();
   initMapa();            // antes que Inicio e Itinerario, que abren días en el mapa
-  initItinerario(); initInicio(); initComer(); initGuia(); initReservas(); initPresupuesto();
+  initItinerario(); initInicio(); initComer(); initGuia(); initReservas(); initPases(); initPresupuesto();
 
   paintWeather(); loadForecast();
   initOffline();

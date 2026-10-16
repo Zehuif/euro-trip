@@ -1,0 +1,45 @@
+/* Pases turísticos: resumen y calculadora por ciudad. */
+.ps-sum small{color:var(--muted)}
+.ps-go{font:inherit;font-weight:700;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--c);text-decoration-thickness:2px;text-underline-offset:3px}
+.ps-badge{display:inline-block;font-size:.82rem;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.ps-badge.yes{background:var(--s2-soft);color:var(--s2)}
+.ps-badge.no{background:var(--must-soft);color:var(--must)}
+.ps-badge.tie{background:var(--s3-soft);color:var(--s3)}
+.ps-buy{background:var(--surface);border-radius:12px;padding:12px 16px;margin:12px 0 22px;font-size:.95rem}
+
+.ps-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;align-items:start}
+.ps-card{background:var(--surface);border-radius:12px;padding:16px 18px;border-top:5px solid var(--c);scroll-margin-top:80px}
+.ps-card header p{color:var(--muted);font-size:.93rem;margin:4px 0 12px}
+.ps-city{font-size:.85rem;font-weight:700;color:var(--c);text-transform:uppercase;letter-spacing:.04em}
+.ps-card h3{font-size:1.2rem;margin:2px 0 0}
+
+.ps-opts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.ps-opt input{position:absolute;opacity:0;pointer-events:none}
+.ps-opt span{display:flex;flex-direction:column;font-size:.85rem;padding:6px 12px;border:1.5px solid var(--rule);border-radius:10px;cursor:pointer}
+.ps-opt span b{font-size:1rem}
+.ps-opt input:checked + span{border-color:var(--c);background:var(--soft)}
+.ps-opt input:focus-visible + span{outline:2px solid var(--focus);outline-offset:2px}
+
+.ps-items{list-style:none;margin:0;padding:0;font-size:.93rem}
+.ps-items li{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:start;padding:8px 0;border-bottom:1px dashed var(--rule)}
+.ps-items li:last-child{border-bottom:0}
+.ps-items .chk{width:18px;height:18px;margin:2px 0 0;accent-color:var(--c)}
+.ps-items .nm small{display:block;color:var(--muted);font-size:.83rem;margin-top:2px}
+.ps-items .pl{text-decoration-color:var(--c)}
+.ps-tag{display:inline-block;margin-left:6px;font-size:.75rem;font-weight:700;color:var(--muted);background:var(--bg);padding:1px 7px;border-radius:999px;white-space:nowrap}
+.ps-items li.new .ps-tag{color:var(--s1);background:var(--s1-soft)}
+.ps-items .pr{white-space:nowrap;text-align:right}
+.ps-items .qty,.ps-res .ppl{width:3.4em;font:inherit;padding:2px 4px;border:1px solid var(--rule);border-radius:6px;background:var(--bg);color:var(--ink)}
+
+.ps-no{font-size:.88rem;color:var(--muted);margin:10px 0}
+.ps-res{background:var(--soft);border-radius:10px;padding:12px 14px}
+.ps-res dl{margin:8px 0 0;display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:.93rem}
+.ps-res dt{color:var(--muted)}
+.ps-res dd{margin:0;text-align:right;font-weight:700;white-space:nowrap}
+.ps-res .tot{border-top:1px solid var(--rule);padding-top:6px;color:var(--ink)}
+.ps-rec{font-size:.93rem;margin:12px 0 8px}
+.ps-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.88rem}
+.ps-foot a{font-weight:700;color:var(--c)}
+.ps-reset{font:inherit;font-size:.85rem;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:4px 10px;cursor:pointer}
+.ps-reset:hover{color:var(--ink);border-color:var(--ink)}
+@media (max-width:400px){.ps-list{grid-template-columns:1fr}}
