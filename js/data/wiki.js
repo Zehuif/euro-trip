@@ -30,7 +30,7 @@ export const WIKI = {
  'Santuario y museo de Delfos':'Delfos','Delfos':'Delfos','Pueblo de montaña de Arachova':'Arájova','Arachova':'Arájova',
  'Miradouro de São Pedro de Alcântara':'Mirador de San Pedro de Alcántara','Bairro Alto':'Barrio Alto (Lisboa)','Time Out Market':'Mercado da Ribeira',
  'Padrão dos Descobrimentos':'Monumento a los Descubrimientos','Praça do Comércio':'Plaza del Comercio (Lisboa)','Rua Augusta':'Rua Augusta','Chiado':'Chiado','Elevador de Santa Justa':'Elevador de Santa Justa','Castillo de San Jorge':'Castillo de San Jorge (Lisboa)','Manteigaria':'Pastel de nata',
- 'Via Toledo':'Via Toledo','Galería Umberto I':'Galería Umberto I','Plaza del Plebiscito':'Plaza del Plebiscito','Via dei Tribunali':'Spaccanapoli',
+ 'Catedral de Nápoles':'Catedral de Nápoles','LX Factory':'LX Factory','Via Toledo':'Via Toledo','Galería Umberto I':'Galería Umberto I','Plaza del Plebiscito':'Plaza del Plebiscito','Via dei Tribunali':'Spaccanapoli',
  'Calle Preciados':'Calle de Preciados','El Corte Inglés':'El Corte Inglés','Barrio de Salamanca':'Barrio de Salamanca (Madrid)','Calle Serrano':'Calle de Serrano','Calle Fuencarral':'Calle de Fuencarral','Turrones':'Turrón','Casa Mira':'Turrón',
  'Puerta del Sol':'Puerta del Sol','Cava Baja':'Calle de la Cava Baja','Plaza de la Villa':'Plaza de la Villa','Plaza de Oriente':'Plaza de Oriente',
  'Fuente de Neptuno':'Fuente de Neptuno (Madrid)','Estanque Grande del Retiro':'Estanque grande del Retiro','Plaza de Cibeles':'Fuente de Cibeles',

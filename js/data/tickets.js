@@ -53,10 +53,10 @@ export const BUY = {
  'Chur → Tirano → Milán':[['Bernina Express (RhB)','https://www.rhb.ch'],['Trenord','https://www.trenord.it']],
  'Milán → Venecia':IT_TRAIN, 'Venecia → Florencia':IT_TRAIN, 'Florencia → Roma':IT_TRAIN,
  'Florencia ⇄ Pisa y Lucca':[['Trenitalia','https://www.trenitalia.com']],
- 'Roma → Atenas':[['Leonardo Express (Trenitalia)','https://www.trenitalia.com'],['Aegean','https://www.aegeanair.com'],['ITA Airways','https://www.ita-airways.com'],FLY],
- 'Atenas → Nápoles ⇄ Pompeya':[['Aegean','https://www.aegeanair.com'],['Volotea','https://www.volotea.com'],FLY,['EAV Circumvesuviana','https://www.eavsrl.it']],
- 'Nápoles → Roma → Lisboa':[...IT_TRAIN,['Leonardo Express (Trenitalia)','https://www.trenitalia.com'],['TAP','https://www.flytap.com'],FLY],
- 'Lisboa → Madrid':[['TAP','https://www.flytap.com'],['Iberia','https://www.iberia.com'],['Air Europa','https://www.aireuropa.com'],FLY]
+ 'Roma → Nápoles ⇄ Pompeya':[...IT_TRAIN,['EAV Circumvesuviana','https://www.eavsrl.it']],
+ 'Nápoles → Atenas':[['Alibus (ANM)','https://www.anm.it']],
+ 'Atenas → Lisboa':[['Metro de Atenas','https://www.stasy.gr']],
+ 'Lisboa → Madrid':[['TAP (gestionar la reserva)','https://www.flytap.com']]
 };
 
 export const SITES = {
