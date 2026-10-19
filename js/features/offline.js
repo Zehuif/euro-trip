@@ -1,6 +1,7 @@
 // Modo sin internet: registra el service worker (sw.js) y descarga de una vez mapas, recorridos, fotos e información.
 import { DSTOPS } from '../data/day-stops.js';
 import { EAT } from '../data/restaurants.js';
+import { METRO_MAPS } from '../data/transit.js';
 import { $ } from '../lib/dom.js';
 import { hav, WALK_KM, tilesFor, bboxOf } from '../lib/geo.js';
 import { satelliteTileURLs } from '../lib/leaflet-map.js';
@@ -43,6 +44,7 @@ async function download(U, n, btn){
   document.querySelectorAll('.illus img').forEach(im => thumbs.add(im.src));
   total += thumbs.size;
   await runPool([...thumbs], u => fetch(u, {mode:'no-cors'}), 6, step);
+  await runPool(METRO_MAPS, u => fetch(u), 4, step);
   await runPool(U.routes, u => fetch(u), 3, step);
   await runPool(U.tiles, u => fetch(u, {mode:'no-cors'}), 8, step);
   bar.style.width = '100%';
@@ -55,8 +57,8 @@ function renderBox(box){
     box.innerHTML = `<b>Este modo funciona cuando la página está publicada en internet</b> (por ejemplo en Netlify o GitHub Pages), no al abrir el archivo directo desde el computador. Una vez publicada, abran el link en el teléfono y vuelvan a tocar este botón.`;
     return;
   }
-  const U = offlineURLs(), n = U.tiles.length + U.routes.length + U.wiki.length, mb = Math.round(U.tiles.length * 0.012 + U.wiki.length * 0.12);
-  box.innerHTML = `<b>Guardar el viaje en este teléfono</b><br>Se guardan los mapas de cada día y de restaurantes (vista satélite), los recorridos a pie, la información de cada lugar y sus fotos: unas ${fmtN(n)} descargas, cerca de ${mb} MB. Háganlo con Wi-Fi, una vez por teléfono, antes de viajar.
+  const U = offlineURLs(), n = U.tiles.length + U.routes.length + U.wiki.length + METRO_MAPS.length, mb = Math.round(U.tiles.length * 0.012 + U.wiki.length * 0.12 + 4);
+  box.innerHTML = `<b>Guardar el viaje en este teléfono</b><br>Se guardan los mapas de cada día y de restaurantes (vista satélite), los planos del metro, los recorridos a pie, la información de cada lugar y sus fotos: unas ${fmtN(n)} descargas, cerca de ${mb} MB. Háganlo con Wi-Fi, una vez por teléfono, antes de viajar.
     <div class="bar"><i id="offBar"></i></div><div id="offTxt" class="netst">Listo para empezar.</div><button type="button" id="offGo">Descargar ahora</button>`;
   $('offGo').addEventListener('click', ev => download(U, n, ev.currentTarget));
 }

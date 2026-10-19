@@ -17,6 +17,7 @@ python3 -m http.server 8000
 index.html              Esqueleto: <head>, hojas de estilo y lugares donde se insertan componentes y páginas
 sw.js                   Service worker (modo sin internet)
 assets/europe-land.svg  Contornos de los países del mapa
+assets/metro/           Planos de metro por ciudad (Wikimedia Commons; autor y licencia en js/data/transit.js)
 
 styles/                 Estilos globales
   tokens.css            Colores claro/oscuro (variables CSS)
@@ -35,7 +36,7 @@ components/<nombre>/    Piezas reutilizables: .html (marcado), .css (estilos), .
   city-tabs             Pestañas de ciudades (Comer y Guía)
 
 pages/<id>/             Una carpeta por página del menú: <id>.html, <id>.css, <id>.js
-  inicio  itinerario  mapa  comer  guia  reservas  pases  presupuesto  antes
+  inicio  itinerario  mapa  comer  guia  transporte  reservas  pases  presupuesto  antes
 
 js/
   main.js               Punto de entrada: carga el HTML y arranca cada módulo

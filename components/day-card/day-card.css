@@ -1,6 +1,9 @@
 /* Contenido de un día (traslado, lugares, enlaces de compra, clima). Lo usan Itinerario e Inicio («Hoy»). */
 .move{margin:10px 0 4px;padding:10px 12px;border-radius:8px;background:var(--soft);font-size:.96rem}
 .move strong{display:block;font-size:.85rem;color:var(--c);margin-bottom:2px}
+.metro-day{margin:10px 0 4px;padding:10px 12px;border-radius:8px;border:1.5px dashed var(--rule);font-size:.94rem}
+.metro-day strong{display:block;font-size:.85rem;color:var(--c);margin-bottom:2px}
+.metro-day a.eat{white-space:nowrap}
 ul.items{list-style:none;padding:0;margin:10px 0 0}
 ul.items li{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px dashed var(--rule)}
 ul.items li:last-child{border-bottom:0}

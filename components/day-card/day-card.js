@@ -2,6 +2,8 @@
 import { TICKETS, NOMAP, BUY } from '../../js/data/tickets.js';
 import { DAYS } from '../../js/data/days.js';
 import { DSTOPS } from '../../js/data/day-stops.js';
+import { TRANSIT } from '../../js/data/transit.js';
+import { FOODCITY } from '../../js/data/restaurants.js';
 import { ext, escapeAttr } from '../../js/lib/dom.js';
 import { hav, gmaps } from '../../js/lib/geo.js';
 import { fmtD } from '../../js/lib/format.js';
@@ -30,6 +32,16 @@ export function departHTML(i){
 export const moveHTML = mv => mv
   ? `<div class="move"><strong>${mv.t}</strong>${mv.d} <span>(${mv.dur}; ${mv.pr})</span>${buyHTML(mv)}</div>`
   : '';
+
+// Ciudad de la página Transporte que corresponde a un día (Lucerna y Chur van con Suiza)
+export const transitKey = city => { const k = city === 'Chur' ? 'zurich' : FOODCITY[city] === 'lucerna' ? 'zurich' : FOODCITY[city]; return TRANSIT[k] ? k : null; };
+
+// Cómo moverse ese día en transporte público, con enlace a la ciudad en la página Transporte
+export const metroHTML = d => {
+  if(!d.metro) return '';
+  const k = transitKey(d.city);
+  return `<div class="metro-day"><strong>🚇 Transporte público</strong>${d.metro}${k ? ` <a class="eat" href="#transporte" data-tr="${k}">Plano y tarifas de ${TRANSIT[k].name} →</a>` : ''}</div>`;
+};
 
 const BADGE = {o:'<span class="badge o">Comprar antes</span>', c:'<span class="badge c">✓ Comprado</span>', r:'<span class="badge r">Mejor reservar</span>'};
 

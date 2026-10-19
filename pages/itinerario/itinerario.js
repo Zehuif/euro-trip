@@ -7,7 +7,7 @@ import { $ } from '../../js/lib/dom.js';
 import { eur } from '../../js/lib/format.js';
 import { readJSON, writeJSON } from '../../js/lib/storage.js';
 import { fetchCityPhotos } from '../../js/services/wikipedia.js';
-import { departHTML, moveHTML, itemsHTML } from '../../components/day-card/day-card.js';
+import { departHTML, moveHTML, itemsHTML, metroHTML } from '../../components/day-card/day-card.js';
 import { dayMaps, initMinis } from '../../components/mini-map/mini-map.js';
 import { showDay } from '../mapa/mapa.js';
 
@@ -29,6 +29,7 @@ function dayHTML(d, i, pic){
       <div class="title"><h4>${d.city}</h4><span class="flag"><span class="wx" data-wx="${i}"></span> ${CN[d.cc]}</span></div>
       ${moveHTML(d.move)}
       ${itemsHTML(d)}
+      ${metroHTML(d)}
       ${departHTML(i)}
       <div class="minis">${dayMaps(i)}</div>
       <div class="meta"><span>Dormir en <b>${d.sleep}</b></span>${eatLinks(d.city)}<span>Traslados y entradas: <b>~${eur(d.cost)}</b> por persona</span></div>

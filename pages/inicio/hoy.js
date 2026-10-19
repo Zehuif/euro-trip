@@ -6,7 +6,7 @@ import { $ } from '../../js/lib/dom.js';
 import { eur } from '../../js/lib/format.js';
 import { NOW, FIRST, LAST, dayDate, daysUntilStart, todayIndex } from '../../js/lib/dates.js';
 import { wxHTML } from '../../js/features/weather.js';
-import { departHTML, moveHTML, itemsHTML } from '../../components/day-card/day-card.js';
+import { departHTML, moveHTML, itemsHTML, metroHTML } from '../../components/day-card/day-card.js';
 import { showDay } from '../mapa/mapa.js';
 
 let idx = todayIndex();
@@ -30,7 +30,7 @@ function render(i){
       <div class="sub2">${d.ppl} personas · ${CN[d.cc]} · <span class="wx" data-wx="${i}">${wxHTML(i)}</span></div></div>
       <div class="hoynav"><button type="button" data-h="-1" aria-label="Día anterior">‹</button><button type="button" data-h="1" aria-label="Día siguiente">›</button></div></div>
     <div class="hoybody"><div>${moveHTML(d.move)}
-        ${itemsHTML(d)}${departHTML(i)}<p class="tip">${d.tip}</p></div>
+        ${itemsHTML(d)}${metroHTML(d)}${departHTML(i)}<p class="tip">${d.tip}</p></div>
       <div class="hoyside">
         ${NOW < FIRST && i === 0 ? `<div class="hbox"><div class="count"><b>${daysUntilStart()}</b><span>días para el viaje</span></div></div>` : ''}
         <div class="hbox"><h4>🛏️ Dormir</h4>${d.sleep}</div>

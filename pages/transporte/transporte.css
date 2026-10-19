@@ -1,0 +1,24 @@
+/* Transporte: resumen, tarjetas por ciudad y plano del metro. */
+.tr-sum{width:100%}
+.tr-sum td:first-child{white-space:nowrap}
+.tr-sum td:first-child a{font-weight:700;color:var(--c);text-decoration:none}
+.tr-sum td:first-child .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:8px}
+.table-box + .th{margin-top:26px}
+.trpanel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.trpanel .tcard.wide{grid-column:1 / -1}
+.trbuy{margin:0 0 10px;font-size:.95rem}
+.trbuy + .trcost{font-size:.9rem;color:var(--muted);margin:0 0 12px}
+.trlines{list-style:none;margin:0;padding:0;font-size:.94rem}
+.trlines li{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--rule)}
+.trlines li:last-child{border-bottom:0}
+.chip{flex:0 0 auto;font-size:.8rem;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;white-space:nowrap;background:var(--lc);color:var(--lf)}
+.trair{padding:8px 0;border-bottom:1px dashed var(--rule);font-size:.94rem}
+.trair:last-child{border-bottom:0}
+.trair b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.02rem}
+.trmap{display:block;background:#fff;border-radius:8px;border:1px solid var(--rule);overflow:hidden}
+.trmap img{display:block;width:100%;height:auto}
+.trcredit{font-size:.8rem;color:var(--muted);margin:8px 0 0}
+.trlinks{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.trlinks a.tk{margin:0}
+.tcard .metro-day{margin-top:10px}
+@media (max-width:900px){.trpanel{grid-template-columns:1fr}}

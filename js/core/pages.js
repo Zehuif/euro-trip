@@ -13,6 +13,8 @@ export const PAGES = [
    icon:'<path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v6M9 3v6M17 3c-2 0-3 2-3 5s1 4 3 4v9"/>'},
   {id:'guia', label:'Guía', title:'Guía',
    icon:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>'},
+  {id:'transporte', label:'Transporte', title:'Transporte público',
+   icon:'<rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l1.5-4M15 21l-1.5-4"/><circle cx="9" cy="14" r=".8"/><circle cx="15" cy="14" r=".8"/>'},
   {id:'reservas', label:'Reservas', title:'Reservas',
    icon:'<path d="M4 6h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4z"/><path d="M14 7v2M14 11v2M14 15v2"/>'},
   {id:'pases', label:'Pases', title:'Pases turísticos',

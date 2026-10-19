@@ -17,6 +17,7 @@ import { initItinerario } from '../pages/itinerario/itinerario.js';
 import { initMapa } from '../pages/mapa/mapa.js';
 import { initComer } from '../pages/comer/comer.js';
 import { initGuia } from '../pages/guia/guia.js';
+import { initTransporte } from '../pages/transporte/transporte.js';
 import { initReservas } from '../pages/reservas/reservas.js';
 import { initPases } from '../pages/pases/pases.js';
 import { initPresupuesto } from '../pages/presupuesto/presupuesto.js';
@@ -29,7 +30,7 @@ async function boot(){
 
   initAppBar(); initTabBar(); initFooter(); initInfoDialog(); initActions();
   initMapa();            // antes que Inicio e Itinerario, que abren días en el mapa
-  initItinerario(); initInicio(); initComer(); initGuia(); initReservas(); initPases(); initPresupuesto();
+  initItinerario(); initInicio(); initComer(); initGuia(); initTransporte(); initReservas(); initPases(); initPresupuesto();
 
   paintWeather(); loadForecast();
   initOffline();

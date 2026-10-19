@@ -47,10 +47,12 @@ export const TICKETS = [
 export const NOMAP = /^(Llegada|Mañana|Tarde|Cena|Almuerzo|Desayuno|Reserva de asiento|Pase de|Paseo en góndola|Alternativa|Pizza|Barco por|Viaducto circular)/;
 const FLY = ['Google Flights','https://www.google.com/travel/flights'];
 const IT_TRAIN = [['Trenitalia','https://www.trenitalia.com'],['Italo','https://www.italotreno.com']];
+const EXPRES = ['Bus Exprés Aeropuerto (EMT)','https://www.emtmadrid.es'];
 export const BUY = {
+ 'Aeropuerto Barajas → Sol':[EXPRES],
  'Madrid → Barcelona':[['Renfe','https://www.renfe.com'],['Iryo','https://iryo.eu'],['Ouigo','https://www.ouigo.com/es']],
  'Barcelona → París':[['SNCF Connect','https://www.sncf-connect.com']],
- 'Madrid → París Orly (Cui)':[['Orlyval y RER B (RATP)','https://www.ratp.fr']],
+ 'Madrid → París Orly (Cui)':[['Metro línea 14 (RATP)','https://www.ratp.fr']],
  'París ⇄ Versalles':[['RER C (SNCF Transilien)','https://www.transilien.com'],['Bonjour RATP','https://www.ratp.fr']],
  'París → Zúrich → Kilchberg → Lucerna':[['TGV Lyria','https://www.tgv-lyria.com'],['SBB (trenes en Suiza)','https://www.sbb.ch']],
  'Lucerna ⇄ Engelberg y Titlis':[['Titlis','https://www.titlis.ch'],['SBB','https://www.sbb.ch']],
@@ -58,10 +60,11 @@ export const BUY = {
  'Chur → Tirano → Milán':[['Bernina Express (RhB)','https://www.rhb.ch'],['Trenord','https://www.trenord.it']],
  'Milán → Venecia':IT_TRAIN, 'Venecia → Florencia':IT_TRAIN, 'Florencia → Roma':IT_TRAIN,
  'Florencia ⇄ Pisa y Lucca':[['Trenitalia','https://www.trenitalia.com']],
- 'Roma → Nápoles ⇄ Pompeya':[...IT_TRAIN,['EAV Circumvesuviana','https://www.eavsrl.it']],
+ 'Roma → Nápoles ⇄ Pompeya':[...IT_TRAIN,['EAV Circumvesuviana','https://www.eavsrl.it'],['Leonardo Express (los 3 a China)','https://www.trenitalia.com/it/regionale/collegamenti-regionale/leonardo-express.html']],
  'Nápoles → Atenas':[['Alibus (ANM)','https://www.anm.it']],
- 'Atenas → Lisboa':[['Metro de Atenas','https://www.stasy.gr']],
- 'Lisboa → Madrid':[['TAP (gestionar la reserva)','https://www.flytap.com']]
+ 'Atenas → Lisboa':[['Metro de Atenas','https://www.stasy.gr'],['Metro de Lisboa','https://www.metrolisboa.pt']],
+ 'Lisboa → Madrid':[['TAP (gestionar la reserva)','https://www.flytap.com'],['Metro de Lisboa','https://www.metrolisboa.pt'],EXPRES],
+ 'Madrid → Aeropuerto Barajas':[EXPRES]
 };
 
 export const SITES = {
