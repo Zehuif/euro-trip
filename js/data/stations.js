@@ -10,6 +10,9 @@ export const STATIONS = {
   // Francia y Suiza
   gareLyon:  ['Paris Gare de Lyon', 'Gare de Lyon, Paris'],
   orly:      ['Aeropuerto París-Orly', 'Aéroport de Paris-Orly'],
+  stMichel:  ['Saint-Michel Notre-Dame (RER C)', 'Gare Saint-Michel Notre-Dame, Paris'],
+  orsayRER:  ['Musée d\'Orsay (RER C)', 'Gare du Musée d\'Orsay, Paris'],
+  versailles:['Versailles Château Rive Gauche', 'Gare de Versailles Château Rive Gauche'],
   zurichHB:  ['Zürich HB', 'Zürich Hauptbahnhof'],
   kilchberg: ['Kilchberg (Lindt Home of Chocolate)', 'Bahnhof Kilchberg ZH'],
   luzern:    ['Luzern (estación)', 'Bahnhof Luzern'],

@@ -47,9 +47,9 @@ export const PASSES = [
    {n:'Torres de Notre-Dame', p:16, day:''},
    {n:'Museo de la Orangerie (Nenúfares de Monet)', p:12.5, day:'', note:'A pasos de las Tullerías.'},
    {n:'Museo Rodin', p:15, day:''},
-   {n:'Palacio de Versalles', p:32, day:'', note:'Media jornada en tren RER C.'}],
+   {n:'Palacio de Versalles', p:32, day:'19 ene', note:'Igual hay que reservar horario.'}],
   no:'Torre Eiffel, crucero por el Sena ni transporte. Notre-Dame es gratis igual.',
-  rec:'Casi empate con el pase de 4 días: lo del itinerario suma ~€105 contra €109. Conviene si agregan uno más, como la Conciergerie (al lado de la Sainte-Chapelle) o la Orangerie (junto a las Tullerías), y además se ahorran filas.'},
+  rec:'Conviene el pase de 4 días: con Versalles, lo del itinerario suma ~€124 contra €109, y además se ahorran filas. Si agregan la Conciergerie (al lado de la Sainte-Chapelle) o la Orangerie (junto a las Tullerías), el ahorro crece.'},
 
  {id:'suiza', city:'Suiza', when:'20 al 23 ene', st:2, ppl:7, cur:'CHF',
   name:'Swiss Travel Pass 4 días', url:'https://www.sbb.ch',

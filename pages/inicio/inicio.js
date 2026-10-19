@@ -10,7 +10,8 @@ import { initHoy } from './hoy.js';
 import { initRouteStrip } from './route-strip.js';
 
 function renderTiles(){
-  const nMust = DAYS.reduce((a, d) => a + d.items.filter(it => it[2] === 'o').length, 0);
+  const count = m => DAYS.reduce((a, d) => a + d.items.filter(it => it[2] === m).length, 0);
+  const nDone = count('c'), nMust = count('o') + nDone;
   const nEat = Object.values(EAT).reduce((a, l) => a + l.length, 0);
   // [página, descripción, color]
   const T = [
@@ -18,7 +19,7 @@ function renderTiles(){
     ['mapa', 'La ruta, día por día', 's1'],
     ['comer', `${nEat} lugares y platos típicos`, 's2'],
     ['guia', 'Transporte, barrios y consejos', 's2'],
-    ['reservas', `${nMust} entradas obligatorias`, 's3'],
+    ['reservas', `${nMust} entradas obligatorias, ${nDone} compradas`, 's3'],
     ['presupuesto', `Total estimado ${eur(computeBudget().total)}`, 's3'],
     ['antes', 'Documentos, seguro, clima y maletas', 's1']
   ];

@@ -31,7 +31,7 @@ export const moveHTML = mv => mv
   ? `<div class="move"><strong>${mv.t}</strong>${mv.d} <span>(${mv.dur}; ${mv.pr})</span>${buyHTML(mv)}</div>`
   : '';
 
-const BADGE = {o:'<span class="badge o">Comprar antes</span>', r:'<span class="badge r">Mejor reservar</span>'};
+const BADGE = {o:'<span class="badge o">Comprar antes</span>', c:'<span class="badge c">✓ Comprado</span>', r:'<span class="badge r">Mejor reservar</span>'};
 
 // Lista de lugares del día con precio y marca de reserva
 export const itemsHTML = d => `<ul class="items">${d.items.map(it =>

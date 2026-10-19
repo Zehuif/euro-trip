@@ -16,8 +16,11 @@ p.tip{font-size:.95rem;font-style:italic;color:var(--muted)}
 /* Must-buy */
 ul.items li.o{background:var(--must-soft);border-bottom-color:transparent;border-radius:8px;padding:9px 10px;margin:4px -10px}
 ul.items li.o > span:first-child{font-weight:700}
+ul.items li.c{background:var(--ok-soft);border-bottom-color:transparent;border-radius:8px;padding:9px 10px;margin:4px -10px}
+ul.items li.c > span:first-child{font-weight:700}
 .badge{display:inline-block;font-size:.78rem;font-weight:700;line-height:1;padding:4px 8px;border-radius:999px;margin-left:8px;vertical-align:2px;white-space:nowrap}
 .badge.o{background:var(--must);color:var(--surface)}
+.badge.c{background:var(--ok);color:var(--surface)}
 .badge.r{border:1.5px solid var(--muted);color:var(--muted);font-weight:400}
 @media (max-width:560px){
   ul.items li{flex-direction:column;gap:0}

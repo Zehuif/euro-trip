@@ -17,12 +17,12 @@ function buildPrint(){
     const t = avgTemp(d);
     h += `<div class="pd"><b class="d">${d.wd} ${d.n} ${d.m}</b><b>${esc(d.city)}</b> · ${d.ppl} personas · ${t ? `${t[0]}°/${t[1]}°` : ''}`
       + (d.move ? `<div><b>${esc(d.move.t)}:</b> ${esc(d.move.op)}; ${esc(d.move.dur)}; ${esc(d.move.pr)}</div>` : '')
-      + `<ul>${d.items.map(it => `<li>${it[2] === 'o' ? '★ ' : ''}${esc(it[0])} — ${esc(it[1])}</li>`).join('')}</ul><div>Dormir: ${esc(d.sleep)}</div></div>`;
+      + `<ul>${d.items.map(it => `<li>${it[2] === 'o' ? '★ ' : it[2] === 'c' ? '✓ ' : ''}${esc(it[0])} — ${esc(it[1])}</li>`).join('')}</ul><div>Dormir: ${esc(d.sleep)}</div></div>`;
   });
 
-  h += '<div class="muted">★ = entrada que hay que comprar antes.</div><h2>Entradas obligatorias</h2><table><tr><th>Fecha</th><th>Entrada</th><th>Dónde comprar</th><th>Precio</th></tr>';
-  DAYS.forEach(d => d.items.filter(it => it[2] === 'o').forEach(it => {
-    h += `<tr><td>${d.n} ${d.m}</td><td>${esc(it[0].replace(/ \(.*\)$/, ''))}</td><td>${siteFor(it[0])[0]}</td><td>${esc(it[1])}</td></tr>`;
+  h += '<div class="muted">★ = entrada que hay que comprar antes; ✓ = ya comprada.</div><h2>Entradas obligatorias</h2><table><tr><th>Fecha</th><th>Entrada</th><th>Dónde comprar</th><th>Precio</th></tr>';
+  DAYS.forEach(d => d.items.filter(it => it[2] === 'o' || it[2] === 'c').forEach(it => {
+    h += `<tr><td>${d.n} ${d.m}</td><td>${esc(it[0].replace(/ \(.*\)$/, ''))}${it[2] === 'c' ? ' ✓' : ''}</td><td>${siteFor(it[0])[0]}</td><td>${esc(it[1])}</td></tr>`;
   }));
 
   h += '</table><h2>Trenes y vuelos</h2><table><tr><th>Fecha</th><th>Tramo</th><th>Sale de</th><th>Llega a</th><th>Operador</th><th>Duración</th><th>Precio</th></tr>';

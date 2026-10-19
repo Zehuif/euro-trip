@@ -13,9 +13,9 @@ const shortName = n => n.replace(/ \(.*\)$/, '');
 function renderTickets(){
   const must = [], recs = [];
   DAYS.forEach(d => d.items.forEach(it => {
-    if(it[2] === 'o'){
-      const [site, when] = siteFor(it[0]);
-      must.push(`<div class="mcard"><div class="when">${d.wd} ${d.n} ${d.m}, ${d.city} (${d.ppl} personas)</div><h3>${shortName(it[0])}</h3><div class="row"><span>${site.includes('.') ? ext(site + ' ↗', 'https://' + site, '') : site}</span><b>${it[1]}</b></div><div class="buy">Comprar: ${when}</div></div>`);
+    if(it[2] === 'o' || it[2] === 'c'){
+      const [site, when] = siteFor(it[0]), done = it[2] === 'c';
+      must.push(`<div class="mcard${done ? ' done' : ''}"><div class="when">${d.wd} ${d.n} ${d.m}, ${d.city} (${d.ppl} personas)</div><h3>${shortName(it[0])}</h3><div class="row"><span>${site.includes('.') ? ext(site + ' ↗', 'https://' + site, '') : site}</span><b>${it[1]}</b></div><div class="buy">${done ? '✓ Ya comprada' : `Comprar: ${when}`}</div></div>`);
     }
     if(it[2] === 'r') recs.push(`${shortName(it[0])} (${d.n} ${d.m})`);
   }));

@@ -1,5 +1,5 @@
 // Itinerario día por día.
-// items: [lugar, precio, marca]  marca: "o" = comprar antes (obligatorio), "r" = mejor reservar.
+// items: [lugar, precio, marca]  marca: "o" = comprar antes (obligatorio), "c" = obligatoria y ya comprada, "r" = mejor reservar.
 // move: traslado del día (t: título, d: detalle, route: tramo,
 //   from/to: estación de salida y llegada, via: estaciones intermedias (claves de js/data/stations.js), op: operador, dur: duración, pr: precio).
 
@@ -22,11 +22,11 @@ export const DAYS = [
   items:[['Barrio Gótico y Catedral','Gratis (interior ~€15)'],['El Born y Santa María del Mar','Gratis'],['Las Ramblas y Mercado de La Boquería','Gratis']],
   sleep:'Eixample',tip:'Ouigo cobra aparte las maletas grandes; con 3 maletas de 23 kg conviene AVE o Iryo.'},
  {wd:'Jue',n:14,m:'ene',city:'Barcelona',cc:'ES',st:1,ppl:6,cost:65,
-  items:[['Sagrada Familia','€26 (€36 con torre)','o'],['Casa Batlló o La Pedrera','~€30–45','r'],['Paseo de Gracia','Gratis']],
+  items:[['Sagrada Familia','€26 (€36 con torre)','c'],['Casa Batlló o La Pedrera','~€30–45','r'],['Paseo de Gracia','Gratis']],
   sleep:'Eixample',tip:'Reserven la Sagrada Familia temprano: con sol de mañana los vitrales se ven mejor.'},
- {wd:'Vie',n:15,m:'ene',city:'Barcelona',cc:'ES',st:1,ppl:6,cost:35,
-  items:[['Park Güell (entrada con horario)','€18','o'],['Mirador Bunkers del Carmel','Gratis'],['Barceloneta y el puerto','Gratis'],['Teleférico de Montjuïc (opcional)','~€16']],
-  sleep:'Eixample',tip:'Dejen las maletas listas esta noche: el tren a París sale en la mañana.'},
+ {wd:'Vie',n:15,m:'ene',city:'Barcelona',cc:'ES',st:1,ppl:6,cost:65,
+  items:[['Park Güell (entrada de las 9:30)','€18','o'],['Mirador Bunkers del Carmel','Gratis'],['Almuerzo en Gràcia, Plaça del Sol','~€15'],['Funicular de Montjuïc (desde el metro Paral·lel)','Incluido en la T-casual'],['Teleférico de Montjuïc hasta el castillo (opcional)','~€12–17'],['Castillo de Montjuïc y sus miradores','~€5–9'],['Teleférico del Puerto de Miramar a la Barceloneta (opcional)','~€15–17 ida','r'],['Barceloneta y el puerto al atardecer','Gratis'],['Cena de paella o tapas en la Barceloneta','—']],
+  sleep:'Eixample',tip:'De los Bunkers bajen a Gràcia (bus V17 o 22) para almorzar y tomen el metro L3 en Fontana hasta Paral·lel, donde sale el funicular. Arriba, el teleférico de Montjuïc los sube al castillo; de ahí bajen a pie a Miramar (~15 min) y crucen el puerto en el Teleférico del Puerto hasta la Barceloneta, con la mejor vista de la ciudad. Lleguen antes de las 17:00: en invierno cierra temprano y no funciona con viento fuerte. Si alguno de los teleféricos está cerrado o lo quieren saltar, del funicular al castillo va el bus 150 (con la T-casual), y del castillo se baja a pie por Miramar hasta Colón y se sigue por el paseo del puerto a la Barceloneta (~35 min en total). El sol se pone cerca de las 17:40. Dejen las maletas listas esta noche: el tren a París sale en la mañana.'},
  {wd:'Sáb',n:16,m:'ene',city:'París',cc:'FR',st:1,ppl:6,cost:145,
   move:{t:'Tren directo a París, llegada 16:30',d:'TGV inOui desde Barcelona Sants; llega a Paris Gare de Lyon a las 16:30. Cui pasa esta noche en Madrid y se une mañana.',route:'Barcelona → París',from:'sants',to:'gareLyon',op:'SNCF TGV inOui. 1–2 directos al día, normalmente uno en la mañana',dur:'~6h40',pr:'€59–150'},
   items:[['Vista de la torre desde el Trocadéro','Gratis'],['Torre Eiffel de noche, 2º piso en ascensor','~€24 (cima ~€37)','r'],['Crucero por el Sena (1 hora)','~€18','r']],
@@ -38,9 +38,10 @@ export const DAYS = [
  {wd:'Lun',n:18,m:'ene',city:'París',cc:'FR',st:2,ppl:7,cost:55,
   items:[['Museo del Louvre (cierra martes)','€32','o'],['Jardín de las Tullerías','Gratis'],['Ópera Garnier (exterior)','Gratis'],['Galerías Lafayette y su terraza con vista','Gratis'],['Iglesia de la Madeleine y Plaza de la Concordia','Gratis'],['Campos Elíseos','Gratis'],['Terraza del Arco del Triunfo al atardecer','~€16–22']],
   sleep:'Le Marais',tip:'En el Louvre, entren por la Galería del Carrusel: suele tener menos fila que la pirámide. La terraza de las Galerías Lafayette es gratis y tiene una de las mejores vistas de París; buen lugar para almorzar o tomar un café. De ahí, por la Madeleine y Concorde hasta el Arco para el atardecer (~17:20).'},
- {wd:'Mar',n:19,m:'ene',city:'París',cc:'FR',st:2,ppl:7,cost:20,
-  items:[['Museo de Orsay (cierra lunes)','€16','r'],['Saint-Germain-des-Prés y sus cafés','Gratis'],['Jardín de Luxemburgo','Gratis'],['Barrio Latino y Panteón','Gratis (interior ~€13)']],
-  sleep:'Le Marais',tip:'Día extra en París por el cambio del tren a Zúrich. El Louvre cierra los martes, pero el Orsay abre: lleguen a las 9:30. Si prefieren Versalles (también abre hoy), vayan temprano porque los martes se llena. Cenen temprano y dejen las maletas listas: mañana el tren sale a las 7:20.'},
+ {wd:'Mar',n:19,m:'ene',city:'París',cc:'FR',st:2,ppl:7,cost:55,
+  move:{t:'Mañana en Versalles',d:'Salgan del alojamiento a las 8:00: metro hasta Saint-Michel Notre-Dame y RER C hacia Versailles Château Rive Gauche (~40 min), a 10 minutos a pie del palacio. A la vuelta, el mismo RER C los deja en la estación Musée d\'Orsay, en la puerta del museo.',route:'París ⇄ Versalles',from:'stMichel',to:'versailles',via:['orsayRER'],op:'RER C, cada 15–30 min',dur:'~40 min por tramo',pr:'€2,55 por tramo (boleto normal)'},
+  items:[['Palacio de Versalles (9:00 a 12:30, cierra lunes)','€32 (incluido en el Museum Pass)','o'],['Jardines de Versalles','Gratis en invierno'],['Museo de Orsay, en la tarde (cierra lunes)','€16','r'],['Saint-Germain-des-Prés y sus cafés','Gratis'],['Jardín de Luxemburgo','Gratis'],['Barrio Latino y Panteón','Gratis (interior ~€13)']],
+  sleep:'Le Marais',tip:'Día extra en París por el cambio del tren a Zúrich. Reserven en Versalles la entrada de las 9:00, aunque tengan el Museum Pass: los martes se llena porque el Louvre cierra. Recorran el palacio y den una vuelta corta por los jardines; almuercen algo rápido en Versalles y tomen el RER C de vuelta hacia las 13:00 para estar en el Orsay a las 14:00. A la salida, a pie por Saint-Germain hasta el Luxemburgo (cierra al atardecer, ~17:15) y terminen en el Barrio Latino. Cenen temprano y dejen las maletas listas: mañana el tren sale a las 7:20.'},
  {wd:'Mié',n:20,m:'ene',city:'Zúrich y Lucerna',cc:'CH',st:2,ppl:7,cost:450,
   move:{t:'Tren 7:20 a Zúrich, Lindt y llegada a Lucerna',d:'TGV Lyria de las 7:20 desde Paris Gare de Lyon; llega a Zürich HB a las 11:26. Activan el Swiss Travel Pass de 4 días (CHF 309, unos €335 por adulto en 2ª clase). Dejan las maletas en casilleros, toman el tren S8 a Kilchberg para el museo Lindt, vuelven a Zürich HB y siguen a Lucerna, donde duermen.',route:'París → Zúrich → Kilchberg → Lucerna',from:'gareLyon',to:'luzern',via:['zurichHB','kilchberg'],op:'TGV Lyria (pasaje ya comprado) y SBB (cada 30 min, incluido en el pase)',dur:'4h06 + 15 min + ~45 min',pr:'Pasaje comprado + pase'},
   items:[['Mañana temprano: taxi o van a Gare de Lyon a las 6:30','~€30 por taxi'],['Lindt Home of Chocolate, Kilchberg (abre 10:00 a 18:00)','~CHF 15–17','r'],['Llegada a Lucerna y paseo nocturno por el puente de la Capilla','Gratis']],
@@ -55,7 +56,7 @@ export const DAYS = [
   sleep:'Cerca de la estación de Chur',tip:'Si quieren el Rigi: maletas en casilleros de la estación de Lucerna, barco a Vitznau, cremallera a Rigi Kulm y bajada por Arth-Goldau; tomen el tren a Chur a media tarde. Los barcos tienen horario de invierno: revísenlo la noche anterior. Noche tranquila: el Bernina Express sale a primera hora.'},
  {wd:'Sáb',n:23,m:'ene',city:'Milán',cc:'IT',st:2,ppl:7,cost:56,
   move:{t:'Bernina Express y tren a Milán',d:'Bernina Express de Chur a Tirano, el tramo más espectacular del viaje (reserva obligatoria CHF 40, el pasaje va incluido en el pase). En Tirano, almuerzo y tren regional a Milano Centrale.',route:'Chur → Tirano → Milán',from:'chur',to:'milano',via:['tirano'],op:'RhB Bernina Express: 1 tren diario en invierno, sale ~8:30. Trenord Tirano–Milán: cada hora',dur:'~4h10 + ~2h30',pr:'CHF 40 + ~€13'},
-  items:[['Reserva de asiento en el Bernina Express','CHF 40','o'],['Viaducto circular de Brusio y glaciar Morteratsch','Desde el tren'],['Almuerzo en Tirano','~€15–20']],
+  items:[['Reserva de asiento en el Bernina Express','CHF 40','c'],['Viaducto circular de Brusio y glaciar Morteratsch','Desde el tren'],['Almuerzo en Tirano','~€15–20']],
   sleep:'Centrale y Porta Venezia',tip:'Si compran el boleto de Trenord en papel, valídenlo en las máquinas del andén antes de subir.'},
  {wd:'Dom',n:24,m:'ene',city:'Milán',cc:'IT',st:2,ppl:7,cost:40,
   items:[['Duomo y sus terrazas','~€16–22','r'],['Galería Vittorio Emanuele II','Gratis'],['La Última Cena (cierra lunes)','~€17','o'],['Navigli al atardecer','Gratis']],
