@@ -1,17 +1,20 @@
-// [ciudad, zona, noches, personas, [precio mín, máx] por noche para el grupo, por qué, etapa]
+// [ciudad, zona, noches, personas, reserva, por qué, etapa]
+// reserva: {n: nombre, a: dirección, via: sitio, amt: monto total del grupo, cur: moneda (js/data/bookings.js), paid: pagado,
+//           cancel: cancelación gratis hasta (si no está pagado), by: quién pagó}
+// Las estadías van seguidas: la entrada de cada una es la salida de la anterior (js/lib/stays.js).
 
 export const LODGING = [
- ['Madrid','Sol (centro histórico)',4,6,[280,420],'Todo a pie: Plaza Mayor, Palacio Real y Prado. Busquen edificio con ascensor.',1],
- ['Barcelona','Eixample, cerca de Passeig de Gràcia',3,6,[300,450],'Plano, seguro, con metro directo a Sants y a la Sagrada Familia.',1],
- ['París','Le Marais',4,7,[450,700],'Céntrico y caminable; a 10 min en taxi de Gare de Lyon, donde llegan y de donde salen.',1],
- ['Lucerna','Casco antiguo, cerca de la estación',2,7,[450,700],'Base para el Titlis (y el Rigi opcional); barcos, trenes y centro histórico a pasos. Reemplaza la noche en Zúrich.',2],
- ['Chur','Cerca de la estación',1,7,[350,500],'El Bernina sale temprano desde ahí.',2],
- ['Milán','Centrale y Porta Venezia',2,7,[300,450],'Llegan y salen desde Milano Centrale; metro directo al Duomo.',2],
- ['Venecia','Cannaregio, cerca de Santa Lucia',2,7,[400,600],'Evita cruzar puentes con maletas grandes.',2],
- ['Florencia','Santa Maria Novella y centro',3,7,[300,450],'Junto a la estación y a 10 min a pie del Duomo.',2],
- ['Roma','Monti',3,7,[320,480],'A pasos del Coliseo y cerca de Termini.',2],
- ['Nápoles','Centro histórico, cerca de Via Duomo',1,4,[110,180],'A 10 min a pie de Napoli Centrale (Alibus al aeropuerto) y en medio de Spaccanapoli.',3],
- ['Atenas','Plaka y Syntagma',2,4,[110,190],'Bajo la Acrópolis, con metro directo al aeropuerto.',3],
- ['Lisboa','Baixa y Chiado',3,4,[130,220],'Plano en la Baixa, con tranvías y metro al aeropuerto.',3],
- ['Madrid','Barrio de las Letras',2,4,[150,250],'Céntrico y a pasos de Sol y Gran Vía para las compras; a 30 min del aeropuerto.',3]
+ ['Madrid','Sol, calle de los Jardines',4,6,{n:'Apartamento Centro Jardines 15',a:'Calle de los Jardines 15, Madrid',via:'Airbnb',amt:875541,cur:'CLP',paid:false,cancel:'4 ene 2027',by:'Zehui F.'},'A 3 min de Sol y de la Gran Vía: todo a pie, y metro L2 Sevilla en la esquina.',1],
+ ['Barcelona','Eixample, Aragó con Passeig de Gràcia',3,6,{n:'One Shot Aragó',a:'Carrer d\'Aragó 257, Eixample, Barcelona',via:'Booking',amt:901,cur:'EUR',paid:false,cancel:'11 ene 2027',by:'Zehui F.'},'Metro Passeig de Gràcia (L2, L3 y L4) y tren R2 a Sants a 3 min; Casa Batlló y La Pedrera a pasos.',1],
+ ['París','2º distrito, Réaumur–Sébastopol',4,7,{n:'Apartamento París',a:'78 Rue Réaumur, 75002 París',via:'Airbnb',amt:1605827,cur:'CLP',paid:false,cancel:'15 ene 2027',by:'Zehui F.'},'Metro Réaumur–Sébastopol (M3 y M4) en la esquina: la M4 va directo a Cité, Saint-Michel y Montmartre, y la M9 a Trocadéro.',1],
+ ['Lucerna','Bruchstrasse, a 12 min a pie de la estación',2,7,{n:'Apartamento Lucerna',a:'Bruchstrasse 35B, 6003 Lucerna',via:'Airbnb',amt:735037,cur:'CLP',paid:false,cancel:'21 dic 2026',by:'Zehui F.'},'Base para el Titlis (y el Rigi opcional), junto al casco antiguo y el río.',2],
+ ['Chur','Casco antiguo, Poststrasse',1,7,{n:'Central Hotel Post',a:'Poststrasse 11, 7000 Chur',via:'Booking',amt:727.42,cur:'USD',paid:true,by:'Zehui F.'},'A 5 min a pie de la estación: el Bernina Express sale a las 8:17.',2],
+ ['Milán','Junto a Milano Centrale',2,7,{n:'Canova Hotel',a:'Via Napo Torriani 15, 20124 Milán',via:'Booking',amt:655,cur:'EUR',paid:false,cancel:'21 ene 2027',by:'Zehui F.'},'A 3 min de Milano Centrale, donde llegan y de donde salen; metro M2 y M3 directo al Duomo y los Navigli.',2],
+ ['Venecia','Cannaregio, junto al Ponte delle Guglie',2,7,{n:'Leone Hotel',a:'Fondamenta di Cannaregio 1250, Venecia',via:'Booking',amt:667,cur:'EUR',paid:false,cancel:'22 ene 2027',by:'Zehui F.'},'A ~7 min a pie de la estación sin subir puentes con las maletas; vaporetto Guglie al lado.',2],
+ ['Florencia','Junto a Santa Maria Novella',3,7,{n:'Apartamento en Florencia',a:'Via degli Avelli 6, 50123 Florencia',via:'Airbnb',amt:993738,cur:'CLP',paid:false,cancel:'22 ene 2027',by:'Zehui F.'},'A 3 min de la estación y a 10 min a pie del Duomo.',2],
+ ['Roma','Termini, Via Massimo d\'Azeglio',3,7,{n:'Augusta Lucilla Palace',a:'Via Massimo d\'Azeglio 24, 00184 Roma',via:'Booking',amt:1247,cur:'USD',paid:true,by:'Zehui F.'},'A 5 min de Termini y del metro Repubblica (línea A); ideal con maletas y para el tren temprano a Nápoles.',2],
+ ['Nápoles','Junto a Napoli Centrale',1,4,{n:'Apartamento Nápoles',a:'Corso Meridionale 6, 80143 Nápoles',via:'Airbnb',amt:200,cur:'USD',paid:false,cancel:'3 ene 2027',by:'Cui'},'A 5 min de la estación: la Circumvesuviana a Pompeya y el Alibus al aeropuerto salen de ahí.',3],
+ ['Atenas','Monastiraki, calle Mitropoleos',2,4,{n:'Apartamento Atenas',a:'Mitropoleos 76, 105 63 Atenas',via:'Airbnb',amt:300,cur:'USD',paid:false,cancel:'4 ene 2027',by:'Cui'},'Bajo la Acrópolis, entre Monastiraki y Syntagma; la línea 3 del metro va directo al aeropuerto.',3],
+ ['Lisboa','Mouraria, junto a Martim Moniz',3,4,{n:'Apartamento Lisboa',a:'Rua das Farinhas 25 R/C, 1100 Lisboa',via:'Airbnb',amt:428.61,cur:'USD',paid:true,by:'Cui'},'Bajo el Castillo de San Jorge, a 5 min del metro Martim Moniz (línea verde) y del tranvía 28. Las calles son en subida.',3],
+ ['Madrid','Puerta del Sol, calle del Arenal',2,4,{n:'Hotel Moderno',a:'Calle del Arenal 2, 28013 Madrid',via:'Booking',amt:390,cur:'USD',paid:false,cancel:'5 feb 2027',by:'Cui'},'En plena Puerta del Sol: Preciados, Callao y la Gran Vía para las compras, a pasos.',3]
 ];

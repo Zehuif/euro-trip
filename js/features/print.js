@@ -28,8 +28,8 @@ function buildPrint(){
   h += '</table><h2>Trenes y vuelos</h2><table><tr><th>Fecha</th><th>Tramo</th><th>Sale de</th><th>Llega a</th><th>Operador</th><th>Duración</th><th>Precio</th></tr>';
   DAYS.filter(d => d.move).forEach(d => { h += `<tr><td>${d.n} ${d.m}</td><td>${esc(d.move.route)}</td><td>${STATIONS[d.move.from][0]}</td><td>${STATIONS[d.move.to][0]}</td><td>${esc(d.move.op)}</td><td>${esc(d.move.dur)}</td><td>${esc(d.move.pr)}</td></tr>`; });
 
-  h += '</table><h2>Dónde dormir</h2><table><tr><th>Ciudad</th><th>Entrada</th><th>Salida</th><th>Zona</th><th>Noches</th><th>Personas</th></tr>';
-  LODGING.forEach((l, i) => { h += `<tr><td>${l[0]}</td><td>${STAYS[i].checkIn}</td><td>${STAYS[i].checkOut}</td><td>${esc(l[1])}</td><td>${l[2]}</td><td>${l[3]}</td></tr>`; });
+  h += '</table><h2>Dónde dormir</h2><table><tr><th>Ciudad</th><th>Entrada</th><th>Salida</th><th>Alojamiento</th><th>Noches</th><th>Personas</th></tr>';
+  LODGING.forEach((l, i) => { h += `<tr><td>${l[0]}</td><td>${STAYS[i].checkIn}</td><td>${STAYS[i].checkOut}</td><td>${esc(l[4].n)}, ${esc(l[4].a)}</td><td>${l[2]}</td><td>${l[3]}</td></tr>`; });
 
   h += '</table><h2>Dónde comer</h2><div class="cols">';
   Object.keys(EAT).forEach(k => { h += `<div><h3>${FOOD_NAMES[k]}</h3><ul>${EAT[k].map(r => `<li><b>${esc(r[0])}</b> (${r[2]}) — ${esc(r[5])}. Pidan: ${esc(r[4])}</li>`).join('')}</ul></div>`; });

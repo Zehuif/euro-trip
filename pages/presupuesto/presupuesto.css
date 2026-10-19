@@ -1,12 +1,21 @@
-/* Presupuesto estimado. */
-/* Budget */
-.budget{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+/* Presupuesto: totales, tarjetas por etapa y tabla de reservas. */
+.grand{background:var(--ink);color:var(--bg);border-radius:12px;padding:18px 20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 24px;margin-bottom:16px}
+.grand div{display:flex;flex-direction:column;gap:2px}
+.grand b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.8rem;line-height:1.1}
+.grand small{opacity:.8;font-size:.85rem}
+.budget{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}
 .bcard{background:var(--surface);border-radius:12px;padding:16px;border-top:5px solid var(--c)}
 .bcard h3{font-size:1.1rem;margin-bottom:10px}
-.bcard dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:.95rem}
+.bcard dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:6px 10px;font-size:.95rem}
 .bcard dt{color:var(--muted)}
+.bcard dt em{font-style:normal;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-left:4px;color:var(--c)}
 .bcard dd{margin:0;text-align:right}
 .bcard .tot{border-top:1px solid var(--rule);padding-top:8px;margin-top:6px;font-weight:700}
-.grand{background:var(--ink);color:var(--bg);border-radius:12px;padding:18px 20px;display:flex;flex-wrap:wrap;gap:8px 30px;align-items:baseline}
-.grand b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.8rem}
-@media (max-width:820px){.budget{grid-template-columns:1fr}}
+.bk td{vertical-align:top}
+.bk td small{display:block;color:var(--muted);font-size:.82rem;margin-top:2px}
+.bk .num{text-align:right}
+.bk .nw{white-space:nowrap}
+.bk .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:8px}
+.bk tfoot td{font-weight:700;border-top:2px solid var(--rule)}
+.bk .ps-badge{font-size:.78rem}
+@media (max-width:820px){.budget,.grand{grid-template-columns:1fr}}

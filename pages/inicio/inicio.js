@@ -20,7 +20,7 @@ function renderTiles(){
     ['comer', `${nEat} lugares y platos típicos`, 's2'],
     ['guia', 'Transporte, barrios y consejos', 's2'],
     ['reservas', `${nMust} entradas obligatorias, ${nDone} compradas`, 's3'],
-    ['presupuesto', `Total estimado ${eur(computeBudget().total)}`, 's3'],
+    ['presupuesto', (b => `Total ${eur(b.total)}; reservado ${eur(b.booked)}`)(computeBudget()), 's3'],
     ['antes', 'Documentos, seguro, clima y maletas', 's1']
   ];
   $('tiles').innerHTML = T.map(([id, desc, c]) => { const p = pageById(id);

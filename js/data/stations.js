@@ -3,8 +3,8 @@
 export const STATIONS = {
   // España
   barajas:   ['Aeropuerto Madrid-Barajas', 'Aeropuerto Adolfo Suárez Madrid-Barajas'],
-  sol:       ['Puerta del Sol (alojamiento)', 'Puerta del Sol, Madrid'],
-  letras:    ['Barrio de las Letras (alojamiento)', 'Barrio de las Letras, Madrid'],
+  sol:       ['Calle de los Jardines 15 (alojamiento)', 'Calle de los Jardines 15, Madrid'],
+  moderno:   ['Hotel Moderno, Puerta del Sol (alojamiento)', 'Hotel Moderno, Calle del Arenal 2, Madrid'],
   atocha:    ['Madrid Puerta de Atocha', 'Estación de Madrid Puerta de Atocha-Almudena Grandes'],
   sants:     ['Barcelona Sants', 'Estación de Barcelona Sants'],
   // Francia y Suiza
