@@ -18,7 +18,6 @@ const reservations = () => [
   ...BOOKINGS.map(b => ({kind:b.lodging ? 'l' : 't', ...b}))
 ].map(r => ({...r, eur:r.amt == null || r.cancelled ? 0 : toEUR(r.amt, r.cur)}))
   .sort((a, b) => dateKey(a.date) - dateKey(b.date));
-// (los vuelos desde Chile van al final: sus fechas quedan fuera de enero y febrero)
 
 // {stages: {1: {l, t, est, f, ppl, days, tot}, ...}, total, paid, due}
 // Lo que falta reservar (todo) va como estimado; lo cancelado o sin monto no se suma.

@@ -24,5 +24,5 @@ export const BOOKINGS = [
  {st:3, date:'2 feb', what:'Vuelo Aegean A3651 Roma Fiumicino (T1) → Atenas, 10:35 a 13:35, tarifa Flex', amt:406.01, cur:'USD', ppl:4, paid:true, by:'Cui'},
  {st:3, date:'5 feb', what:'Vuelo Sky Express GQ922 Atenas → Lisboa, 20:00 a 22:30', amt:351.82, cur:'USD', ppl:4, paid:true, by:'Cui'},
  {st:3, date:'8 feb', what:'Vuelo TAP TP1012 Lisboa → Madrid, 8:55 a 11:20', amt:186.94, cur:'USD', ppl:4, paid:true, by:'Cui'},
- {st:3, date:'8 may', what:'Vuelo Chile → Madrid (3 personas)', amt:3945.56, cur:'USD', ppl:3, paid:true, by:'Cui', outside:true}
+ {st:1, date:'8 ene', what:'Vuelo Chile → Madrid para 3 de los 6 de la etapa 1 (sale el 8, llega el 9 de enero)', amt:3945.56, cur:'USD', ppl:3, paid:true, by:'Cui', outside:true}
 ];
