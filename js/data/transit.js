@@ -3,6 +3,7 @@
 //   lines: líneas que usa el itinerario [nombre, color, detalle]
 //   air: aeropuertos en transporte público [tramo, detalle]
 //   map: plano del metro guardado en assets/metro (Wikimedia Commons: archivo, autor, licencia, fecha)
+//   pass: ¿conviene el pase? trips: viajes del itinerario [día, qué, cantidad]; ways: formas de pagarlos [cómo, precio por persona, 1 = es un pase]; note
 //   links: planos y apps oficiales [texto, url]
 
 export const TRANSIT = {
@@ -20,6 +21,9 @@ export const TRANSIT = {
    ['Cui al aeropuerto, 17 ene','Desde el NH Madrid Zurbano: L10 de Gregorio Marañón a Nuevos Ministerios (1 estación) y L8 rosa hasta Aeropuerto T1-T2-T3 (~30 min, con el suplemento de €3).'],
    ['Metro al aeropuerto','La L8 rosa llega a las terminales, pero desde el centro exige 2 transbordos y cobra €3 de suplemento: con maletas conviene el bus.']],
   map:{f:'assets/metro/madrid.png', src:'Madrid_Metro_Map.svg', by:'Javitomad', lic:'CC BY-SA 4.0', date:'2025'},
+  pass:{trips:[['9 ene','L2 Banco de España → Sevilla, al llegar',1],['10 ene','L3 Plaza de España → Sol',1],['11 ene','L1 Estación del Arte → Sol, si están cansados',1],['13 ene','L1 Sol → Atocha, al tren',1],['8 feb','L2 Banco de España → Sol, al llegar',1],['9 feb','L2 Sol → Goya y L1 Tribunal → Sol',2],['10 feb','L2 Sol → Banco de España, al bus',1]],
+   ways:[['Boletos sencillos (8 × ~€1,75)',14,0],['Tarjeta Multi (€2,50) + 10 viajes (€7,30)',9.8,0],['Abono Turístico zona A: dos de 3 días, uno por estadía',46.2,1]],
+   note:'El bus Exprés Aeropuerto (€5 por viaje, 3 viajes) se paga aparte con cualquier opción.'},
   links:[['Plano oficial (esMadrid)','https://www.esmadrid.com/plano-de-metro-de-madrid'],['Metro de Madrid','https://www.metromadrid.es'],['Bus Exprés Aeropuerto (EMT)','https://www.emtmadrid.es']]},
 
  barcelona:{name:'Barcelona',
@@ -34,6 +38,9 @@ export const TRANSIT = {
    ['Funicular','#5C9C3C','Paral·lel → Parc de Montjuïc, con la misma T-casual.']],
   air:[],
   map:{f:'assets/metro/barcelona.png', src:'Mapa_metro_Barcelona_actual.svg', by:'ItsAstrid', lic:'CC BY-SA 4.0', date:'2025'},
+  pass:{trips:[['13 ene','Tren R2 Sants → Passeig de Gràcia',1],['13 ene','L3 al Gótico, ida y vuelta',2],['14 ene','L2 a la Sagrada Família, ida y vuelta',2],['15 ene','Bus 24 al Park Güell',1],['15 ene','Bus V17 o 22 de los Bunkers a Gràcia',1],['15 ene','L3 Fontana → Paral·lel y funicular (un viaje con transbordo)',1],['15 ene','L4 Barceloneta → Passeig de Gràcia',1],['16 ene','Tren R2 a Sants',1]],
+   ways:[['Boletos sencillos (10 × €2,90)',29,0],['T-casual de 10 viajes',13,0],['Hola Barcelona 72 h',27.3,1]],
+   note:'La Hola Barcelona incluye el metro al aeropuerto, que este viaje no usa.'},
   links:[['Plano oficial (TMB)','https://www.tmb.cat/es/transporte-barcelona/mapa/metro'],['App TMB','https://www.tmb.cat']]},
 
  paris:{name:'París',
@@ -48,6 +55,9 @@ export const TRANSIT = {
    ['RER C','#FFCE00','Saint-Michel Notre-Dame → Versailles Château Rive Gauche (~40 min); vuelve a la estación Musée d\'Orsay.']],
   air:[['Cui, Orly, 17 ene','Línea 14 del metro desde Aéroport d\'Orly hasta Châtelet (~25 min, boleto aeropuerto €14) y M4 tres estaciones hasta Réaumur–Sébastopol, en la esquina del departamento. Más simple y rápido que el Orlyval.']],
   map:{f:'assets/metro/paris.png', src:'Carte_Métro_de_Paris.svg', by:'Rigil', lic:'CC BY 3.0', date:'julio de 2024'},
+  pass:{trips:[['16 ene','M14 y M4 de Gare de Lyon al departamento',1],['16 ene','M9 a Trocadéro, ida y vuelta',2],['17 ene','M4 y M2 a Montmartre, ida y vuelta',2],['18 ene','Al Louvre (o a pie) y vuelta desde el Arco',2],['19 ene','M4 y RER C a Versalles',1],['19 ene','RER C de vuelta al Orsay',1],['19 ene','M4 de Saint-Michel al departamento',1],['20 ene','M4 y M14 a Gare de Lyon, si no van en taxi',1]],
+   ways:[['Navigo Easy (€2) + 11 boletos de €2,55',30.05,0],['Paris Visite 5 días (16 al 20 ene)',78,1]],
+   note:'Cui paga aparte el boleto aeropuerto (€14) para llegar desde Orly. El Navigo Semana va de lunes a domingo y pide foto: tampoco conviene para estas fechas.'},
   links:[['Planos oficiales (RATP)','https://www.bonjour-ratp.fr/plans-metro/'],['App Bonjour RATP','https://www.bonjour-ratp.fr']]},
 
  zurich:{name:'Suiza',
@@ -68,6 +78,9 @@ export const TRANSIT = {
    ['M2','#009A49','Cadorna → Porta Genova (3) para los Navigli, y vuelta directa a Centrale.']],
   air:[],
   map:{f:'assets/metro/milan.png', src:'Milano_-_mappa_rete_metropolitana_(geografica).svg', by:'CortoFrancese', lic:'CC BY-SA 4.0', date:'2024'},
+  pass:{trips:[['24 ene','M3 Centrale → Duomo',1],['24 ene','M1 Duomo → Conciliazione, a la Última Cena',1],['24 ene','M1 y M2 a Porta Genova, a los Navigli',1],['24 ene','M2 Porta Genova → Centrale',1]],
+   ways:[['Pagar con tarjeta (4 × €2,20, con tope diario de €7,60)',7.6,0],['Pase de 24 horas',7.6,1]],
+   note:'Da lo mismo: al pagar con la tarjeta bancaria, el tope diario los cobra como un pase de 24 horas sin comprar nada.'},
   links:[['ATM Milano (plano y app)','https://www.atm.it']]},
 
  venecia:{name:'Venecia',
@@ -78,6 +91,9 @@ export const TRANSIT = {
    ['Línea 2','#00589C','La rápida: Ferrovia → Rialto → San Marco con menos paradas.'],
    ['4.1 / 4.2 y 12','#00589C','Fondamente Nove → Murano (4.1 o 4.2) y Fondamente Nove o Murano Faro → Burano (12).']],
   air:[],
+  pass:{trips:[['25 ene','Línea 1 de Ferrovia a San Marco por el Gran Canal',1],['25 ene','Vuelta al hotel',1],['26 ene','Al Palacio Ducal (San Marco)',1],['26 ene','San Zaccaria → Murano',1],['26 ene','Murano → Burano',1],['26 ene','Burano → hotel',1]],
+   ways:[['Boletos de 75 minutos (6 × €9,50)',57,0],['Pase de 24 h el 26 (€25) + 2 boletos el 25',44,0],['Pase de 48 horas',35,1]],
+   note:'El vaporetto es caro por viaje: con 4 viajes o más, cualquier pase ya conviene.'},
   links:[['Mapa de líneas (ACTV)','https://actv.avmspa.it'],['Pases (Venezia Unica)','https://www.veneziaunica.it']]},
 
  florencia:{name:'Florencia',
@@ -87,6 +103,9 @@ export const TRANSIT = {
   lines:[['Bus 12 y 13','#7B868C','Desde la estación Santa Maria Novella al Piazzale Michelangelo.'],
    ['Tranvía T2','#7B868C','Llega al aeropuerto de Florencia, que este viaje no usa.']],
   air:[],
+  pass:{trips:[['27 ene','Bus 12 o 13 al Piazzale Michelangelo, ida y vuelta',2]],
+   ways:[['Pagar con tarjeta en el bus (2 × €1,70)',3.4,0]],
+   note:'No hace falta pase: el centro se recorre a pie.'},
   links:[['Mapas de Autolinee Toscane','https://www.at-bus.it/it/mappe']]},
 
  roma:{name:'Roma',
@@ -96,33 +115,28 @@ export const TRANSIT = {
   lines:[['Metro B','#0067B1','Termini → Colosseo (2 estaciones).'],
    ['Metro A','#F68D20','Repubblica, a 5 min del hotel → Barberini (1) para Trevi, y → Ottaviano (5) para el Vaticano.'],
    ['Tranvía 8 y bus 40','#7B868C','Trastevere → Piazza Venezia en tranvía, y bus 40 o 64 hasta Termini, para volver de la cena de despedida.'],
-   ['Leonardo Express','#C8102E','Termini → Fiumicino en 32 min, sin paradas (€14): para los 3 que viajan a China.']],
-  air:[['Los 3 a China, 2 feb','Leonardo Express desde Termini, cada 15–30 min. Boleto en la app de Trenitalia o en las máquinas; no entra en el Tap&Go.']],
+   ['Leonardo Express','#C8102E','Termini → Fiumicino en 32 min, sin paradas (€14, o €40 cada 4): el 2 de febrero, para el vuelo a Atenas.']],
+  air:[['Vuelo a Atenas, 2 feb, 10:35 (terminal 1)','Leonardo Express desde Termini, a 5 min del hotel, hacia las 8:00; sale cada 15–30 min. Viajan los 7: los 3 que van a China salen del mismo aeropuerto. Boleto en la app de Trenitalia o en las máquinas (4 personas en una compra, €40); no entra en el Tap&Go.']],
   map:{f:'assets/metro/roma.png', src:'Liniennetz_Metro_Rom.svg', by:'Wiesenpinguin', lic:'CC0', date:'2025'},
+  pass:{trips:[['30 ene','Metro A Repubblica ⇄ Barberini (Trevi)',2],['31 ene','Metro B Termini ⇄ Colosseo',2],['1 feb','Metro A Repubblica → Ottaviano (Vaticano)',1],['1 feb','Tranvía 8 y bus 40 desde Trastevere (un mismo boleto de 100 min)',1]],
+   ways:[['Tap&Go con tarjeta (6 × €1,50)',9,0],['Roma 48 h',15,1],['Roma 72 h',22,1]],
+   note:'El Leonardo Express al aeropuerto (€14, o €40 cada 4) se paga aparte con cualquier opción.'},
   links:[['ATAC (plano y app)','https://www.atac.roma.it'],['Leonardo Express (Trenitalia)','https://www.trenitalia.com/it/regionale/collegamenti-regionale/leonardo-express.html']]},
 
- napoles:{name:'Nápoles',
-  short:'Circumvesuviana y Alibus con boleto propio; metro con tarjeta',
-  buy:'En la Línea 1 se paga acercando la tarjeta bancaria. La Circumvesuviana a Pompeya y el Alibus al aeropuerto tienen boleto propio: cómprenlo en la boletería o en la app UnicoCampania.',
-  cost:'~€15 por persona (Pompeya ida y vuelta, metro y Alibus)',
-  lines:[['Circumvesuviana','#E2001A','Napoli Garibaldi (bajo Napoli Centrale) → Pompei Scavi, línea Napoli–Sorrento (~35 min, ~€3–4).'],
-   ['Línea 1','#FFC20E','Garibaldi → Duomo (1), Università, Municipio y Toledo, una de las estaciones más lindas del mundo.'],
-   ['Alibus','#00A1DE','Piazza Garibaldi, a 5 min del departamento → aeropuerto (~20 min, €5), cada 15–20 min.']],
-  air:[['A Atenas, 3 feb','Alibus desde Piazza Garibaldi, frente a Napoli Centrale, a las 7:45. A bordo puede costar €1 más: compren el boleto antes.']],
-  map:{f:'assets/metro/napoles.jpg', src:'Napoli_-_mappa_metropolitana_linea_1.svg', by:'Arbalete y colaboradores de OpenStreetMap', lic:'CC BY-SA 2.0', date:'2025'},
-  links:[['ANM (metro y Alibus)','https://www.anm.it'],['EAV Circumvesuviana','https://www.eavsrl.it']]},
-
  atenas:{name:'Atenas',
-  short:'Pase turístico de 3 días con aeropuerto',
-  buy:'El <b>pase turístico de 3 días</b> (€20) en las máquinas del aeropuerto: cubre el metro de llegada, todo el transporte de la ciudad y la vuelta al aeropuerto el 5 de febrero.',
-  cost:'€20 por persona',
+  short:'Ida y vuelta al aeropuerto + viajes sueltos',
+  buy:'El <b>boleto de metro de ida y vuelta al aeropuerto</b> (€16) en las máquinas del aeropuerto, y para la ciudad viajes sueltos de €1,20 (90 minutos), pagando con la tarjeta bancaria en el validador. El pase turístico de 3 días no alcanza: la vuelta al aeropuerto del 5 de febrero cae más de 72 horas después de la llegada.',
+  cost:'~€22 por persona',
   lines:[['Línea 3','#0070BB','Aeropuerto → Monastiraki, a 3 min del departamento (~45 min, cada ~30 min); Monastiraki → Evangelismos (2) para el Licabeto.'],
+   ['Línea 1','#00A651','Monastiraki → Victoria (2) para el Museo Arqueológico Nacional.'],
    ['Línea 2','#E2231A','Syntagma → Akropoli (1 estación), si no quieren caminar a la Acrópolis.'],
-   ['Línea 1','#00A651','Monastiraki → Thissio (1) para el Ágora, si no quieren caminar.'],
    ['Bus 024','#7B868C','Syntagma → terminal KTEL Liosion, si van a Delfos en bus público.']],
-  air:[['Llegada, 3 feb','Línea 3 desde el aeropuerto hasta Monastiraki, sin transbordo (~45 min); el departamento de la calle Mitropoleos queda a 3 min.'],
-   ['Salida, 5 feb','Línea 3 desde Monastiraki o Syntagma hacia las 17:00 (~45 min), incluida en el pase. Suban al tren que dice «Airport»: los demás terminan en Doukissis Plakentias; si toman uno de esos, bájense ahí y esperen el siguiente al aeropuerto.']],
+  air:[['Llegada, 2 feb, 13:35','Línea 3 desde el aeropuerto hasta Monastiraki, sin transbordo (~45 min); el departamento de la calle Mitropoleos queda a 3 min.'],
+   ['Salida, 5 feb','Línea 3 desde Monastiraki o Syntagma hacia las 17:00 (~45 min), con la vuelta del boleto de ida y vuelta. Suban al tren que dice «Airport»: los demás terminan en Doukissis Plakentias; si toman uno de esos, bájense ahí y esperen el siguiente al aeropuerto.']],
   map:{f:'assets/metro/atenas.png', src:'Athens_Metro_map_2022.png', by:'autores originales y ediciones de colaboradores de Wikimedia', lic:'CC BY 3.0', date:'2022'},
+  pass:{trips:[['2 feb','Metro aeropuerto → Monastiraki',1],['2 feb','Línea 3 a Evangelismos y vuelta, para el Licabeto',2],['3 feb','Bus 024 a la terminal KTEL, si no van en tour',1],['5 feb','Línea 1 al Museo Arqueológico y vuelta',2],['5 feb','Metro al aeropuerto',1]],
+   ways:[['Boletos sueltos (2 × €9 + 5 × €1,20)',24,0],['Ida y vuelta al aeropuerto (€16) + 5 × €1,20',22,0],['Ida y vuelta al aeropuerto (€16) + pase de 5 días (€8,20)',24.2,1],['Pase turístico de 3 días (€20) + metro al aeropuerto el 5 (€9)',29,1]],
+   note:'Llegan el 2 a las 13:35 y vuelven al aeropuerto el 5 a las 17:00: más de 72 horas, así que el pase turístico de 3 días no cubre la vuelta.'},
   links:[['Metro de Atenas (STASY)','https://www.stasy.gr/en/'],['OASA (buses y boletos)','https://www.oasa.gr']]},
 
  lisboa:{name:'Lisboa',
@@ -137,6 +151,9 @@ export const TRANSIT = {
   air:[['Llegada, 5 feb, 22:30','Metro línea roja desde Aeroporto hasta Alameda y línea verde hasta Martim Moniz (~25 min, €1,90; funciona hasta la 1:00), y 5 min a pie en subida. Para 4 personas, el taxi hasta la puerta (€15–20) cuesta casi lo mismo y se ahorran la subida de noche.'],
    ['Vuelo a Madrid, 8 feb, 8:55','El metro abre a las 6:30: desde Martim Moniz, verde hasta Alameda y roja hasta Aeroporto, llegando cerca de las 7:00. Es justo; el taxi de las 6:45 da más margen.']],
   map:{f:'assets/metro/lisboa.jpg', src:'Mapa_Metropolitano_de_Lisboa_2016.png', by:'Rúdisicyon', lic:'CC BY-SA 4.0', date:'2016, sin cambios en las líneas que usan'},
+  pass:{trips:[['5 feb','Metro Aeroporto → Martim Moniz',1],['6 feb','Tranvía 15E a Belém y vuelta, y metro de vuelta del Bairro Alto',4],['7 feb','Elevador de Santa Justa (€6,20 sin pase) y tranvía 28E',2],['8 feb','Metro al aeropuerto',1]],
+   ways:[['Navegante (€0,50) con viajes sueltos y el Elevador aparte',20,0],['Navegante con pase de 24 h el 6 y el 7 (€7,25 cada día)',18.8,1]],
+   note:'Casi lo mismo, pero el pase de 24 h incluye el Elevador de Santa Justa y evita pagar €3,30 en el tranvía si alguien se queda sin saldo. La Lisboa Card está en la página Pases.'},
   links:[['Planos oficiales (Metro de Lisboa)','https://www.metrolisboa.pt/en/travel/diagrams-and-maps/'],['Carris (tranvías y elevadores)','https://www.carris.pt']]}
 };
 

@@ -105,29 +105,15 @@ export const PASSES = [
   no:'Museos Vaticanos ni Panteón.',
   rec:'No conviene: Roma se recorre a pie y el Vaticano no está incluido. Compren el Coliseo por separado (€18 + €2 en línea) y viajes sueltos de metro (€1,50).'},
 
- {id:'napoles', city:'Nápoles', when:'2 feb', st:3, ppl:4, cur:'€', rest:0.5,
-  name:'Campania ArteCard 3 días', url:'https://www.campaniartecard.it',
-  what:'Transporte en Nápoles y la región (incluida la Circumvesuviana), las dos primeras entradas gratis y 50% de descuento en las siguientes. Solo en la app.',
-  opts:[['3 días, toda la región', 32, 2]],
-  items:[
-   {n:'Parque arqueológico de Pompeya', p:18, day:'2 feb', m:true},
-   {n:'Circumvesuviana ida y vuelta a Pompeya', p:3.6, q:2, day:'2 feb'},
-   {n:'Metro y bus en Nápoles', p:1.3, q:2, day:'2 feb'},
-   {n:'Museo Arqueológico Nacional (MANN)', p:20, day:'', m:true, note:'Los tesoros de Pompeya están aquí.'},
-   {n:'Herculano', p:13, day:'', m:true}],
-  no:'El Alibus al aeropuerto.',
-  rec:'No conviene con un solo día: lo del itinerario suma ~€28 contra €32. Solo se paga si agregan el Museo Arqueológico, y no les da el tiempo.'},
-
- {id:'atenas', city:'Atenas', when:'3 al 5 feb', st:3, ppl:4, cur:'€',
+ {id:'atenas', city:'Atenas', when:'2 al 5 feb', st:3, ppl:4, cur:'€',
   name:'Pase turístico de transporte 3 días', url:'https://www.stasy.gr',
   what:'Todo el transporte de Atenas por 3 días, con el metro de ida y vuelta al aeropuerto incluido.',
   opts:[['3 días', 20]],
   items:[
-   {n:'Metro del aeropuerto a Syntagma', p:9, day:'3 feb'},
-   {n:'Metro de Syntagma al aeropuerto', p:9, day:'5 feb'},
-   {n:'Viajes en la ciudad (~4: Licabeto, Monastiraki)', p:1.2, q:4, day:'3–5 feb'}],
+   {n:'Metro del aeropuerto al llegar', p:9, day:'2 feb', note:'La vuelta del 5 a las 17:00 cae fuera de las 72 horas del pase: se paga aparte igual.'},
+   {n:'Viajes en la ciudad (Licabeto, bus a la terminal KTEL y Museo Arqueológico)', p:1.2, q:5, day:'2–5 feb'}],
   no:'Entradas. La entrada combinada oficial a los sitios arqueológicos se eliminó en abril de 2025: se compran por separado en hhticket.gr.',
-  rec:'Conviene: cuesta menos que los dos viajes al aeropuerto más unos pocos en la ciudad, y no tienen que comprar boletos cada vez.'},
+  rec:'No conviene: llegan el 2 a las 13:35 y vuelven al aeropuerto el 5 a las 17:00, más de 72 horas después. Mejor el boleto de metro de ida y vuelta al aeropuerto (€16) y viajes sueltos de €1,20.'},
 
  {id:'lisboa', city:'Lisboa', when:'6 y 7 feb', st:3, ppl:4, cur:'€',
   name:'Lisboa Card', url:'https://www.visitlisboa.com',

@@ -36,12 +36,13 @@ export const TICKETS = [
  ['Coliseo',[['Entradas','https://colosseo.it']]],
  ['Museos Vaticanos',[['Entradas','https://www.museivaticani.va']]],
  ['Galería Borghese',[['Entradas','https://galleriaborghese.beniculturali.it']]],
- ['Capilla Sansevero',[['Entradas','https://www.museosansevero.it']]],
- ['Parque arqueológico de Pompeya',[['Entradas','https://www.pompeiisites.org']]],
  ['Acrópolis',[['Entradas','https://hhticket.gr']]],
  ['Museo de la Acrópolis',[['Entradas','https://www.theacropolismuseum.gr']]],
  ['Tranvía 28',[['Carris','https://www.carris.pt']]],
  ['Santuario y museo de Delfos',[['Entradas','https://hhticket.gr']]],
+ ['Templo de Zeus Olímpico',[['Entradas','https://hhticket.gr']]],
+ ['Ágora Antigua',[['Entradas','https://hhticket.gr']]],
+ ['Museo Arqueológico Nacional',[['Entradas','https://hhticket.gr']]],
  ['Castillo de San Jorge',[['Entradas','https://castelodesaojorge.pt']]]
 ];
 export const NOMAP = /^(Llegada|Mañana|Tarde|Cena|Almuerzo|Desayuno|Reserva de asiento|Pase de|Paseo en góndola|Alternativa|Pizza|Barco por|Viaducto circular)/;
@@ -60,8 +61,7 @@ export const BUY = {
  'Chur → Tirano → Milán':[['Bernina Express (RhB)','https://www.rhb.ch'],['Trenord','https://www.trenord.it']],
  'Milán → Venecia':IT_TRAIN, 'Venecia → Florencia':IT_TRAIN, 'Florencia → Roma':IT_TRAIN,
  'Florencia ⇄ Pisa y Lucca':[['Trenitalia','https://www.trenitalia.com']],
- 'Roma → Nápoles ⇄ Pompeya':[...IT_TRAIN,['EAV Circumvesuviana','https://www.eavsrl.it'],['Leonardo Express (los 3 a China)','https://www.trenitalia.com/it/regionale/collegamenti-regionale/leonardo-express.html']],
- 'Nápoles → Atenas':[['Alibus (ANM)','https://www.anm.it']],
+ 'Roma → Atenas':[['Leonardo Express (Trenitalia)','https://www.trenitalia.com/it/regionale/collegamenti-regionale/leonardo-express.html'],['Metro de Atenas','https://www.stasy.gr']],
  'Atenas → Lisboa':[['Metro de Atenas','https://www.stasy.gr'],['Metro de Lisboa','https://www.metrolisboa.pt']],
  'Lisboa → Madrid':[['TAP (gestionar la reserva)','https://www.flytap.com'],['Metro de Lisboa','https://www.metrolisboa.pt'],EXPRES],
  'Madrid → Aeropuerto Barajas':[EXPRES]

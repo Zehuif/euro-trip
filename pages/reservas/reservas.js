@@ -33,7 +33,7 @@ function renderMoves(){
 
 function renderLodging(){
   $('lodging').innerHTML = LODGING.map((l, i) => { const b = l[4];
-    return `<tr style="--c:${ST[l[6]].c}"><td><span class="dot"></span>${l[0]}</td><td class="stay">Entrada <b>${STAYS[i].checkIn}</b><br>Salida <b>${STAYS[i].checkOut}</b></td><td><b>${b.n}</b><br>${ext(b.a + ' ↗', 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(b.a), 'stn')}<br><small>${l[1]} · ${b.via}</small></td><td class="num">${l[2]}</td><td class="num">${l[3]}</td><td class="num">${money(b.amt, b.cur)}</td><td>${b.paid ? '<span class="ps-badge yes">Pagado</span>' : `<span class="ps-badge no">Por pagar</span><br><small>Cancelación gratis hasta el ${b.cancel}</small>`}</td><td>${l[5]}</td></tr>`; }).join('');
+    return `<tr style="--c:${ST[l[6]].c}"><td><span class="dot"></span>${l[0]}</td><td class="stay">Entrada <b>${STAYS[i].checkIn}</b><br>Salida <b>${STAYS[i].checkOut}</b></td><td><b>${b.n}</b><br>${ext(b.a + ' ↗', 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(b.a), 'stn')}<br><small>${l[1]} · ${b.via}</small></td><td class="num">${l[2]}</td><td class="num">${l[3]}</td><td class="num">${b.todo ? '~' : ''}${money(b.amt, b.cur)}</td><td>${b.todo ? '<span class="ps-badge tie">Por reservar</span>' : b.paid ? '<span class="ps-badge yes">Pagado</span>' : `<span class="ps-badge no">Por pagar</span><br><small>Cancelación gratis hasta el ${b.cancel}</small>`}</td><td>${l[5]}</td></tr>`; }).join('');
 }
 
 export function initReservas(){

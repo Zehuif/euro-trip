@@ -30,10 +30,6 @@ export const STATIONS = {
   lucca:     ['Lucca (estación)', 'Stazione di Lucca'],
   termini:   ['Roma Termini', 'Stazione di Roma Termini'],
   fiumicino: ['Fiumicino Aeroporto', 'Stazione Fiumicino Aeroporto'],
-  napoli:    ['Napoli Centrale', 'Stazione di Napoli Centrale'],
-  garibaldi: ['Napoli Garibaldi (Circumvesuviana)', 'Stazione Circumvesuviana Napoli Garibaldi'],
-  pompei:    ['Pompei Scavi – Villa dei Misteri', 'Stazione Pompei Scavi Villa dei Misteri'],
-  napAir:    ['Aeropuerto de Nápoles-Capodichino', 'Aeroporto di Napoli-Capodichino'],
   // Grecia y Portugal
   athAir:    ['Aeropuerto de Atenas', 'Aeropuerto Internacional de Atenas Eleftherios Venizelos'],
   liosion:   ['Terminal de buses KTEL Liosion', 'KTEL Liosion Bus Terminal, Athens'],

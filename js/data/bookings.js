@@ -1,6 +1,7 @@
 // Reservas reales de trenes, vuelos, entradas y extras (el alojamiento está en js/data/lodging.js), y tipos de cambio.
 // {st: etapa, date: fecha, what: qué es, amt: monto total, cur: moneda, ppl: personas, paid: pagado, cancel: cancelación gratis hasta, by: quién pagó,
-//  lodging: true = es alojamiento (se suma al alojamiento del presupuesto)}
+//  lodging: true = es alojamiento (se suma al alojamiento del presupuesto), amt: null = monto por confirmar (no se suma),
+//  cancelled: true = cancelado, con reembolso pendiente (no se suma), outside: true = vuelo desde o hacia Chile (va aparte del total de Europa)}
 
 // Unidades de cada moneda por 1 euro. Actualícenlas cuando quieran: el presupuesto se recalcula solo.
 export const RATES = {EUR:1, USD:1.12, CLP:1115};
@@ -20,7 +21,8 @@ export const BOOKINGS = [
  {st:2, date:'17 ene', what:'Cui: vuelo Air Europa UX1029 Madrid → París Orly, 14:25 a 16:20', amt:71, cur:'USD', ppl:1, paid:true, by:'Cui'},
  {st:2, date:'20 ene', what:'Tren Paris Gare de Lyon → Zürich HB, 7:20 a 11:30', amt:228, cur:'USD', ppl:7, paid:true, by:'Zehui F.'},
  {st:2, date:'23 ene', what:'Bernina Express Chur → Tirano, 8:17 a 12:50 (reserva de asiento)', amt:338, cur:'USD', ppl:7, paid:true, by:'Zehui F.'},
- {st:3, date:'3 feb', what:'Vuelo Aegean A3681 Nápoles → Atenas, 10:00 a 12:45', amt:335.69, cur:'USD', ppl:4, paid:true, by:'Cui'},
+ {st:3, date:'2 feb', what:'Vuelo Aegean A3651 Roma Fiumicino (T1) → Atenas, 10:35 a 13:35, tarifa Flex', amt:406.01, cur:'USD', ppl:4, paid:true, by:'Cui'},
  {st:3, date:'5 feb', what:'Vuelo Sky Express GQ922 Atenas → Lisboa, 20:00 a 22:30', amt:351.82, cur:'USD', ppl:4, paid:true, by:'Cui'},
- {st:3, date:'8 feb', what:'Vuelo TAP TP1012 Lisboa → Madrid, 8:55 a 11:20', amt:186.94, cur:'USD', ppl:4, paid:true, by:'Cui'}
+ {st:3, date:'8 feb', what:'Vuelo TAP TP1012 Lisboa → Madrid, 8:55 a 11:20', amt:186.94, cur:'USD', ppl:4, paid:true, by:'Cui'},
+ {st:3, date:'8 may', what:'Vuelo Chile → Madrid (3 personas)', amt:3945.56, cur:'USD', ppl:3, paid:true, by:'Cui', outside:true}
 ];

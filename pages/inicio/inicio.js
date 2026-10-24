@@ -15,7 +15,7 @@ function renderTiles(){
   const nEat = Object.values(EAT).reduce((a, l) => a + l.length, 0);
   // [página, descripción, color]
   const T = [
-    ['itinerario', `${DAYS.length} días, 14 ciudades`, 's1'],
+    ['itinerario', `${DAYS.length} días, 12 ciudades`, 's1'],
     ['mapa', 'La ruta, día por día', 's1'],
     ['comer', `${nEat} lugares y platos típicos`, 's2'],
     ['guia', 'Transporte, barrios y consejos', 's2'],

@@ -21,4 +21,14 @@
 .trlinks{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .trlinks a.tk{margin:0}
 .tcard .metro-day{margin-top:10px}
-@media (max-width:900px){.trpanel{grid-template-columns:1fr}}
+.tcard h3 .ps-badge{margin-left:auto;font-family:"Atkinson Hyperlegible",sans-serif}
+.trpass{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px}
+.trpass h4{font-size:.95rem;margin:0 0 6px}
+.trtrips{list-style:none;margin:0;padding:0;font-size:.92rem}
+.trtrips li{padding:5px 0;border-bottom:1px dashed var(--rule)}
+.trtrips li:last-child{border-bottom:0}
+.trtrips .ps-tag{margin:0 6px 0 0}
+.trways tr.low td{font-weight:700;color:var(--ink)}
+.trways small{font-size:.75rem;font-weight:700;color:var(--s2);background:var(--s2-soft);padding:1px 7px;border-radius:999px;white-space:nowrap}
+.trverd{font-size:.93rem;margin:6px 0 0}
+@media (max-width:900px){.trpanel,.trpass{grid-template-columns:1fr}}

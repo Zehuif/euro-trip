@@ -3,6 +3,8 @@
 .grand div{display:flex;flex-direction:column;gap:2px}
 .grand b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.8rem;line-height:1.1}
 .grand small{opacity:.8;font-size:.85rem}
+.grand .out{grid-column:1 / -1;border-top:1px solid rgba(255,255,255,.2);padding-top:10px;flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.grand .out b{font-size:1.3rem}
 .budget{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}
 .bcard{background:var(--surface);border-radius:12px;padding:16px;border-top:5px solid var(--c)}
 .bcard h3{font-size:1.1rem;margin-bottom:10px}

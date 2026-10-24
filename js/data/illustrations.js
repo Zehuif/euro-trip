@@ -52,11 +52,6 @@ export const ILL = {
  roma: svgWrap(ground()+
   `<path d="M140 128V58Q300 34 460 58V128Z" fill="${C}"/><path d="M420 128V60L460 58V128Z" fill="${K}" opacity=".5"/>`+
   arches(158,10,30,18,124,22)+arches(158,10,30,16,96,18)+arches(158,10,30,14,72,12),'Coliseo, Roma'),
- napoles: svgWrap(mtn('300,128 380,52 420,64 460,40 560,128','.3')+water+
-  `<g fill="${C}">${[40,70,95,125,150,180].map((x,i)=>`<rect x="${x}" y="${100-(i%3)*10}" width="24" height="${28+(i%3)*10}"/>`).join('')}<rect x="220" y="100" width="70" height="24"/><rect x="230" y="90" width="20" height="10"/></g>`,'Bahía de Nápoles y el Vesubio'),
- pompeya: svgWrap(mtn('260,128 360,40 400,52 440,30 560,128','.25')+ground()+
-  `<rect x="90" y="118" width="320" height="10" fill="${C}"/>`+columns(110,6,52,14,62,118)+
-  `<rect x="104" y="54" width="130" height="10" fill="${C}"/><rect x="310" y="96" width="14" height="22" fill="${K}"/>`,'Ruinas de Pompeya con el Vesubio'),
  atenas: svgWrap(`<path d="M0 128Q150 70 300 74Q450 70 600 128Z" fill="${C}" opacity=".3"/>`+ground()+
   `<rect x="190" y="70" width="220" height="8" fill="${C}"/>`+columns(200,8,28,10,40,70)+
   `<rect x="194" y="32" width="212" height="8" fill="${C}"/><path d="M194 32L300 12L406 32Z" fill="${C}"/>`,'Partenón, Atenas'),
@@ -73,4 +68,4 @@ export const ILL = {
    ${[46,62,78,94,110].map(y=>`<rect x="280" y="${y}" width="40" height="2" fill="${K}"/>`).join('')}</g>
    <path d="M110 128V90L190 76L270 90V128Z" fill="${C}" opacity=".6"/><path d="M160 76a30 20 0 0 1 60 0z" fill="${C}" opacity=".6"/>`,'Torre inclinada de Pisa'),
 };
-export const KEYS = {'Madrid':'madrid','Barcelona':'barcelona','París':'paris','Zúrich':'zurich','Zúrich y Lucerna':'zurich','Lucerna':'lucerna','Chur':'chur','Milán':'milan','Venecia':'venecia','Florencia':'florencia','Pisa y Lucca':'pisa','Roma':'roma','Roma: se separan':'roma','Nápoles':'napoles','Pompeya':'pompeya','Atenas':'atenas','Delfos':'delfos','Lisboa':'lisboa'};
+export const KEYS = {'Madrid':'madrid','Barcelona':'barcelona','París':'paris','Zúrich':'zurich','Zúrich y Lucerna':'zurich','Lucerna':'lucerna','Chur':'chur','Milán':'milan','Venecia':'venecia','Florencia':'florencia','Pisa y Lucca':'pisa','Roma':'roma','Roma: se separan':'roma','Atenas':'atenas','Delfos':'delfos','Lisboa':'lisboa'};

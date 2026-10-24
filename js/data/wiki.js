@@ -27,7 +27,7 @@ export const WIKI = {
  'Ágora Antigua':'Ágora de Atenas','Monastiraki':'Monastiraki','Mercado de Monastiraki':'Monastiraki','Estadio Panatenaico':'Estadio Panathinaikó','Monte Licabeto':'Monte Licabeto',
  'Alfama':'Alfama','Miradouro de Santa Luzia':'Mirador de Santa Lucía','Catedral (Sé)':'Catedral de Lisboa','Monasterio de los Jerónimos':'Monasterio de los Jerónimos de Belém',
  'Torre de Belém':'Torre de Belém','Pastéis de Belém':'Pastel de nata','Tranvía 28':'Tranvía de Lisboa',
- 'Santuario y museo de Delfos':'Delfos','Delfos':'Delfos','Pueblo de montaña de Arachova':'Arájova','Arachova':'Arájova',
+ 'Santuario y museo de Delfos':'Delfos','Tour de día a Delfos':'Delfos','Areópago':'Areópago','Colina de Filopapo':'Colina de Filopapo','Thissio':'Thissio','Templo de Zeus Olímpico':'Olimpieion','Arco de Adriano':'Arco de Adriano (Atenas)','Jardín Nacional':'Jardín Nacional de Atenas','Mercado Central (Varvakios)':'Mercado Central de Atenas','Almuerzo en el Mercado Central (Varvakios)':'Mercado Central de Atenas','Museo Arqueológico Nacional':'Museo Arqueológico Nacional de Atenas','Plaka':'Plaka','Delfos':'Delfos','Pueblo de montaña de Arachova':'Arájova','Arachova':'Arájova',
  'Miradouro de São Pedro de Alcântara':'Mirador de San Pedro de Alcántara','Bairro Alto':'Barrio Alto (Lisboa)','Time Out Market':'Mercado da Ribeira',
  'Padrão dos Descobrimentos':'Monumento a los Descubrimientos','Praça do Comércio':'Plaza del Comercio (Lisboa)','Rua Augusta':'Rua Augusta','Chiado':'Chiado','Elevador de Santa Justa':'Elevador de Santa Justa','Castillo de San Jorge':'Castillo de San Jorge (Lisboa)','Manteigaria':'Pastel de nata',
  'Catedral de Nápoles':'Catedral de Nápoles','LX Factory':'LX Factory','Via Toledo':'Via Toledo','Galería Umberto I':'Galería Umberto I','Plaza del Plebiscito':'Plaza del Plebiscito','Via dei Tribunali':'Spaccanapoli',
@@ -45,6 +45,6 @@ export const PHOTO = {
   madrid:['Puerta de Alcalá'], barcelona:['Sagrada Família'], paris:['Eiffel Tower'],
   zurich:['Grossmünster'], lucerna:['Kapellbrücke','Lucerne'], chur:['Brusio spiral viaduct','Bernina Express','Bernina railway'],
   milan:['Milan Cathedral'], venecia:['Grand Canal (Venice)','Venice'], florencia:['Florence Cathedral'],
-  pisa:['Leaning Tower of Pisa'], roma:['Colosseum'], napoles:['Gulf of Naples','Naples'],
-  pompeya:['Pompeii'], atenas:['Parthenon'], delfos:['Delphi'], lisboa:['Trams in Lisbon','Lisbon']
+  pisa:['Leaning Tower of Pisa'], roma:['Colosseum'], 
+  atenas:['Parthenon'], delfos:['Delphi'], lisboa:['Trams in Lisbon','Lisbon']
 };
