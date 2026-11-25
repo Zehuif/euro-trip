@@ -11,6 +11,7 @@ import { initAppBar } from '../components/app-bar/app-bar.js';
 import { initTabBar } from '../components/tab-bar/tab-bar.js';
 import { initFooter } from '../components/site-footer/site-footer.js';
 import { initInfoDialog } from '../components/info-dialog/info-dialog.js';
+import { initPrintDialog } from '../components/print-dialog/print-dialog.js';
 
 import { initInicio } from '../pages/inicio/inicio.js';
 import { initItinerario } from '../pages/itinerario/itinerario.js';
@@ -28,7 +29,7 @@ async function boot(){
   await loadPages($('pages'), PAGES);
   await includePartials();
 
-  initAppBar(); initTabBar(); initFooter(); initInfoDialog(); initActions();
+  initAppBar(); initTabBar(); initFooter(); initInfoDialog(); initPrintDialog(); initActions();
   initMapa();            // antes que Inicio e Itinerario, que abren días en el mapa
   initItinerario(); initInicio(); initComer(); initGuia(); initTransporte(); initReservas(); initPases(); initPresupuesto();
 

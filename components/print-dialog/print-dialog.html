@@ -1,0 +1,12 @@
+<dialog id="printDialog" aria-labelledby="pdTitle">
+  <form method="dialog" class="pd-form">
+    <h3 id="pdTitle">Imprimir resumen</h3>
+    <p class="pd-sub">Elijan qué etapas incluir. Se omiten los días, entradas, traslados, alojamientos y ciudades de las etapas sin marcar.</p>
+    <!-- Las opciones se generan desde js/data/stages.js -->
+    <fieldset class="pd-stages" id="pdStages"><legend>Etapas</legend></fieldset>
+    <div class="pd-actions">
+      <button type="submit" value="cancel" class="pd-btn">Cancelar</button>
+      <button type="submit" value="print" class="pd-btn pd-main" id="pdPrint">🖨️ Imprimir</button>
+    </div>
+  </form>
+</dialog>

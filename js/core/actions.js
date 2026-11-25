@@ -2,12 +2,12 @@
 import { go } from './router.js';
 import { reduceMotion } from '../lib/dom.js';
 import { toggleTheme } from '../features/theme.js';
-import { printSummary } from '../features/print.js';
+import { openPrintDialog } from '../../components/print-dialog/print-dialog.js';
 import { toggleOfflineBox, revealOfflineBox } from '../features/offline.js';
 
 const ACTIONS = {
   theme: toggleTheme,
-  print: printSummary,
+  print: openPrintDialog,
   'offline-toggle': toggleOfflineBox,
   offline: () => { go('#/inicio'); revealOfflineBox(); },
   top: () => window.scrollTo({top:0, behavior:reduceMotion ? 'auto' : 'smooth'})

@@ -31,6 +31,7 @@ components/<nombre>/    Piezas reutilizables: .html (marcado), .css (estilos), .
   site-footer           Pie de página
   brand                 Logo (usado en barra y pie)
   info-dialog           Ventana con información de Wikipedia
+  print-dialog          Ventana para elegir qué etapas imprimir
   day-card              Traslado y lugares de un día (Itinerario y «Hoy»)
   mini-map              Mapas de paradas de cada día
   city-tabs             Pestañas de ciudades (Comer y Guía)
